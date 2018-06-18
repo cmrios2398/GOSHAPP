@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AddNotePage } from '../add-note/add-note';
 
 /**
  * Generated class for the NotesToSelfPage page.
@@ -16,6 +17,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class NotesToSelfPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  addNote(){
+    this.navCtrl.push(AddNotePage);
   }
 
   ionViewDidLoad() {

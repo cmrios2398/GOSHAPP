@@ -10,6 +10,7 @@ import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AddNotePage } from '../pages/add-note/add-note';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     VideoLibraryPage,
     SafetyToolkitPage,
-    NotesToSelfPage
+    NotesToSelfPage,
+    AddNotePage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     VideoLibraryPage,
     SafetyToolkitPage,
-    NotesToSelfPage
+    NotesToSelfPage,
+    AddNotePage
   ],
   providers: [
     StatusBar,

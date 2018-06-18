@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
 
 /**
  * Generated class for the SafetyToolkitPage page.
@@ -16,6 +17,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class SafetyToolkitPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  notesToSelf(){
+    this.navCtrl.push(NotesToSelfPage);
   }
 
   ionViewDidLoad() {
