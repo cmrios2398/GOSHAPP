@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AddNotePage } from '../add-note/add-note';
 import { NoteService } from '../../providers/note-service/note-service';
+import { Note } from '../../models/note.model';
 
 @IonicPage()
 @Component({
@@ -10,7 +11,7 @@ import { NoteService } from '../../providers/note-service/note-service';
 })
 export class NotesToSelfPage {
 
-  notes: { title: string }[] = [];
+  notes: Promise<Note[]>;
   constructor(public navCtrl: NavController, public navParams: NavParams, private noteService: NoteService) {
   }
 
