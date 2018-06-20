@@ -12,6 +12,10 @@ import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
+import { AddNotePage } from '../pages/add-note/add-note';
+import { NoteService } from '../providers/note-service/note-service';
+import { IonicStorageModule } from '@ionic/storage';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,12 +24,16 @@ import { HttpClientModule } from '@angular/common/http';
     AboutPage,
     VideoLibraryPage,
     SafetyToolkitPage,
-    NotesToSelfPage
+    NotesToSelfPage,
+    AddNotePage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,12 +42,14 @@ import { HttpClientModule } from '@angular/common/http';
     AboutPage,
     VideoLibraryPage,
     SafetyToolkitPage,
-    NotesToSelfPage
+    NotesToSelfPage,
+    AddNotePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NoteService
   ]
 })
 export class AppModule {}
