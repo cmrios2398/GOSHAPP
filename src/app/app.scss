@@ -16,3 +16,25 @@
 // automatically applied to the <body> element in the app.
 
 
+$SIDEMENU_TOP: #184F8A;
+$SIDEMENU_BOTTOM: #68b9ff;
+$SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+.side-menu-item {
+	background: none;
+	color: white;
+	font-weight: 300;
+	border: 0px;
+	.item-content {
+		background: none;
+		
+		
+	}
+}
+.side-menu-gradient {
+	background: -webkit-linear-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+	background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+	background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+	background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+}
