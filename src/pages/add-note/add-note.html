@@ -31,6 +31,8 @@
         <div class ="alert" *ngIf="!formGroup.controls['content'].valid
          && formGroup.controls['content'].touched">{{ contentAlert }}</div>
       </ion-item>
-    <button ion-button type="submit" [disabled]="!formGroup.valid">Save Note</button>
+      <div style="margin-left: 15px;">
+        <button block ion-button type="submit" [disabled]="!formGroup.valid">Save Note</button>
+      </div>  
   </form>
 </ion-content>

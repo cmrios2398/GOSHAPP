@@ -16,6 +16,7 @@ import { AddNotePage } from '../pages/add-note/add-note';
 import { NoteService } from '../providers/note-service/note-service';
 import { IonicStorageModule } from '@ionic/storage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ViewNotePage } from '../pages/view-note/view-note';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     VideoLibraryPage,
     SafetyToolkitPage,
     NotesToSelfPage,
-    AddNotePage
+    AddNotePage,
+    ViewNotePage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     VideoLibraryPage,
     SafetyToolkitPage,
     NotesToSelfPage,
-    AddNotePage
+    AddNotePage,
+    ViewNotePage
   ],
   providers: [
     StatusBar,

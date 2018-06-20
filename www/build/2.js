@@ -5,10 +5,10 @@ webpackJsonp([2],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SituationalAwarenessPageModule", function() { return SituationalAwarenessPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TracheostomyEmergencyManagementPageModule", function() { return TracheostomyEmergencyManagementPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__situational_awareness__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tracheostomy_emergency_management__ = __webpack_require__(302);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SituationalAwarenessPageModule = /** @class */ (function () {
-    function SituationalAwarenessPageModule() {
+var TracheostomyEmergencyManagementPageModule = /** @class */ (function () {
+    function TracheostomyEmergencyManagementPageModule() {
     }
-    SituationalAwarenessPageModule = __decorate([
+    TracheostomyEmergencyManagementPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__situational_awareness__["a" /* SituationalAwarenessPage */],
+                __WEBPACK_IMPORTED_MODULE_2__tracheostomy_emergency_management__["a" /* TracheostomyEmergencyManagementPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__situational_awareness__["a" /* SituationalAwarenessPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tracheostomy_emergency_management__["a" /* TracheostomyEmergencyManagementPage */]),
             ],
         })
-    ], SituationalAwarenessPageModule);
-    return SituationalAwarenessPageModule;
+    ], TracheostomyEmergencyManagementPageModule);
+    return TracheostomyEmergencyManagementPageModule;
 }());
 
-//# sourceMappingURL=situational-awareness.module.js.map
+//# sourceMappingURL=tracheostomy-emergency-management.module.js.map
 
 /***/ }),
 
-/***/ 301:
+/***/ 302:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SituationalAwarenessPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TracheostomyEmergencyManagementPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the SituationalAwarenessPage page.
+ * Generated class for the TracheostomyEmergencyManagementPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var SituationalAwarenessPage = /** @class */ (function () {
-    function SituationalAwarenessPage(navCtrl, navParams) {
+var TracheostomyEmergencyManagementPage = /** @class */ (function () {
+    function TracheostomyEmergencyManagementPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    SituationalAwarenessPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SituationalAwarenessPage');
+    TracheostomyEmergencyManagementPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TracheostomyEmergencyManagementPage');
     };
-    SituationalAwarenessPage = __decorate([
+    TracheostomyEmergencyManagementPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-situational-awareness',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/situational-awareness/situational-awareness.html"*/'<!--\n  Generated template for the SituationalAwarenessPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>situationalAwareness</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/situational-awareness/situational-awareness.html"*/,
+            selector: 'page-tracheostomy-emergency-management',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP\src\pages\tracheostomy-emergency-management\tracheostomy-emergency-management.html"*/'<!--\n\n  Generated template for the TracheostomyEmergencyManagementPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>tracheostomyEmergencyManagement</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP\src\pages\tracheostomy-emergency-management\tracheostomy-emergency-management.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], SituationalAwarenessPage);
-    return SituationalAwarenessPage;
+    ], TracheostomyEmergencyManagementPage);
+    return TracheostomyEmergencyManagementPage;
 }());
 
-//# sourceMappingURL=situational-awareness.js.map
+//# sourceMappingURL=tracheostomy-emergency-management.js.map
 
 /***/ })
 
