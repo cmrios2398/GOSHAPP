@@ -1,6 +1,6 @@
 {
   "name": "gosh",
-  "app_id": "c600b115",
+  "app_id": "6ff28bf0",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
