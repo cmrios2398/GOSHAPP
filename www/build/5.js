@@ -5,10 +5,10 @@ webpackJsonp([5],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NeonatalToolkitPageModule", function() { return NeonatalToolkitPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EPsagPageModule", function() { return EPsagPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__neonatal_toolkit__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__e_psag__ = __webpack_require__(300);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var NeonatalToolkitPageModule = /** @class */ (function () {
-    function NeonatalToolkitPageModule() {
+var EPsagPageModule = /** @class */ (function () {
+    function EPsagPageModule() {
     }
-    NeonatalToolkitPageModule = __decorate([
+    EPsagPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__neonatal_toolkit__["a" /* NeonatalToolkitPage */],
+                __WEBPACK_IMPORTED_MODULE_2__e_psag__["a" /* EPsagPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__neonatal_toolkit__["a" /* NeonatalToolkitPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__e_psag__["a" /* EPsagPage */]),
             ],
         })
-    ], NeonatalToolkitPageModule);
-    return NeonatalToolkitPageModule;
+    ], EPsagPageModule);
+    return EPsagPageModule;
 }());
 
-//# sourceMappingURL=neonatal-toolkit.module.js.map
+//# sourceMappingURL=e-psag.module.js.map
 
 /***/ }),
 
@@ -42,9 +42,9 @@ var NeonatalToolkitPageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NeonatalToolkitPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EPsagPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the NeonatalToolkitPage page.
+ * Generated class for the EPsagPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var NeonatalToolkitPage = /** @class */ (function () {
-    function NeonatalToolkitPage(navCtrl, navParams) {
+var EPsagPage = /** @class */ (function () {
+    function EPsagPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    NeonatalToolkitPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad NeonatalToolkitPage');
+    EPsagPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad EPsagPage');
     };
-    NeonatalToolkitPage = __decorate([
+    EPsagPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-neonatal-toolkit',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP\src\pages\neonatal-toolkit\neonatal-toolkit.html"*/'<!--\n\n  Generated template for the NeonatalToolkitPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>neonatalToolkit</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP\src\pages\neonatal-toolkit\neonatal-toolkit.html"*/,
+            selector: 'page-e-psag',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP\src\pages\e-psag\e-psag.html"*/'<!--\n\n  Generated template for the EPsagPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>ePSAG</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP\src\pages\e-psag\e-psag.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], NeonatalToolkitPage);
-    return NeonatalToolkitPage;
+    ], EPsagPage);
+    return EPsagPage;
 }());
 
-//# sourceMappingURL=neonatal-toolkit.js.map
+//# sourceMappingURL=e-psag.js.map
 
 /***/ })
 

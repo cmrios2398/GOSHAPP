@@ -17,6 +17,7 @@ import { NoteService } from '../providers/note-service/note-service';
 import { IonicStorageModule } from '@ionic/storage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewNotePage } from '../pages/view-note/view-note';
+import { EmailComposer } from '@ionic-native/email-composer'
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { ViewNotePage } from '../pages/view-note/view-note';
   providers: [
     StatusBar,
     SplashScreen,
+    EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NoteService
   ]
