@@ -29,7 +29,7 @@ export class NoteService {
 
   getNote(createDate: number){
     return this.storage.get('notes').then((notes)=> {
-      // this.note = [...notes].find(r => r.createDate === createDate);
+      this.note = [...notes].find(r => r.createDate === createDate);
       return this.note;
     });
   }
