@@ -8,6 +8,7 @@ import { AboutPage } from '../pages/about/about';
 import { SafetyToolkitPage } from '../pages/safety-toolkit/safety-toolkit';
 import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
+import { SafetyToolkitMorePage } from '../pages/safety-toolkit-more/safety-toolkit-more';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,6 +19,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewNotePage } from '../pages/view-note/view-note';
 import { EmailComposer } from '@ionic-native/email-composer'
+import { WpApiProvider } from '../providers/wp-api/wp-api';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { EmailComposer } from '@ionic-native/email-composer'
     AboutPage,
     VideoLibraryPage,
     SafetyToolkitPage,
+    SafetyToolkitMorePage,
     NotesToSelfPage,
     AddNotePage,
     ViewNotePage
@@ -45,6 +48,7 @@ import { EmailComposer } from '@ionic-native/email-composer'
     AboutPage,
     VideoLibraryPage,
     SafetyToolkitPage,
+    SafetyToolkitMorePage,
     NotesToSelfPage,
     AddNotePage,
     ViewNotePage
@@ -54,7 +58,8 @@ import { EmailComposer } from '@ionic-native/email-composer'
     SplashScreen,
     EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    NoteService
+    NoteService,
+    WpApiProvider
   ]
 })
 export class AppModule {}

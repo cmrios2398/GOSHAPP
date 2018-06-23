@@ -3,7 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
-
+import { SafetyToolkitMorePage } from '../safety-toolkit-more/safety-toolkit-more';
+import { WpApiProvider } from '../../providers/wp-api/wp-api';
 /**
  * Generated class for the SafetyToolkitPage page.
  *
@@ -17,14 +18,21 @@ import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
   templateUrl: 'safety-toolkit.html',
 })
 export class SafetyToolkitPage {
-  films: Observable<any>;
+  tools;
  
-  constructor(public navCtrl: NavController, public navParams: NavParams, private httpClient: HttpClient) { 
-    this.films = this.httpClient.get('https://swapi.co/api/films');  
+  constructor(public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider) { 
+    this.wpApiProvider.getSafetyToolkit().subscribe( data => {
+      console.log(data);
+      this.tools = data;
+    })
   }
 
   notesToSelf(){
     this.navCtrl.push(NotesToSelfPage);
+  }
+
+  safetyToolkitMore(tool){
+    this.navCtrl.push(SafetyToolkitMorePage, {tool: tool});
   }
 
   ionViewDidLoad() {

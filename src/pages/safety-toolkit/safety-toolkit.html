@@ -13,19 +13,34 @@
       <ion-buttons end>
         <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>
       </ion-buttons>
-  
-     
-    
-     
     </ion-navbar>
   </ion-header>
 
 
   <ion-content padding class="has-header" overflow-scroll="true" class="background">
-    
+
+
+      <ion-card id="home-card21" *ngFor="let tool of tools" >
+        <button  icon-only style="float:right; padding-top:-25px; padding-right:10px;" (click)="toggleAccordion()">
+            <ion-icon name="ios-arrow-down"></ion-icon>
+          </button>
+            <ion-item color="none" id="home-list-item6" (click)="safetyToolkitMore(tool)">
+              <ion-avatar item-left>
+                <img src="{{ tool.icon.guid }}">
+                </ion-avatar>
+                <h2>
+                    {{ tool.title.rendered }}
+                </h2>
+
+                </ion-item>
+                <ion-card-content >
+                  <div>
+              {{ tool.content.rendered }}
+            </div>
+            </ion-card-content>
+        </ion-card>
 
   
-  
+
 
   </ion-content>
-  
