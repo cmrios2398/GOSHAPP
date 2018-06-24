@@ -25694,8 +25694,32 @@ ion-navbar.toolbar {
   background: linear-gradient(to bottom right, #184F8A, #68b9ff);
 }
 
+accordion .card-header {
+  background-color: #184F8A;
+  color: #fff;
+}
+
+accordion .card-content {
+  padding: 0px 16px;
+  max-height: 0px;
+}
+
 page-safety-toolkit .background {
   background-color: #9ed7e9;
+}
+
+page-safety-toolkit .card-header {
+  color: black;
+}
+
+page-safety-toolkit .card-content {
+  padding: 0px 16px;
+  max-height: 0px;
+}
+
+page-safety-toolkit .item-content {
+  background-color: transparent !important;
+  color: black;
 }
 
 page-safety-toolkit-more .card-header {

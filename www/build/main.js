@@ -221,7 +221,7 @@ var SafetyToolkitMorePage = /** @class */ (function () {
     ], SafetyToolkitMorePage.prototype, "cardContent", void 0);
     SafetyToolkitMorePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-safety-toolkit-more',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit-more/safety-toolkit-more.html"*/'<!--\n  Generated template for the SafetyToolkitDetailsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>{{ tool.title.rendered }}</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-card-header (click)="toggleAccordion()">\n      {{ tool.heading }}\n    </ion-card-header>\n    <ion-card-content #cc>\n      {{ tool.contents }}\n    </ion-card-content>\n  </ion-card>\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit-more/safety-toolkit-more.html"*/,
+            selector: 'page-safety-toolkit-more',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit-more/safety-toolkit-more.html"*/'<!--\n  Generated template for the SafetyToolkitDetailsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>{{ tool.title.rendered }}</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-card-header (click)="toggleAccordion()">\n      {{ tool.heading }}\n    </ion-card-header>\n    <ion-card-content #cc>\n      {{ tool.contents }}\n    </ion-card-content>\n  </ion-card>\n\n  <accordion></accordion>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit-more/safety-toolkit-more.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
     ], SafetyToolkitMorePage);
@@ -263,33 +263,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var SafetyToolkitPage = /** @class */ (function () {
-    function SafetyToolkitPage(navCtrl, navParams, wpApiProvider) {
+    function SafetyToolkitPage(navCtrl, navParams, wpApiProvider, renderer) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.wpApiProvider = wpApiProvider;
+        this.renderer = renderer;
+        this.accordionExpanded = false;
         this.wpApiProvider.getSafetyToolkit().subscribe(function (data) {
             console.log(data);
             _this.tools = data;
         });
     }
+    SafetyToolkitPage.prototype.toggleAccordion = function () {
+        if (this.accordionExpanded) {
+            this.renderer.setElementStyle(this.cardContent.nativeElement, "max-height", "0px");
+            this.renderer.setElementStyle(this.cardContent.nativeElement, "padding", "0px 16px");
+        }
+        else {
+            this.renderer.setElementStyle(this.cardContent.nativeElement, "max-height", "1000px");
+            this.renderer.setElementStyle(this.cardContent.nativeElement, "padding", "13px 16px");
+        }
+        this.accordionExpanded = !this.accordionExpanded;
+    };
     SafetyToolkitPage.prototype.notesToSelf = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
     };
     SafetyToolkitPage.prototype.safetyToolkitMore = function (tool) {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__safety_toolkit_more_safety_toolkit_more__["a" /* SafetyToolkitMorePage */], { tool: tool });
     };
-    SafetyToolkitPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SafetyToolkitPage');
-    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])("cc"),
+        __metadata("design:type", Object)
+    ], SafetyToolkitPage.prototype, "cardContent", void 0);
     SafetyToolkitPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-safety-toolkit',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit/safety-toolkit.html"*/'<!--\n  Generated template for the SafetyToolkitPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color="primary">\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n       <ion-title>Safety Toolkit</ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-header>\n\n\n  <ion-content padding class="has-header" overflow-scroll="true" class="background">\n\n\n      <ion-card id="home-card21" *ngFor="let tool of tools" >\n        <button  icon-only style="float:right; padding-top:-25px; padding-right:10px;" (click)="toggleAccordion()">\n            <ion-icon name="ios-arrow-down"></ion-icon>\n          </button>\n            <ion-item color="none" id="home-list-item6" (click)="safetyToolkitMore(tool)">\n              <ion-avatar item-left>\n                <img src="{{ tool.icon.guid }}">\n                </ion-avatar>\n                <h2>\n                    {{ tool.title.rendered }}\n                </h2>\n\n                </ion-item>\n                <ion-card-content >\n                  <div>\n              {{ tool.content.rendered }}\n            </div>\n            </ion-card-content>\n        </ion-card>\n\n  \n\n\n  </ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit/safety-toolkit.html"*/,
+            selector: 'page-safety-toolkit',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit/safety-toolkit.html"*/'<!--\n  Generated template for the SafetyToolkitPage page.\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n     <ion-title>Safety Toolkit</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding class="has-header" overflow-scroll="true" class="background">\n\n \n    <ion-card id="home-card21" *ngFor="let tool of tools" >\n     \n      \n          <ion-item color="none" id="home-list-item6">\n             \n            <ion-avatar item-left (click)="safetyToolkitMore(tool)">\n              <img src="{{ tool.icon.guid }}">\n              </ion-avatar>\n              <h2>\n                  <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion()">\n                      <ion-icon name="ios-arrow-down"></ion-icon>\n                    </button>\n                    <div (click)="safetyToolkitMore(tool)">\n                  {{ tool.title.rendered }}\n                  </div>\n              </h2>\n\n              </ion-item>\n           \n              <ion-card-content #cc>\n         \n            <div [innerHTML] = "tool.content.rendered"></div>\n        \n          </ion-card-content>\n      </ion-card>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit/safety-toolkit.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_wp_api_wp_api__["a" /* WpApiProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_wp_api_wp_api__["a" /* WpApiProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
     ], SafetyToolkitPage);
     return SafetyToolkitPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=safety-toolkit.js.map
@@ -363,39 +376,39 @@ webpackEmptyAsyncContext.id = 119;
 
 var map = {
 	"../pages/about/about.module": [
-		289,
+		290,
 		13
 	],
 	"../pages/add-note/add-note.module": [
-		290,
+		291,
 		12
 	],
 	"../pages/e-diary/e-diary.module": [
-		291,
+		292,
 		6
 	],
 	"../pages/e-psag/e-psag.module": [
-		292,
+		293,
 		5
 	],
 	"../pages/neonatal-toolkit/neonatal-toolkit.module": [
-		293,
+		294,
 		4
 	],
 	"../pages/notes-to-self/notes-to-self.module": [
-		294,
+		295,
 		11
 	],
 	"../pages/safety-huddle/safety-huddle.module": [
-		295,
+		296,
 		3
 	],
 	"../pages/safety-toolkit-more/safety-toolkit-more.module": [
-		296,
+		297,
 		10
 	],
 	"../pages/safety-toolkit/safety-toolkit.module": [
-		297,
+		299,
 		9
 	],
 	"../pages/situational-awareness/situational-awareness.module": [
@@ -403,19 +416,19 @@ var map = {
 		2
 	],
 	"../pages/tracheostomy-emergency-management/tracheostomy-emergency-management.module": [
-		299,
+		300,
 		1
 	],
 	"../pages/vessel-health/vessel-health.module": [
-		302,
+		301,
 		0
 	],
 	"../pages/video-library/video-library.module": [
-		300,
+		302,
 		8
 	],
 	"../pages/view-note/view-note.module": [
-		301,
+		303,
 		7
 	]
 };
@@ -552,12 +565,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_view_note_view_note__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_email_composer__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_wp_api_wp_api__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_accordion_accordion__ = __webpack_require__(289);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -592,6 +607,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__pages_safety_toolkit_more_safety_toolkit_more__["a" /* SafetyToolkitMorePage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_notes_to_self_notes_to_self__["a" /* NotesToSelfPage */],
                 __WEBPACK_IMPORTED_MODULE_13__pages_add_note_add_note__["a" /* AddNotePage */],
+                __WEBPACK_IMPORTED_MODULE_20__components_accordion_accordion__["a" /* AccordionComponent */],
                 __WEBPACK_IMPORTED_MODULE_17__pages_view_note_view_note__["a" /* ViewNotePage */]
             ],
             imports: [
@@ -607,12 +623,12 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/notes-to-self/notes-to-self.module#NotesToSelfPageModule', name: 'NotesToSelfPage', segment: 'notes-to-self', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/safety-huddle/safety-huddle.module#SafetyHuddlePageModule', name: 'SafetyHuddlePage', segment: 'safety-huddle', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/safety-toolkit-more/safety-toolkit-more.module#SafetyToolkitMorePageModule', name: 'SafetyToolkitMorePage', segment: 'safety-toolkit-more', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/safety-toolkit/safety-toolkit.module#SafetyToolkitPageModule', name: 'SafetyToolkitPage', segment: 'safety-toolkit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/situational-awareness/situational-awareness.module#SituationalAwarenessPageModule', name: 'SituationalAwarenessPage', segment: 'situational-awareness', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/safety-toolkit/safety-toolkit.module#SafetyToolkitPageModule', name: 'SafetyToolkitPage', segment: 'safety-toolkit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tracheostomy-emergency-management/tracheostomy-emergency-management.module#TracheostomyEmergencyManagementPageModule', name: 'TracheostomyEmergencyManagementPage', segment: 'tracheostomy-emergency-management', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/vessel-health/vessel-health.module#VesselHealthPageModule', name: 'VesselHealthPage', segment: 'vessel-health', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/video-library/video-library.module#VideoLibraryPageModule', name: 'VideoLibraryPage', segment: 'video-library', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/view-note/view-note.module#ViewNotePageModule', name: 'ViewNotePage', segment: 'view-note', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/vessel-health/vessel-health.module#VesselHealthPageModule', name: 'VesselHealthPage', segment: 'vessel-health', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/view-note/view-note.module#ViewNotePageModule', name: 'ViewNotePage', segment: 'view-note', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_15__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
@@ -720,6 +736,65 @@ var MyApp = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 289:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccordionComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the AccordionComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var AccordionComponent = /** @class */ (function () {
+    function AccordionComponent(renderer) {
+        this.renderer = renderer;
+        this.accordionExpanded = false;
+    }
+    AccordionComponent.prototype.ngOnInit = function () {
+        console.log(this.cardContent.nativeElement);
+        this.renderer.setElementStyle(this.cardContent.nativeElement, "webkitTransition", "max-height 300ms, padding 300ms");
+    };
+    AccordionComponent.prototype.toggleAccordion = function () {
+        if (this.accordionExpanded) {
+            this.renderer.setElementStyle(this.cardContent.nativeElement, "max-height", "0px");
+            this.renderer.setElementStyle(this.cardContent.nativeElement, "padding", "0px 16px");
+        }
+        else {
+            this.renderer.setElementStyle(this.cardContent.nativeElement, "max-height", "1000px");
+            this.renderer.setElementStyle(this.cardContent.nativeElement, "padding", "13px 16px");
+        }
+        this.accordionExpanded = !this.accordionExpanded;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])("cc"),
+        __metadata("design:type", Object)
+    ], AccordionComponent.prototype, "cardContent", void 0);
+    AccordionComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'accordion',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion/accordion.html"*/'<ion-card>\n  <ion-card-header (click)="toggleAccordion()">\n    Lorem Ipsum\n  </ion-card-header>\n  <ion-card-content #cc>\n    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n  </ion-card-content>\n</ion-card>\n\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion/accordion.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
+    ], AccordionComponent);
+    return AccordionComponent;
+}());
+
+//# sourceMappingURL=accordion.js.map
 
 /***/ }),
 

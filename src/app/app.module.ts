@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewNotePage } from '../pages/view-note/view-note';
 import { EmailComposer } from '@ionic-native/email-composer'
 import { WpApiProvider } from '../providers/wp-api/wp-api';
+import { AccordionComponent } from '../components/accordion/accordion';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { WpApiProvider } from '../providers/wp-api/wp-api';
     SafetyToolkitMorePage,
     NotesToSelfPage,
     AddNotePage,
+    AccordionComponent,
     ViewNotePage
   ],
   imports: [

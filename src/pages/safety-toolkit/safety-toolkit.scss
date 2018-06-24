@@ -2,5 +2,21 @@ page-safety-toolkit {
     .background {
         background-color: #9ed7e9;
     }
+
+    .card-header{
+        background-color: map-get($colors, #fff);
+        color: rgb(0, 0, 0);
+    }
+
+    .card-content {
+        padding: 0px 16px;
+        max-height: 0px;
+    }
+
+    .item-content {
+        background-color: transparent !important;
+        color: rgb(0, 0, 0);
+      }
+      
     
 }
