@@ -5,10 +5,10 @@ webpackJsonp([0],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VesselHealthPageModule", function() { return VesselHealthPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TracheostomyEmergencyManagementPageModule", function() { return TracheostomyEmergencyManagementPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vessel_health__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tracheostomy_emergency_management__ = __webpack_require__(310);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var VesselHealthPageModule = /** @class */ (function () {
-    function VesselHealthPageModule() {
+var TracheostomyEmergencyManagementPageModule = /** @class */ (function () {
+    function TracheostomyEmergencyManagementPageModule() {
     }
-    VesselHealthPageModule = __decorate([
+    TracheostomyEmergencyManagementPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__vessel_health__["a" /* VesselHealthPage */],
+                __WEBPACK_IMPORTED_MODULE_2__tracheostomy_emergency_management__["a" /* TracheostomyEmergencyManagementPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__vessel_health__["a" /* VesselHealthPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tracheostomy_emergency_management__["a" /* TracheostomyEmergencyManagementPage */]),
             ],
         })
-    ], VesselHealthPageModule);
-    return VesselHealthPageModule;
+    ], TracheostomyEmergencyManagementPageModule);
+    return TracheostomyEmergencyManagementPageModule;
 }());
 
-//# sourceMappingURL=vessel-health.module.js.map
+//# sourceMappingURL=tracheostomy-emergency-management.module.js.map
 
 /***/ }),
 
@@ -42,9 +42,9 @@ var VesselHealthPageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VesselHealthPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TracheostomyEmergencyManagementPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,29 +57,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the VesselHealthPage page.
+ * Generated class for the TracheostomyEmergencyManagementPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var VesselHealthPage = /** @class */ (function () {
-    function VesselHealthPage(navCtrl, navParams) {
+var TracheostomyEmergencyManagementPage = /** @class */ (function () {
+    function TracheostomyEmergencyManagementPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
-    VesselHealthPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad VesselHealthPage');
+    TracheostomyEmergencyManagementPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TracheostomyEmergencyManagementPage');
     };
-    VesselHealthPage = __decorate([
+    TracheostomyEmergencyManagementPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-vessel-health',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/vessel-health/vessel-health.html"*/'<!--\n  Generated template for the VesselHealthPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>vesselHealth</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/vessel-health/vessel-health.html"*/,
+            selector: 'page-tracheostomy-emergency-management',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/tracheostomy-emergency-management/tracheostomy-emergency-management.html"*/'<!--\n  Generated template for the TracheostomyEmergencyManagementPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>tracheostomyEmergencyManagement</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/tracheostomy-emergency-management/tracheostomy-emergency-management.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], VesselHealthPage);
-    return VesselHealthPage;
+    ], TracheostomyEmergencyManagementPage);
+    return TracheostomyEmergencyManagementPage;
 }());
 
-//# sourceMappingURL=vessel-health.js.map
+//# sourceMappingURL=tracheostomy-emergency-management.js.map
 
 /***/ })
 

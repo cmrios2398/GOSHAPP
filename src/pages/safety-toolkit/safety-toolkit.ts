@@ -2,6 +2,7 @@ import { Component, ViewChild, Renderer  } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
 import { SafetyToolkitMorePage } from '../safety-toolkit-more/safety-toolkit-more';
+import { VesselHealthPage } from '../vessel-health/vessel-health';
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 /**
  * Generated class for the SafetyToolkitPage page.
@@ -45,6 +46,10 @@ export class SafetyToolkitPage {
 
   notesToSelf(){
     this.navCtrl.push(NotesToSelfPage);
+  }
+
+  vesselHealth(){
+    this.navCtrl.push(VesselHealthPage);
   }
 
   safetyToolkitMore(tool){

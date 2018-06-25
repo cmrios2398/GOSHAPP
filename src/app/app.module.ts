@@ -8,6 +8,7 @@ import { AboutPage } from '../pages/about/about';
 import { SafetyToolkitPage } from '../pages/safety-toolkit/safety-toolkit';
 import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
+import { VesselHealthPage } from '../pages/vessel-health/vessel-health';
 import { SafetyToolkitMorePage } from '../pages/safety-toolkit-more/safety-toolkit-more';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -30,6 +31,7 @@ import { AccordionComponent } from '../components/accordion/accordion';
     VideoLibraryPage,
     SafetyToolkitPage,
     SafetyToolkitMorePage,
+    VesselHealthPage,
     NotesToSelfPage,
     AddNotePage,
     AccordionComponent,
@@ -50,6 +52,7 @@ import { AccordionComponent } from '../components/accordion/accordion';
     AboutPage,
     VideoLibraryPage,
     SafetyToolkitPage,
+    VesselHealthPage,
     SafetyToolkitMorePage,
     NotesToSelfPage,
     AddNotePage,

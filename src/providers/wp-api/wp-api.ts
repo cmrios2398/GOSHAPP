@@ -17,4 +17,9 @@ export class WpApiProvider {
   getSafetyToolkit(){
     return this.http.get('http://uclst.co.uk/wp-json/wp/v2/safety_toolkit')
   }
+
+  getVesselHealth(){
+    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/vessel_health')
+  }
+  
 }

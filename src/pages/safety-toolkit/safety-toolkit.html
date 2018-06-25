@@ -24,14 +24,14 @@
       
           <ion-item color="none" id="home-list-item6">
              
-            <ion-avatar item-left (click)="safetyToolkitMore(tool)">
+            <ion-avatar item-left (click)="vesselHealth()">
               <img src="{{ tool.icon.guid }}">
               </ion-avatar>
               <h2>
                   <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion()">
                       <ion-icon name="ios-arrow-down"></ion-icon>
                     </button>
-                    <div (click)="safetyToolkitMore(tool)">
+                    <div (click)="vesselHealth()">
                   {{ tool.title.rendered }}
                   </div>
               </h2>
