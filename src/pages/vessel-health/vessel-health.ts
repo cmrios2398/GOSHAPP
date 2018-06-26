@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { WpApiProvider } from '../../providers/wp-api/wp-api';
 
 /**
  * Generated class for the VesselHealthPage page.
@@ -14,8 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'vessel-health.html',
 })
 export class VesselHealthPage {
+  sections;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider) { 
+    this.wpApiProvider.getVesselHealth().subscribe( data => {
+      console.log(data);
+      this.sections = data;
+    })
   }
 
   ionViewDidLoad() {

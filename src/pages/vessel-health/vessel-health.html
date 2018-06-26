@@ -7,12 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>vesselHealth</ion-title>
+    <ion-title>Vessel Health</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <accordion *ngFor="let section of sections" [title]="section.title.rendered">
+    <div [innerHTML]="section.content.rendered"></div>
+  </accordion>
 
 </ion-content>

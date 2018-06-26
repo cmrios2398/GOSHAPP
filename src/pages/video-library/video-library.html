@@ -14,7 +14,18 @@
   </ion-header>
 
 
-<ion-content padding>
-    <iframe width="auto" height="auto" src="https://www.youtube.com/embed/y_Ct6C__p18" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-</ion-content>
+  <ion-content padding="true" class="has-header">
+    <form class="list">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="" ng-model="data.search" ng-change="search()">
+      </label>
+    </form>
+    <ion-list>
+      <ion-item class="item-thumbnail-left" ui-sref="video({&quot;videokey&quot;:&quot;&quot;+tutorial.key+&quot;&quot;})" ng-repeat="tutorial in narrowed_tutorials">
+        <img src="https://img.youtube.com/vi/{{tutorial.id}}/maxresdefault.jpg">
+        <h2>{{tutorial.name}}</h2>
+        <p>{{tutorial.description}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>

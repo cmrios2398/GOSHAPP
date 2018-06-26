@@ -14,6 +14,7 @@ export class AccordionComponent implements OnInit {
 
   accordionExpanded = false;
   @ViewChild("cc") cardContent: any;
+  @Input('title') title: string;
   
 
   constructor(public renderer: Renderer) {
