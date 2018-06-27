@@ -10,6 +10,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class WpApiProvider {
 
+ 
+
   constructor(public http: HttpClient) {
     console.log('Hello WpApiProvider Provider');
   }
@@ -19,7 +21,9 @@ export class WpApiProvider {
   }
 
   getVesselHealth(){
-    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/vessel_health')
+    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/vessel-health')
   }
+
+ 
   
 }

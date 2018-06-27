@@ -1,4 +1,9 @@
 import { Component, ViewChild, OnInit, Renderer, Input } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NotesToSelfPage } from '../../pages/notes-to-self/notes-to-self';
+import { SafetyToolkitMorePage } from '../../pages/safety-toolkit-more/safety-toolkit-more';
+
+/**
 
 /**
  * Generated class for the AccordionComponent component.
@@ -13,17 +18,19 @@ import { Component, ViewChild, OnInit, Renderer, Input } from '@angular/core';
 export class AccordionComponent implements OnInit {
 
   accordionExpanded = false;
+  tools;
   @ViewChild("cc") cardContent: any;
   @Input('title') title: string;
+  @Input('icon') icon: any;
   
 
-  constructor(public renderer: Renderer) {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams, public renderer: Renderer) {
+ 
   }
 
   ngOnInit(){
     console.log(this.cardContent.nativeElement);
-    this.renderer.setElementStyle(this.cardContent.nativeElement, "webkitTransition", "max-height 300ms, padding 300ms")
+    this.renderer.setElementStyle(this.cardContent.nativeElement, "webkitTransition", "max-height 200ms, padding 200ms")
   }
 
   toggleAccordion() {
@@ -37,5 +44,10 @@ export class AccordionComponent implements OnInit {
 
     this.accordionExpanded = !this.accordionExpanded;
   }
+
+  safetyToolkitMore(){
+    this.navCtrl.push(SafetyToolkitMorePage);
+  }
+
 
 }
