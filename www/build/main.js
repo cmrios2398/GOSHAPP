@@ -356,7 +356,7 @@ var VesselHealthPage = /** @class */ (function () {
     };
     VesselHealthPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-vessel-health',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\vessel-health\vessel-health.html"*/'<!--\n\n  Generated template for the VesselHealthPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Vessel Health</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <accordion *ngFor="let section of sections" [title]="section.title.rendered">\n\n    <div [innerHTML]="section.content.rendered"></div>\n\n  </accordion>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\vessel-health\vessel-health.html"*/,
+            selector: 'page-vessel-health',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\vessel-health\vessel-health.html"*/'<!--\n\n  Generated template for the VesselHealthPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Vessel Health</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  \n\n  <accordion *ngFor="let section of sections" [title]="section.title.rendered">\n\n    <div [innerHTML]="section.content.rendered">\n\n      <ion-scroll zooming="true" style="width: 100%; height: 100%">\n\n      </ion-scroll>\n\n    </div>\n\n  \n\n  </accordion>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\vessel-health\vessel-health.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
     ], VesselHealthPage);
@@ -395,6 +395,51 @@ var VideoLibraryPage = /** @class */ (function () {
     function VideoLibraryPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.tutorials_list = [
+            {
+                key: 'vhp1',
+                name: 'Vessel Health',
+                description: 'Engagement video',
+                id: 'LXChhaEAuJI'
+            },
+            {
+                key: 'vhp2',
+                name: 'Vessel Health',
+                description: 'Education and training video',
+                id: '5qQ09xz3hOo'
+            },
+            {
+                key: 'sa',
+                name: 'Situational Awareness',
+                description: 'Situational Awareness for Everyone (SAFE)',
+                id: 'UMVRgbN-AS0',
+            },
+            {
+                key: 'phototherapy',
+                name: 'Phototherapy',
+                description: 'Preparing the baby for phototherapy training video',
+                id: 'rm9tWpOZ-IY'
+            },
+            {
+                key: 'babycheck',
+                name: 'Baby check',
+                description: 'How to conduct a newborn examination training video',
+                id: 'IS8t2YaH6Jo'
+            },
+            {
+                key: 'tracheostomy',
+                name: 'Tracheostomy Support',
+                description: 'Basic life support of babies and children with a tracheostomy training video',
+                id: '5wd7KLo32fU'
+            },
+            {
+                key: 'tracheostomytube',
+                name: 'Changing a tracheostomy tube',
+                description: "Tracheostomy elective tube change training video",
+                id: "6vrYRKLhZSg"
+            }
+        ];
+        this.tutorials_keys = {};
     }
     VideoLibraryPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad VideoLibraryPage');
@@ -442,11 +487,11 @@ var map = {
 		12
 	],
 	"../pages/e-diary/e-diary.module": [
-		294,
+		293,
 		5
 	],
 	"../pages/e-psag/e-psag.module": [
-		293,
+		294,
 		4
 	],
 	"../pages/neonatal-toolkit/neonatal-toolkit.module": [
@@ -635,8 +680,8 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-note/add-note.module#AddNotePageModule', name: 'AddNotePage', segment: 'add-note', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/e-psag/e-psag.module#EPsagPageModule', name: 'EPsagPage', segment: 'e-psag', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/e-diary/e-diary.module#EDiaryPageModule', name: 'EDiaryPage', segment: 'e-diary', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/e-psag/e-psag.module#EPsagPageModule', name: 'EPsagPage', segment: 'e-psag', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/neonatal-toolkit/neonatal-toolkit.module#NeonatalToolkitPageModule', name: 'NeonatalToolkitPage', segment: 'neonatal-toolkit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notes-to-self/notes-to-self.module#NotesToSelfPageModule', name: 'NotesToSelfPage', segment: 'notes-to-self', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/safety-huddle/safety-huddle.module#SafetyHuddlePageModule', name: 'SafetyHuddlePage', segment: 'safety-huddle', priority: 'low', defaultHistory: [] },
