@@ -1,9 +1,27 @@
-<ion-card>
-  <ion-card-header (click)="toggleAccordion()">
-    {{ title }}
-  </ion-card-header>
-  <ion-card-content #cc>
-     <ng-content></ng-content>
-  </ion-card-content>
-</ion-card>
 
+
+<ion-card id="home-card21">
+     
+      
+    <ion-item color="none" id="home-list-item6">
+       
+      <ion-avatar item-left (click)="safetyToolkitMore()">
+        <img src="{{ icon }}">
+        </ion-avatar>
+        <h2>
+            <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion()">
+                <ion-icon name="ios-arrow-down"></ion-icon>
+              </button>
+              <div (click)="safetyToolkitMore()">
+            {{ title }}
+            </div>
+        </h2>
+
+        </ion-item>
+     
+        <ion-card-content #cc>
+          
+     <ng-content></ng-content>
+  
+    </ion-card-content>
+</ion-card>

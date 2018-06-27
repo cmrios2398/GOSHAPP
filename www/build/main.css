@@ -25704,6 +25704,16 @@ accordion .card-content {
   max-height: 0px;
 }
 
+accordion-more .card-header {
+  background-color: #184F8A;
+  color: #fff;
+}
+
+accordion-more .card-content {
+  padding: 0px 16px;
+  max-height: 0px;
+}
+
 page-safety-toolkit .background {
   background-color: #9ed7e9;
 }

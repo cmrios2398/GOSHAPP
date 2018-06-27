@@ -22,6 +22,8 @@ import { ViewNotePage } from '../pages/view-note/view-note';
 import { EmailComposer } from '@ionic-native/email-composer'
 import { WpApiProvider } from '../providers/wp-api/wp-api';
 import { AccordionComponent } from '../components/accordion/accordion';
+import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { AccordionComponent } from '../components/accordion/accordion';
     NotesToSelfPage,
     AddNotePage,
     AccordionComponent,
+    AccordionMoreComponent,
     ViewNotePage
   ],
   imports: [

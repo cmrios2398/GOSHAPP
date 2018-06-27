@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>{{ tool.title.rendered }}</ion-title>
+    <ion-title>Vessel Health</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>
     </ion-buttons>
@@ -17,16 +17,11 @@
 
 
 <ion-content padding>
-  <ion-card>
-    <ion-card-header (click)="toggleAccordion()">
-      {{ tool.heading }}
-    </ion-card-header>
-    <ion-card-content #cc>
-      {{ tool.contents }}
-    </ion-card-content>
-  </ion-card>
 
-  <accordion></accordion>
+
+  <accordion-more *ngFor="let section of sections" [title]="section.title.rendered">
+      <div [innerHTML]="section.content.rendered"></div>
+    </accordion-more>
 
 
 </ion-content>
