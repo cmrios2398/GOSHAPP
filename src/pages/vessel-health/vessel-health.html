@@ -14,8 +14,13 @@
 
 
 <ion-content padding>
-  <accordion *ngFor="let section of sections" [title]="section.title.rendered">
-    <div [innerHTML]="section.content.rendered"></div>
-  </accordion>
 
+  
+  <accordion *ngFor="let section of sections" [title]="section.title.rendered">
+    <div [innerHTML]="section.content.rendered">
+      <ion-scroll zooming="true" style="width: 100%; height: 100%">
+      </ion-scroll>
+    </div>
+  
+  </accordion>
 </ion-content>
