@@ -17,12 +17,16 @@ import { WpApiProvider } from '../../providers/wp-api/wp-api';
 })
 export class SafetyToolkitPage {
   tools;
+  // tool;
  
  
   constructor(public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider) { 
     this.wpApiProvider.getSafetyToolkit().subscribe( data => {
       console.log(data);
       this.tools = data;
+      // this.tool = data[''];
+      // this.safetyToolkitMore();
+      // alert(this.tools);
     })
   }
 
@@ -37,8 +41,10 @@ export class SafetyToolkitPage {
   }
 
 
-  safetyToolkitMore(tool){
-    this.navCtrl.push(SafetyToolkitMorePage, {tool: tool});
+  safetyToolkitMore(slug){
+    // alert(toolLink);
+    this.navCtrl.push(SafetyToolkitMorePage, {slug: slug} );
+
   }
 
 

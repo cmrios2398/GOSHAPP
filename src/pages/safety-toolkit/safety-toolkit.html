@@ -17,9 +17,9 @@
 
 
 <ion-content padding class="has-header" overflow-scroll="true" class="background">
-
+  <!-- <script src="safety-toolkit.ts"></script> -->
  
-    <!-- <ion-card id="home-card21" *ngFor="let tool of tools; let i = index">
+    <!-- <!-- <ion-card id="home-card21" *ngFor="let tool of tools; let i = index">
      
       
           <ion-item color="none" id="home-list-item6">
@@ -42,10 +42,10 @@
                 
             <div [innerHTML] = "tool.content.rendered"></div>
         
-          </ion-card-content>
-      </ion-card> -->
+          </ion-card-content> -->
+      <!-- </ion-card> --> 
 
-      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid">
+      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug">
           <div [innerHTML]="tool.content.rendered"></div>
         </accordion>
 

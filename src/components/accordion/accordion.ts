@@ -2,6 +2,7 @@ import { Component, ViewChild, OnInit, Renderer, Input } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NotesToSelfPage } from '../../pages/notes-to-self/notes-to-self';
 import { SafetyToolkitMorePage } from '../../pages/safety-toolkit-more/safety-toolkit-more';
+import { WpApiProvider } from '../../providers/wp-api/wp-api';
 
 /**
 
@@ -18,14 +19,20 @@ import { SafetyToolkitMorePage } from '../../pages/safety-toolkit-more/safety-to
 export class AccordionComponent implements OnInit {
 
   accordionExpanded = false;
-  tools;
+  
   @ViewChild("cc") cardContent: any;
   @Input('title') title: string;
   @Input('icon') icon: any;
+  @Input('slug') slug: string;
   
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public renderer: Renderer) {
- 
+    
+      // this.safetyToolkitMore();
+      // alert(this.tools);
+      
+      // alert(this.tool.title);
+    
   }
 
   ngOnInit(){
@@ -45,8 +52,10 @@ export class AccordionComponent implements OnInit {
     this.accordionExpanded = !this.accordionExpanded;
   }
 
-  safetyToolkitMore(){
-    this.navCtrl.push(SafetyToolkitMorePage);
+  safetyToolkitMore(slug){
+    // alert(toolLink);
+    this.navCtrl.push(SafetyToolkitMorePage, {slug: slug} );
+
   }
 
 

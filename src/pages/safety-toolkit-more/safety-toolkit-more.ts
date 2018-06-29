@@ -18,14 +18,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SafetyToolkitMorePage {
   tool;
+  tools;
   sections;
- 
+  slug;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, public http: HttpClient) {
-    this.tool = this.navParams.get('tool');
-    console.log(this.tool);
+    this.slug = this.navParams.get('slug');
+    console.log(this.slug);
+    // alert(this.slug);
 
-    this.http.get('http://uclst.co.uk/wp-json/wp/v2/vessel-health').subscribe( data => {
+    this.wpApiProvider.getSTSpecific(this.slug).subscribe( data => {
       console.log(data);
       this.sections = data;
     })

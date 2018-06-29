@@ -24,6 +24,9 @@ export class WpApiProvider {
     return this.http.get('http://uclst.co.uk/wp-json/wp/v2/vessel-health')
   }
 
+  getSTSpecific(slug){
+    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/' + slug)
+  }
  
   
 }
