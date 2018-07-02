@@ -25678,6 +25678,15 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+@font-face {
+  font-family: Poppins;
+  src: url("../assets/fonts/poppins.woff2");
+}
+
+* {
+  font-family: Poppins;
+}
+
 .side-menu-item {
   background: none;
   color: white;

@@ -21,6 +21,14 @@ $SIDEMENU_BOTTOM: #68b9ff;
 $SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
+@font-face{
+	font-family: Poppins; 
+	src : url('../assets/fonts/poppins.woff2');
+}
+
+* {
+	font-family: Poppins;
+}
 .side-menu-item {
 	background: none;
 	color: white;
