@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { VideoService } from '../../providers/video-service/video-service'
 
 /**
  * Generated class for the VideoLibraryPage page.
@@ -15,8 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class VideoLibraryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  narrowed_tutorials;
+  // constructor(public navCtrl: NavController, public navParams: NavParams) {
+  // }
+  // constructor(public navCtrl: NavController, public navParams: NavParams, private videoService: VideoService) {
+  // }
+  constructor(public navCtrl: NavController, public navParams: NavParams, private videoService: VideoService) {
+    this.narrowed_tutorials = this.videoService.tutorials_list;
   }
-
+  
   
 }

@@ -23,7 +23,7 @@ import { EmailComposer } from '@ionic-native/email-composer'
 import { WpApiProvider } from '../providers/wp-api/wp-api';
 import { AccordionComponent } from '../components/accordion/accordion';
 import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
-
+import { VideoService } from '../providers/video-service/video-service';
 
 @NgModule({
   declarations: [
@@ -67,7 +67,9 @@ import { AccordionMoreComponent } from '../components/accordion-more/accordion-m
     EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NoteService,
-    WpApiProvider
+    WpApiProvider,
+    VideoService,
+    
   ]
 })
 export class AppModule {}
