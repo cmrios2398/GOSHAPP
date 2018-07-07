@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 301:
+/***/ 305:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SafetyToolkitPageModule", function() { return SafetyToolkitPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VesselHealthPageModule", function() { return VesselHealthPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__safety_toolkit__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vessel_health__ = __webpack_require__(211);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SafetyToolkitPageModule = /** @class */ (function () {
-    function SafetyToolkitPageModule() {
+var VesselHealthPageModule = /** @class */ (function () {
+    function VesselHealthPageModule() {
     }
-    SafetyToolkitPageModule = __decorate([
+    VesselHealthPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__safety_toolkit__["a" /* SafetyToolkitPage */],
+                __WEBPACK_IMPORTED_MODULE_2__vessel_health__["a" /* VesselHealthPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__safety_toolkit__["a" /* SafetyToolkitPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__vessel_health__["a" /* VesselHealthPage */]),
             ],
         })
-    ], SafetyToolkitPageModule);
-    return SafetyToolkitPageModule;
+    ], VesselHealthPageModule);
+    return VesselHealthPageModule;
 }());
 
-//# sourceMappingURL=safety-toolkit.module.js.map
+//# sourceMappingURL=vessel-health.module.js.map
 
 /***/ })
 

@@ -10,6 +10,7 @@ import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 import { VesselHealthPage } from '../pages/vessel-health/vessel-health';
 import { SafetyToolkitMorePage } from '../pages/safety-toolkit-more/safety-toolkit-more';
+import { VideoPage } from '../pages/video/video'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -38,7 +39,8 @@ import { VideoService } from '../providers/video-service/video-service';
     AddNotePage,
     AccordionComponent,
     AccordionMoreComponent,
-    ViewNotePage
+    ViewNotePage,
+    VideoPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ import { VideoService } from '../providers/video-service/video-service';
     SafetyToolkitMorePage,
     NotesToSelfPage,
     AddNotePage,
-    ViewNotePage
+    ViewNotePage,
+    VideoPage
   ],
   providers: [
     StatusBar,

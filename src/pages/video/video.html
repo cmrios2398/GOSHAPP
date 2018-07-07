@@ -1,0 +1,26 @@
+<!--
+  Generated template for the VideoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> {{ video.name }} </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;">
+      <iframe [src]="trustedVideoUrl" frameborder="0" allowfullscreen="" width="560" height="315" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+    </div>
+
+    <!-- {{ videourl }} -->
+    <div class="spacer" style="height: 10px;"></div>
+  {{ video.description }}
+
+  
+</ion-content>
