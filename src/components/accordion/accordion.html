@@ -5,14 +5,14 @@
       
     <ion-item color="none" id="home-list-item6">
        
-      <ion-avatar item-left (click)="safetyToolkitMore(slug)">
+      <ion-avatar item-left (click)="safetyToolkitMore(slug,title)">
         <img src="{{ icon }}">
         </ion-avatar>
         <h2>
             <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion()">
                 <ion-icon name="ios-arrow-down"></ion-icon>
               </button>
-              <div (click)="safetyToolkitMore(slug)">
+              <div (click)="safetyToolkitMore(slug, title)">
             {{ title }} 
             </div>
         </h2>

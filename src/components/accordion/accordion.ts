@@ -52,9 +52,9 @@ export class AccordionComponent implements OnInit {
     this.accordionExpanded = !this.accordionExpanded;
   }
 
-  safetyToolkitMore(slug){
-    // alert(toolLink);
-    this.navCtrl.push(SafetyToolkitMorePage, {slug: slug} );
+  safetyToolkitMore(slug,title){
+    // alert(title);
+    this.navCtrl.push(SafetyToolkitMorePage, {slug: slug, title: title} );
 
   }
 

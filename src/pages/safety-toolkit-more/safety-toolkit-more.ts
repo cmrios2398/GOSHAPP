@@ -17,15 +17,19 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: 'safety-toolkit-more.html',
 })
 export class SafetyToolkitMorePage {
-  tool;
-  tools;
+  
+
   sections;
   slug;
+  title;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, public http: HttpClient) {
     this.slug = this.navParams.get('slug');
     console.log(this.slug);
-    // alert(this.slug);
+    
+    this.title = this.navParams.get('title');
+    // alert(this.title);
+    console.log(this.title);
 
     this.wpApiProvider.getSTSpecific(this.slug).subscribe( data => {
       console.log(data);
