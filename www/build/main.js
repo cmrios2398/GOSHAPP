@@ -1,4 +1,4 @@
-webpackJsonp([14],{
+webpackJsonp([15],{
 
 /***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -41,7 +41,7 @@ var AddNotePage = /** @class */ (function () {
     };
     AddNotePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-note',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\add-note\add-note.html"*/'<!--\n\n  Generated template for the AddNotePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Add Note</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <form [formGroup]="formGroup" (ngSubmit)="saveNote(formGroup.value)"> \n\n      <ion-item>\n\n          <ion-label>Date</ion-label>\n\n          <ion-datetime displayFormat="MM/DD/YYYY" formControlName="date"></ion-datetime>\n\n         </ion-item>\n\n    <ion-item>\n\n      <ion-label>Title</ion-label>\n\n      <ion-input type = "text" name="title" formControlName="title" required></ion-input>\n\n      <div class ="alert" *ngIf="!formGroup.controls[\'title\'].valid\n\n       && formGroup.controls[\'title\'].touched">{{ titleAlert }}</div>\n\n    </ion-item>\n\n    <ion-item>\n\n        <ion-label>Note</ion-label>\n\n        <ion-input type = "text" name="content" formControlName="content" required></ion-input>\n\n        <div class ="alert" *ngIf="!formGroup.controls[\'content\'].valid\n\n         && formGroup.controls[\'content\'].touched">{{ contentAlert }}</div>\n\n      </ion-item>\n\n      <div style="margin-left: 15px;">\n\n        <button block ion-button type="submit" [disabled]="!formGroup.valid">Save Note</button>\n\n      </div>  \n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\add-note\add-note.html"*/,
+            selector: 'page-add-note',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/add-note/add-note.html"*/'<!--\n  Generated template for the AddNotePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add Note</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form [formGroup]="formGroup" (ngSubmit)="saveNote(formGroup.value)"> \n      <ion-item>\n          <ion-label>Date</ion-label>\n          <ion-datetime displayFormat="MM/DD/YYYY" formControlName="date"></ion-datetime>\n         </ion-item>\n    <ion-item>\n      <ion-label>Title</ion-label>\n      <ion-input type = "text" name="title" formControlName="title" required></ion-input>\n      <div class ="alert" *ngIf="!formGroup.controls[\'title\'].valid\n       && formGroup.controls[\'title\'].touched">{{ titleAlert }}</div>\n    </ion-item>\n    <ion-item>\n        <ion-label>Note</ion-label>\n        <ion-input type = "text" name="content" formControlName="content" required></ion-input>\n        <div class ="alert" *ngIf="!formGroup.controls[\'content\'].valid\n         && formGroup.controls[\'content\'].touched">{{ contentAlert }}</div>\n      </ion-item>\n      <div style="margin-left: 15px;">\n        <button block ion-button type="submit" [disabled]="!formGroup.valid">Save Note</button>\n      </div>  \n  </form>\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/add-note/add-note.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_note_service_note_service__["a" /* NoteService */]])
     ], AddNotePage);
@@ -86,7 +86,7 @@ var AboutPage = /** @class */ (function () {
     };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\about\about.html"*/'<!--\n\n  Generated template for the AboutPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n    <ion-navbar color="primary">\n\n      <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n       <ion-title>About</ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-only><ion-icon name="logo-buffer"></ion-icon></button>\n\n      </ion-buttons>\n\n     \n\n    \n\n     \n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\about\about.html"*/,
+            selector: 'page-about',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/about/about.html"*/'<!--\n  Generated template for the AboutPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color="primary">\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n       <ion-title>About</ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only><ion-icon name="logo-buffer"></ion-icon></button>\n      </ion-buttons>\n     \n    \n     \n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/about/about.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], AboutPage);
@@ -105,7 +105,7 @@ var AboutPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_note_service_note_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(167);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -148,7 +148,7 @@ var ViewNotePage = /** @class */ (function () {
     };
     ViewNotePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-view-note',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\view-note\view-note.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>View Note</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        {{ note.title }}\n\n      </ion-card-title>\n\n      <div class="note-date">{{ note.date }}</div>\n\n      <hr>\n\n      <div>{{ note.content }}</div>\n\n    </ion-card-content>\n\n  </ion-card>\n\n</ion-content>\n\n<ion-footer>\n\n  <button ion-button color="balanced" block (click)="send()">Send</button>\n\n  <button ion-button color="danger" block (click)="deleteNote(note.createDate)">Delete Note</button>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\view-note\view-note.html"*/,
+            selector: 'page-view-note',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/view-note/view-note.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>View Note</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <ion-card-content>\n      <ion-card-title>\n        {{ note.title }}\n      </ion-card-title>\n      <div class="note-date">{{ note.date }}</div>\n      <hr>\n      <div>{{ note.content }}</div>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n<ion-footer>\n  <button ion-button color="balanced" block (click)="send()">Send</button>\n  <button ion-button color="danger" block (click)="deleteNote(note.createDate)">Delete Note</button>\n</ion-footer>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/view-note/view-note.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
@@ -170,8 +170,7 @@ var ViewNotePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_wp_api_wp_api__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__ = __webpack_require__(47);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -181,7 +180,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -210,19 +208,11 @@ var SafetyToolkitPage = /** @class */ (function () {
     SafetyToolkitPage.prototype.notesToSelf = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
     };
-    SafetyToolkitPage.prototype.safetyToolkitMore = function (slug) {
-        // alert(toolLink);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__safety_toolkit_more_safety_toolkit_more__["a" /* SafetyToolkitMorePage */], { slug: slug });
-    };
     SafetyToolkitPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-safety-toolkit',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\safety-toolkit\safety-toolkit.html"*/'<!--\n\n  Generated template for the SafetyToolkitPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n     <ion-title>Safety Toolkit</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="has-header" overflow-scroll="true" class="background">\n\n  <!-- <script src="safety-toolkit.ts"></script> -->\n\n \n\n    <!-- <!-- <ion-card id="home-card21" *ngFor="let tool of tools; let i = index">\n\n     \n\n      \n\n          <ion-item color="none" id="home-list-item6">\n\n             \n\n            <ion-avatar item-left (click)="safetyToolkitMore(tool)">\n\n              <img src="{{ tool.icon.guid }}">\n\n              </ion-avatar>\n\n              <h2>\n\n                  <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion(i)">\n\n                      <ion-icon name="ios-arrow-down"></ion-icon>\n\n                    </button>\n\n                    <div (click)="safetyToolkitMore(tool)">\n\n                  {{ tool.title.rendered }}\n\n                  </div>\n\n              </h2>\n\n\n\n              </ion-item>\n\n           \n\n              <ion-card-content #cc>\n\n                \n\n            <div [innerHTML] = "tool.content.rendered"></div>\n\n        \n\n          </ion-card-content> -->\n\n      <!-- </ion-card> --> \n\n\n\n      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug">\n\n          <div [innerHTML]="tool.content.rendered"></div>\n\n        </accordion>\n\n\n\n\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\safety-toolkit\safety-toolkit.html"*/,
-=======
-            selector: 'page-safety-toolkit',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit/safety-toolkit.html"*/'<!--\n  Generated template for the SafetyToolkitPage page.\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n     <ion-title>Safety Toolkit</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding class="has-header" overflow-scroll="true" class="background">\n\n \n    <!-- <ion-card id="home-card21" *ngFor="let tool of tools; let i = index">\n     \n      \n          <ion-item color="none" id="home-list-item6">\n             \n            <ion-avatar item-left (click)="safetyToolkitMore(tool)">\n              <img src="{{ tool.icon.guid }}">\n              </ion-avatar>\n              <h2>\n                  <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion(i)">\n                      <ion-icon name="ios-arrow-down"></ion-icon>\n                    </button>\n                    <div (click)="safetyToolkitMore(tool)">\n                  {{ tool.title.rendered }}\n                  </div>\n              </h2>\n\n              </ion-item>\n           \n              <ion-card-content #cc>\n                \n            <div [innerHTML] = "tool.content.rendered"></div>\n        \n          </ion-card-content>\n      </ion-card> -->\n\n      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid">\n          <div [innerHTML]="tool.content.rendered"></div>\n        </accordion>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit/safety-toolkit.html"*/,
->>>>>>> df1aa32f26296f9f65905f73106213ff8ba72c03
+            selector: 'page-safety-toolkit',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit/safety-toolkit.html"*/'<!--\n  Generated template for the SafetyToolkitPage page.\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n     <ion-title>Safety Toolkit</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding class="has-header" overflow-scroll="true" class="background">\n  <!-- <script src="safety-toolkit.ts"></script> -->\n \n    <!-- <!-- <ion-card id="home-card21" *ngFor="let tool of tools; let i = index">\n     \n      \n          <ion-item color="none" id="home-list-item6">\n             \n            <ion-avatar item-left (click)="safetyToolkitMore(tool)">\n              <img src="{{ tool.icon.guid }}">\n              </ion-avatar>\n              <h2>\n                  <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion(i)">\n                      <ion-icon name="ios-arrow-down"></ion-icon>\n                    </button>\n                    <div (click)="safetyToolkitMore(tool)">\n                  {{ tool.title.rendered }}\n                  </div>\n              </h2>\n\n              </ion-item>\n           \n              <ion-card-content #cc>\n                \n            <div [innerHTML] = "tool.content.rendered"></div>\n        \n          </ion-card-content> -->\n      <!-- </ion-card> --> \n\n      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug" [title] = "tool.title">\n          <div [innerHTML]="tool.content.rendered"></div>\n        </accordion>\n\n\n\n\n</ion-content>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit/safety-toolkit.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
     ], SafetyToolkitPage);
     return SafetyToolkitPage;
 }());
@@ -231,20 +221,16 @@ var SafetyToolkitPage = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-/***/ 109:
+/***/ 110:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VesselHealthPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafetyToolkitMorePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(83);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -257,49 +243,56 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
- * Generated class for the VesselHealthPage page.
+ * Generated class for the SafetyToolkitMorePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var VesselHealthPage = /** @class */ (function () {
-    function VesselHealthPage(navCtrl, navParams, wpApiProvider) {
+var SafetyToolkitMorePage = /** @class */ (function () {
+    function SafetyToolkitMorePage(navCtrl, navParams, wpApiProvider, http) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.wpApiProvider = wpApiProvider;
-        this.wpApiProvider.getVesselHealth().subscribe(function (data) {
+        this.http = http;
+        this.slug = this.navParams.get('slug');
+        console.log(this.slug);
+        this.title = this.navParams.get('title');
+        // alert(this.title);
+        console.log(this.title);
+        this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
             console.log(data);
             _this.sections = data;
         });
     }
-    VesselHealthPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad VesselHealthPage');
+    SafetyToolkitMorePage.prototype.notesToSelf = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
     };
-    VesselHealthPage = __decorate([
+    SafetyToolkitMorePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-vessel-health',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\vessel-health\vessel-health.html"*/'<!--\n\n  Generated template for the VesselHealthPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Vessel Health</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  \n\n  <accordion *ngFor="let section of sections" [title]="section.title.rendered">\n\n    <div [innerHTML]="section.content.rendered">\n\n      <ion-scroll zooming="true" style="width: 100%; height: 100%">\n\n      </ion-scroll>\n\n    </div>\n\n  \n\n  </accordion>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\vessel-health\vessel-health.html"*/,
+            selector: 'page-safety-toolkit-more',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit-more/safety-toolkit-more.html"*/'<!--\n  Generated template for the SafetyToolkitDetailsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>{{ title }}</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n<ion-slides class="sliderr" pager>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-01.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-02.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-03.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-04.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-05.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-06.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-07.jpg">\n  </ion-slide>\n</ion-slides>\n\n  <accordion-more *ngFor="let section of sections" [title]="section.title.rendered">\n      <div [innerHTML]="section.content.rendered"></div>\n    </accordion-more>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit-more/safety-toolkit-more.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
-    ], VesselHealthPage);
-    return VesselHealthPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]])
+    ], SafetyToolkitMorePage);
+    return SafetyToolkitMorePage;
 }());
 
-//# sourceMappingURL=vessel-health.js.map
+//# sourceMappingURL=safety-toolkit-more.js.map
 
 /***/ }),
 
->>>>>>> 7d07d5dafef3f4af2577988b7e8be910c9c25dde
->>>>>>> 00c04ebd8d23da13efea30d6370478dece506f65
->>>>>>> df1aa32f26296f9f65905f73106213ff8ba72c03
-/***/ 110:
+/***/ 111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoLibraryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__video_video__ = __webpack_require__(112);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -311,74 +304,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the VideoLibraryPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
+
 var VideoLibraryPage = /** @class */ (function () {
-    function VideoLibraryPage(navCtrl, navParams) {
+    function VideoLibraryPage(navCtrl, navParams, videoService) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.tutorials_list = [
-            {
-                key: 'vhp1',
-                name: 'Vessel Health',
-                description: 'Engagement video',
-                id: 'LXChhaEAuJI'
-            },
-            {
-                key: 'vhp2',
-                name: 'Vessel Health',
-                description: 'Education and training video',
-                id: '5qQ09xz3hOo'
-            },
-            {
-                key: 'sa',
-                name: 'Situational Awareness',
-                description: 'Situational Awareness for Everyone (SAFE)',
-                id: 'UMVRgbN-AS0',
-            },
-            {
-                key: 'phototherapy',
-                name: 'Phototherapy',
-                description: 'Preparing the baby for phototherapy training video',
-                id: 'rm9tWpOZ-IY'
-            },
-            {
-                key: 'babycheck',
-                name: 'Baby check',
-                description: 'How to conduct a newborn examination training video',
-                id: 'IS8t2YaH6Jo'
-            },
-            {
-                key: 'tracheostomy',
-                name: 'Tracheostomy Support',
-                description: 'Basic life support of babies and children with a tracheostomy training video',
-                id: '5wd7KLo32fU'
-            },
-            {
-                key: 'tracheostomytube',
-                name: 'Changing a tracheostomy tube',
-                description: "Tracheostomy elective tube change training video",
-                id: "6vrYRKLhZSg"
-            }
-        ];
-        this.tutorials_keys = {};
+        this.videoService = videoService;
+        this.narrowed_tutorials = this.videoService.tutorials_list;
+        this.data = {
+            search: ''
+        };
     }
-    VideoLibraryPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad VideoLibraryPage');
+    VideoLibraryPage.prototype.search = function () {
+        alert("working");
+        var searchedString = this.data.search.toLocaleLowerCase();
+        if (searchedString == '') {
+            this.narrowed_tutorials = this.videoService.tutorials_list;
+            return;
+        }
+        this.narrowed_tutorials = this.videoService.tutorials_list.filter(function (tutorial) {
+            if (tutorial.name.toLocaleLowerCase().indexOf(searchedString) > -1 || tutorial.description.toLocaleLowerCase().indexOf(searchedString) > -1) {
+                return true;
+            }
+            return false;
+        });
+    };
+    VideoLibraryPage.prototype.viewVideo = function (key) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__video_video__["a" /* VideoPage */], { videokey: key });
     };
     VideoLibraryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'page-video-library',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\video-library\video-library.html"*/'<!--\n\n  Generated template for the VideoLibraryPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n    <ion-navbar color="primary">\n\n      <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n      <ion-title>Video Library</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n\n\n  <ion-content padding="true" class="has-header">\n\n    <form class="list">\n\n      <label class="item item-input">\n\n        <i class="icon ion-search placeholder-icon"></i>\n\n        <input type="search" placeholder="" ng-model="data.search" ng-change="search()">\n\n      </label>\n\n    </form>\n\n    <ion-list>\n\n      <ion-item class="item-thumbnail-left" ui-sref="video({&quot;videokey&quot;:&quot;&quot;+tutorial.key+&quot;&quot;})" ng-repeat="tutorial in narrowed_tutorials">\n\n        <img src="https://img.youtube.com/vi/{{tutorial.id}}/maxresdefault.jpg">\n\n        <h2>{{tutorial.name}}</h2>\n\n        <p>{{tutorial.description}}</p>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\video-library\video-library.html"*/,
-=======
-            selector: 'page-video-library',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/video-library/video-library.html"*/'<!--\n  Generated template for the VideoLibraryPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color="primary">\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>Video Library</ion-title>\n    </ion-navbar>\n  </ion-header>\n\n\n  <ion-content padding="true" class="has-header">\n    <form class="list">\n      <label class="item item-input">\n        <i class="icon ion-search placeholder-icon"></i>\n        <input type="search" placeholder="" ng-model="data.search" ng-change="search()">\n      </label>\n    </form>\n    <ion-list>\n      <ion-item class="item-thumbnail-left" ui-sref="video({&quot;videokey&quot;:&quot;&quot;+tutorial.key+&quot;&quot;})" ng-repeat="tutorial in narrowed_tutorials">\n        <img src="https://img.youtube.com/vi/{{tutorial.id}}/maxresdefault.jpg">\n        <h2>{{tutorial.name}}</h2>\n        <p>{{tutorial.description}}</p>\n      </ion-item>\n    </ion-list>\n  </ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/video-library/video-library.html"*/,
->>>>>>> df1aa32f26296f9f65905f73106213ff8ba72c03
+            selector: 'page-video-library',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/video-library/video-library.html"*/'\n<ion-header>\n    <ion-navbar color="primary">\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>Video Library</ion-title>\n    </ion-navbar>\n  </ion-header>\n\n \n    <ion-content padding="true" class="has-header">\n      \n        \n       \n          <ion-searchbar \n\n            [(ngModel)] = "data.search" \n            [ngModelOptions]="{standalone: true}" \n            (keyup.enter)="search()"\n            (ionInput) = "search()"\n        \n          ></ion-searchbar>\n        \n      \n      <ion-list>\n        <ion-item (click)="viewVideo(tutorial.key)" *ngFor="let tutorial of narrowed_tutorials" class="item-thumbnail-left">\n          \n          <img src="https://img.youtube.com/vi/{{tutorial.id}}/maxresdefault.jpg">\n          <h2>{{ tutorial.name }}</h2>\n          <h3 class="lbl">{{ tutorial.description }}</h3>\n\n        </ion-item>\n      </ion-list>\n    </ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/video-library/video-library.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__["a" /* VideoService */]])
     ], VideoLibraryPage);
     return VideoLibraryPage;
 }());
@@ -387,7 +346,63 @@ var VideoLibraryPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 121:
+/***/ 112:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(27);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the VideoPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var VideoPage = /** @class */ (function () {
+    function VideoPage(navCtrl, navParams, videoService, domSanitizer) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.videoService = videoService;
+        this.domSanitizer = domSanitizer;
+        this.video = videoService.tutorials_keys[navParams.get('videokey')];
+        this.videourl = "https://www.youtube.com/embed/" + this.video.id;
+    }
+    VideoPage.prototype.ionViewWillEnter = function () {
+        this.trustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.videourl);
+    };
+    VideoPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad VideoPage');
+    };
+    VideoPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-video',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/video/video.html"*/'<!--\n  Generated template for the VideoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title> {{ video.name }} </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <div style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;">\n      <iframe [src]="trustedVideoUrl" frameborder="0" allowfullscreen="" width="560" height="315" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>\n    </div>\n\n    <!-- {{ videourl }} -->\n    <div class="spacer" style="height: 10px;"></div>\n  {{ video.description }}\n\n  \n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/video/video.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__["a" /* VideoService */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */]])
+    ], VideoPage);
+    return VideoPage;
+}());
+
+//# sourceMappingURL=video.js.map
+
+/***/ }),
+
+/***/ 123:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -400,68 +415,72 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 121;
+webpackEmptyAsyncContext.id = 123;
 
 /***/ }),
 
-/***/ 163:
+/***/ 165:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/about/about.module": [
-		292,
-		13
+		294,
+		14
 	],
 	"../pages/add-note/add-note.module": [
-		293,
-		12
+		295,
+		13
 	],
 	"../pages/e-diary/e-diary.module": [
-		294,
+		296,
 		5
 	],
 	"../pages/e-psag/e-psag.module": [
-		295,
+		297,
 		4
 	],
 	"../pages/neonatal-toolkit/neonatal-toolkit.module": [
-		296,
+		298,
 		3
 	],
 	"../pages/notes-to-self/notes-to-self.module": [
-		297,
-		11
+		299,
+		12
 	],
 	"../pages/safety-huddle/safety-huddle.module": [
-		298,
+		300,
 		2
 	],
 	"../pages/safety-toolkit-more/safety-toolkit-more.module": [
-		299,
-		10
+		302,
+		11
 	],
 	"../pages/safety-toolkit/safety-toolkit.module": [
-		300,
-		9
+		301,
+		10
 	],
 	"../pages/situational-awareness/situational-awareness.module": [
-		301,
+		303,
 		1
 	],
 	"../pages/tracheostomy-emergency-management/tracheostomy-emergency-management.module": [
-		302,
+		304,
 		0
 	],
 	"../pages/vessel-health/vessel-health.module": [
-		303,
-		8
+		305,
+		9
 	],
 	"../pages/video-library/video-library.module": [
-		304,
+		306,
+		8
+	],
+	"../pages/video/video.module": [
+		307,
 		7
 	],
 	"../pages/view-note/view-note.module": [
-		305,
+		308,
 		6
 	]
 };
@@ -476,12 +495,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 163;
+webpackAsyncContext.id = 165;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 208:
+/***/ 210:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -505,7 +524,7 @@ var HomePage = /** @class */ (function () {
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <h3>GOSH App</h3>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3>GOSH App</h3>\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], HomePage);
@@ -516,7 +535,7 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 209:
+/***/ 211:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -558,7 +577,7 @@ var VesselHealthPage = /** @class */ (function () {
     };
     VesselHealthPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-vessel-health',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\vessel-health\vessel-health.html"*/'<!--\n\n  Generated template for the VesselHealthPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Vessel Health</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  \n\n  <accordion *ngFor="let section of sections" [title]="section.title.rendered">\n\n    <div [innerHTML]="section.content.rendered">\n\n      <!-- <ion-scroll zooming="true" style="width: 100%; height: 100%"> -->\n\n    </div>\n\n  <!-- </ion-scroll> -->\n\n  \n\n  </accordion>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\vessel-health\vessel-health.html"*/,
+            selector: 'page-vessel-health',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/vessel-health/vessel-health.html"*/'<!--\n  Generated template for the VesselHealthPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Vessel Health</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  \n  <accordion *ngFor="let section of sections" [title]="section.title.rendered">\n    <div [innerHTML]="section.content.rendered">\n      <!-- <ion-scroll zooming="true" style="width: 100%; height: 100%"> -->\n    </div>\n  <!-- </ion-scroll> -->\n  \n  </accordion>\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/vessel-health/vessel-health.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
     ], VesselHealthPage);
@@ -569,13 +588,13 @@ var VesselHealthPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 210:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(233);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -583,40 +602,44 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 231:
+/***/ 233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(289);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_about_about__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_safety_toolkit_safety_toolkit__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_video_library_video_library__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_video_library_video_library__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_notes_to_self_notes_to_self__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_vessel_health_vessel_health__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_add_note_add_note__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_note_service_note_service__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_storage__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_forms__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_view_note_view_note__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_email_composer__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_wp_api_wp_api__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_accordion_accordion__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_accordion_more_accordion_more__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_vessel_health_vessel_health__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_video_video__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_splash_screen__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_common_http__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_add_note_add_note__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_note_service_note_service__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_storage__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_forms__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_view_note_view_note__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_email_composer__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_wp_api_wp_api__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_accordion_accordion__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_accordion_more_accordion_more__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_video_service_video_service__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -654,14 +677,15 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_10__pages_safety_toolkit_more_safety_toolkit_more__["a" /* SafetyToolkitMorePage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_vessel_health_vessel_health__["a" /* VesselHealthPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_notes_to_self_notes_to_self__["a" /* NotesToSelfPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_add_note_add_note__["a" /* AddNotePage */],
-                __WEBPACK_IMPORTED_MODULE_21__components_accordion_accordion__["a" /* AccordionComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__components_accordion_more_accordion_more__["a" /* AccordionMoreComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_view_note_view_note__["a" /* ViewNotePage */]
+                __WEBPACK_IMPORTED_MODULE_15__pages_add_note_add_note__["a" /* AddNotePage */],
+                __WEBPACK_IMPORTED_MODULE_22__components_accordion_accordion__["a" /* AccordionComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__components_accordion_more_accordion_more__["a" /* AccordionMoreComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_view_note_view_note__["a" /* ViewNotePage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_video_video__["a" /* VideoPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_14__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
@@ -671,18 +695,19 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/neonatal-toolkit/neonatal-toolkit.module#NeonatalToolkitPageModule', name: 'NeonatalToolkitPage', segment: 'neonatal-toolkit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notes-to-self/notes-to-self.module#NotesToSelfPageModule', name: 'NotesToSelfPage', segment: 'notes-to-self', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/safety-huddle/safety-huddle.module#SafetyHuddlePageModule', name: 'SafetyHuddlePage', segment: 'safety-huddle', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/safety-toolkit-more/safety-toolkit-more.module#SafetyToolkitMorePageModule', name: 'SafetyToolkitMorePage', segment: 'safety-toolkit-more', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/safety-toolkit/safety-toolkit.module#SafetyToolkitPageModule', name: 'SafetyToolkitPage', segment: 'safety-toolkit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/safety-toolkit-more/safety-toolkit-more.module#SafetyToolkitMorePageModule', name: 'SafetyToolkitMorePage', segment: 'safety-toolkit-more', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/situational-awareness/situational-awareness.module#SituationalAwarenessPageModule', name: 'SituationalAwarenessPage', segment: 'situational-awareness', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tracheostomy-emergency-management/tracheostomy-emergency-management.module#TracheostomyEmergencyManagementPageModule', name: 'TracheostomyEmergencyManagementPage', segment: 'tracheostomy-emergency-management', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/vessel-health/vessel-health.module#VesselHealthPageModule', name: 'VesselHealthPage', segment: 'vessel-health', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/video-library/video-library.module#VideoLibraryPageModule', name: 'VideoLibraryPage', segment: 'video-library', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/video/video.module#VideoPageModule', name: 'VideoPage', segment: 'video', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/view-note/view-note.module#ViewNotePageModule', name: 'ViewNotePage', segment: 'view-note', priority: 'low', defaultHistory: [] }
                     ]
                 }),
-                __WEBPACK_IMPORTED_MODULE_16__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_17__angular_forms__["c" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_forms__["f" /* ReactiveFormsModule */]
+                __WEBPACK_IMPORTED_MODULE_17__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_18__angular_forms__["c" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_forms__["f" /* ReactiveFormsModule */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
             entryComponents: [
@@ -694,16 +719,18 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__pages_vessel_health_vessel_health__["a" /* VesselHealthPage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_safety_toolkit_more_safety_toolkit_more__["a" /* SafetyToolkitMorePage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_notes_to_self_notes_to_self__["a" /* NotesToSelfPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_add_note_add_note__["a" /* AddNotePage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_view_note_view_note__["a" /* ViewNotePage */]
+                __WEBPACK_IMPORTED_MODULE_15__pages_add_note_add_note__["a" /* AddNotePage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_view_note_view_note__["a" /* ViewNotePage */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_video_video__["a" /* VideoPage */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
-                __WEBPACK_IMPORTED_MODULE_19__ionic_native_email_composer__["a" /* EmailComposer */],
+                __WEBPACK_IMPORTED_MODULE_12__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_13__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_20__ionic_native_email_composer__["a" /* EmailComposer */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_15__providers_note_service_note_service__["a" /* NoteService */],
-                __WEBPACK_IMPORTED_MODULE_20__providers_wp_api_wp_api__["a" /* WpApiProvider */]
+                __WEBPACK_IMPORTED_MODULE_16__providers_note_service_note_service__["a" /* NoteService */],
+                __WEBPACK_IMPORTED_MODULE_21__providers_wp_api_wp_api__["a" /* WpApiProvider */],
+                __WEBPACK_IMPORTED_MODULE_24__providers_video_service_video_service__["a" /* VideoService */],
             ]
         })
     ], AppModule);
@@ -714,19 +741,19 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 289:
+/***/ 291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_about_about__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_safety_toolkit_safety_toolkit__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_video_library_video_library__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_video_library_video_library__ = __webpack_require__(111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -778,7 +805,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\app\app.html"*/'<ion-menu [content]="content">\n\n  <ion-header>\n\n    \n\n  </ion-header>\n\n\n\n  <ion-content class="side-menu-gradient">\n\n    <ion-list>\n\n        <div class="spacer" style="height: 40px;"></div>\n\n        <h2 style="color:rgba(255, 255, 255, 0.927);text-align:center;font-weight:400;">GOSH App</h2>\n\n        <div class="spacer" style="height: 10px;"></div>\n\n      <button class="side-menu-item" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" no-line>\n\n        {{p.title}}\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    \n  </ion-header>\n\n  <ion-content class="side-menu-gradient">\n    <ion-list>\n        <div class="spacer" style="height: 40px;"></div>\n        <h2 style="color:rgba(255, 255, 255, 0.927);text-align:center;font-weight:400;">GOSH App</h2>\n        <div class="spacer" style="height: 10px;"></div>\n      <button class="side-menu-item" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" no-line>\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -789,14 +816,14 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 290:
+/***/ 292:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccordionComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(110);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -842,9 +869,9 @@ var AccordionComponent = /** @class */ (function () {
         }
         this.accordionExpanded = !this.accordionExpanded;
     };
-    AccordionComponent.prototype.safetyToolkitMore = function (slug) {
-        // alert(toolLink);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages_safety_toolkit_more_safety_toolkit_more__["a" /* SafetyToolkitMorePage */], { slug: slug });
+    AccordionComponent.prototype.safetyToolkitMore = function (slug, title) {
+        // alert(title);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__pages_safety_toolkit_more_safety_toolkit_more__["a" /* SafetyToolkitMorePage */], { slug: slug, title: title });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])("cc"),
@@ -864,11 +891,7 @@ var AccordionComponent = /** @class */ (function () {
     ], AccordionComponent.prototype, "slug", void 0);
     AccordionComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-<<<<<<< HEAD
-            selector: 'accordion',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\components\accordion\accordion.html"*/'\n\n\n\n<ion-card id="home-card21">\n\n     \n\n      \n\n    <ion-item color="none" id="home-list-item6">\n\n       \n\n      <ion-avatar item-left (click)="safetyToolkitMore(tool)">\n\n        <img src="{{ icon }}">\n\n        </ion-avatar>\n\n        <h2>\n\n            <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion()">\n\n                <ion-icon name="ios-arrow-down"></ion-icon>\n\n              </button>\n\n              <div (click)="safetyToolkitMore(slug)">\n\n            {{ title }} \n\n            </div>\n\n        </h2>\n\n\n\n        </ion-item>\n\n     \n\n        <ion-card-content #cc>\n\n          \n\n     <ng-content></ng-content>\n\n  \n\n    </ion-card-content>\n\n</ion-card>'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\components\accordion\accordion.html"*/
-=======
-            selector: 'accordion',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion/accordion.html"*/'\n\n<ion-card id="home-card21">\n     \n      \n    <ion-item color="none" id="home-list-item6">\n       \n      <ion-avatar item-left (click)="safetyToolkitMore()">\n        <img src="{{ icon }}">\n        </ion-avatar>\n        <h2>\n            <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion()">\n                <ion-icon name="ios-arrow-down"></ion-icon>\n              </button>\n              <div (click)="safetyToolkitMore()">\n            {{ title }}\n            </div>\n        </h2>\n\n        </ion-item>\n     \n        <ion-card-content #cc>\n          \n     <ng-content></ng-content>\n  \n    </ion-card-content>\n</ion-card>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion/accordion.html"*/
->>>>>>> df1aa32f26296f9f65905f73106213ff8ba72c03
+            selector: 'accordion',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion/accordion.html"*/'\n\n<ion-card id="home-card21">\n     \n      \n    <ion-item color="none" id="home-list-item6">\n       \n      <ion-avatar item-left (click)="safetyToolkitMore(slug,title)">\n        <img src="{{ icon }}">\n        </ion-avatar>\n        <h2>\n            <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion()">\n                <ion-icon name="ios-arrow-down"></ion-icon>\n              </button>\n              <div (click)="safetyToolkitMore(slug, title)">\n            {{ title }} \n            </div>\n        </h2>\n\n        </ion-item>\n     \n        <ion-card-content #cc>\n          \n     <ng-content></ng-content>\n  \n    </ion-card-content>\n</ion-card>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion/accordion.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
     ], AccordionComponent);
@@ -879,7 +902,7 @@ var AccordionComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 291:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -931,7 +954,7 @@ var AccordionMoreComponent = /** @class */ (function () {
     ], AccordionMoreComponent.prototype, "title", void 0);
     AccordionMoreComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'accordion-more',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\components\accordion-more\accordion-more.html"*/'<ion-card>\n\n    <ion-card-header (click)="toggleAccordion()">\n\n      {{ title }}\n\n    </ion-card-header>\n\n    <ion-card-content #cc>\n\n       <ng-content></ng-content>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  \n\n  '/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\components\accordion-more\accordion-more.html"*/
+            selector: 'accordion-more',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion-more/accordion-more.html"*/'<ion-card>\n    <ion-card-header (click)="toggleAccordion()">\n      {{ title }}\n    </ion-card-header>\n    <ion-card-content #cc>\n       <ng-content></ng-content>\n    </ion-card-content>\n  </ion-card>\n  \n  '/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion-more/accordion-more.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
     ], AccordionMoreComponent);
@@ -948,7 +971,7 @@ var AccordionMoreComponent = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NoteService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(166);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1006,7 +1029,7 @@ var NoteService = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WpApiProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1098,7 +1121,7 @@ var NotesToSelfPage = /** @class */ (function () {
     };
     NotesToSelfPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-notes-to-self',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\notes-to-self\notes-to-self.html"*/'<!--\n\n  Generated template for the NotesToSelfPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Notes To Self</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <button ion-item *ngFor="let note of notes | async" (click)="getNote(note.createDate)">\n\n        {{ note.title }}\n\n    </button>\n\n  </ion-list>\n\n    \n\n</ion-content>\n\n<ion-footer>\n\n  <button ion-button (click)="addNote()" block>Add Note</button>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\notes-to-self\notes-to-self.html"*/,
+            selector: 'page-notes-to-self',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/notes-to-self/notes-to-self.html"*/'<!--\n  Generated template for the NotesToSelfPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Notes To Self</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <button ion-item *ngFor="let note of notes | async" (click)="getNote(note.createDate)">\n        {{ note.title }}\n    </button>\n  </ion-list>\n    \n</ion-content>\n<ion-footer>\n  <button ion-button (click)="addNote()" block>Add Note</button>\n</ion-footer>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/notes-to-self/notes-to-self.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_note_service_note_service__["a" /* NoteService */]])
     ], NotesToSelfPage);
@@ -1109,16 +1132,12 @@ var NotesToSelfPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 53:
+/***/ 84:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafetyToolkitMorePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(84);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1129,50 +1148,71 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-
-
-
-/**
- * Generated class for the SafetyToolkitMorePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var SafetyToolkitMorePage = /** @class */ (function () {
-    function SafetyToolkitMorePage(navCtrl, navParams, wpApiProvider, http) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.wpApiProvider = wpApiProvider;
-        this.http = http;
-        this.slug = this.navParams.get('slug');
-        console.log(this.slug);
-        // alert(this.slug);
-        this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
-            console.log(data);
-            _this.sections = data;
-        });
+var VideoService = /** @class */ (function () {
+    function VideoService() {
+        this.tutorials_keys = {};
+        this.tutorials_list = [
+            {
+                key: 'vhp1',
+                name: 'Vessel Health',
+                description: 'Engagement video',
+                id: 'LXChhaEAuJI'
+            },
+            {
+                key: 'vhp2',
+                name: 'Vessel Health',
+                description: 'Education and training video',
+                id: '5qQ09xz3hOo'
+            },
+            {
+                key: 'sa',
+                name: 'Situational Awareness',
+                description: 'Situational Awareness for Everyone (SAFE)',
+                id: 'UMVRgbN-AS0',
+            },
+            {
+                key: 'phototherapy',
+                name: 'Phototherapy',
+                description: 'Preparing the baby for phototherapy training video',
+                id: 'rm9tWpOZ-IY'
+            },
+            {
+                key: 'babycheck',
+                name: 'Baby check',
+                description: 'How to conduct a newborn examination training video',
+                id: 'IS8t2YaH6Jo'
+            },
+            {
+                key: 'tracheostomy',
+                name: 'Tracheostomy Support',
+                description: 'Basic life support of babies and children with a tracheostomy training video',
+                id: '5wd7KLo32fU'
+            },
+            {
+                key: 'tracheostomytube',
+                name: 'Changing a tracheostomy tube',
+                description: "Tracheostomy elective tube change training video",
+                id: "6vrYRKLhZSg"
+            }
+        ];
+        console.log('Hello VideoService Service');
+        for (var i in this.tutorials_list) {
+            this.tutorials_keys[this.tutorials_list[i].key] = this.tutorials_list[i];
+        }
     }
-    SafetyToolkitMorePage.prototype.notesToSelf = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
+    VideoService.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad VideoLibraryPage');
     };
-    SafetyToolkitMorePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-safety-toolkit-more',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\safety-toolkit-more\safety-toolkit-more.html"*/'<!--\n\n  Generated template for the SafetyToolkitDetailsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="primary">\n\n    <ion-title>{{ title }}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n\n\n  <accordion-more *ngFor="let section of sections" [title]="section.title.rendered">\n\n      <div [innerHTML]="section.content.rendered"></div>\n\n    </accordion-more>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1\src\pages\safety-toolkit-more\safety-toolkit-more.html"*/,
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__["a" /* WpApiProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__["a" /* WpApiProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */]) === "function" && _d || Object])
-    ], SafetyToolkitMorePage);
-    return SafetyToolkitMorePage;
-<<<<<<< HEAD
-    var _a, _b, _c, _d;
-=======
->>>>>>> df1aa32f26296f9f65905f73106213ff8ba72c03
+    VideoService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], VideoService);
+    return VideoService;
 }());
 
-//# sourceMappingURL=safety-toolkit-more.js.map
+//# sourceMappingURL=video-service.js.map
 
 /***/ })
 
-},[210]);
+},[212]);
 //# sourceMappingURL=main.js.map

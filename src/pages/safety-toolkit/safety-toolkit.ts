@@ -41,11 +41,11 @@ export class SafetyToolkitPage {
   }
 
 
-  safetyToolkitMore(slug){
-    // alert(toolLink);
-    this.navCtrl.push(SafetyToolkitMorePage, {slug: slug} );
+  // safetyToolkitMore(slug,title){
+  //   // alert(toolLink);
+  //   this.navCtrl.push(SafetyToolkitMorePage, {slug: slug, title: title});
 
-  }
+  // }
 
 
 

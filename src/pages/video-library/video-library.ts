@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { VideoService } from '../../providers/video-service/video-service'
+import { VideoPage } from '../video/video';
 
-/**
- * Generated class for the VideoLibraryPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,67 +11,36 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class VideoLibraryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  narrowed_tutorials;
+  data;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad VideoLibraryPage');
-  }
-
-
-  tutorials_list = [
-    {
-      key: 'vhp1',
-      name: 'Vessel Health',
-      description: 'Engagement video',
-      id: 'LXChhaEAuJI'
-    },
-    {
-      key: 'vhp2',
-      name: 'Vessel Health',
-      description: 'Education and training video',
-      id: '5qQ09xz3hOo'
-    },
-    {
-      key: 'sa',
-      name: 'Situational Awareness',
-      description: 'Situational Awareness for Everyone (SAFE)',
-      id: 'UMVRgbN-AS0',
-    },
-    {
-      key: 'phototherapy',
-      name: 'Phototherapy',
-      description: 'Preparing the baby for phototherapy training video',
-      id: 'rm9tWpOZ-IY'
-    },
-    {
-      key: 'babycheck',
-      name: 'Baby check',
-      description: 'How to conduct a newborn examination training video',
-      id: 'IS8t2YaH6Jo'
-    },
-    {
-      key: 'tracheostomy',
-      name: 'Tracheostomy Support',
-      description: 'Basic life support of babies and children with a tracheostomy training video',
-      id: '5wd7KLo32fU'
-    },
-    {
-      key: 'tracheostomytube',
-      name: 'Changing a tracheostomy tube',
-      description: "Tracheostomy elective tube change training video",
-      id: "6vrYRKLhZSg"
+  constructor(public navCtrl: NavController, public navParams: NavParams, private videoService: VideoService) {
+    this.narrowed_tutorials = this.videoService.tutorials_list;
+    this.data = {
+      search: ''
     }
-  ];
+  }
   
-  tutorials_keys = {};
+  search(){
+    alert("working");
+    var searchedString = this.data.search.toLocaleLowerCase();
 
-  // for (var i=0;i<tutorials_list.length;i++){
-  //   tutorials_keys[tutorials_list[i].key] = tutorials_list[i];
-  // }
+    if (searchedString == ''){
+      this.narrowed_tutorials = this.videoService.tutorials_list;
+      return; 
+    }
 
-// return {
-//     list: tutorials_list,
-//     keys: tutorials_keys
+    this.narrowed_tutorials = this.videoService.tutorials_list.filter(function(tutorial){
+      if(tutorial.name.toLocaleLowerCase().indexOf(searchedString) > -1 || tutorial.description.toLocaleLowerCase().indexOf(searchedString) > -1){
+        return true;
+      }
+        return false;
+    })
+  }
 
+  viewVideo(key){
+    this.navCtrl.push(VideoPage, {videokey: key} );
+
+  }
+  
 }

@@ -1,9 +1,4 @@
-<!--
-  Generated template for the VideoLibraryPage page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
     <ion-navbar color="primary">
       <button ion-button menuToggle>
@@ -13,19 +8,28 @@
     </ion-navbar>
   </ion-header>
 
+ 
+    <ion-content padding="true" class="has-header">
+      
+        
+       
+          <ion-searchbar 
 
-  <ion-content padding="true" class="has-header">
-    <form class="list">
-      <label class="item item-input">
-        <i class="icon ion-search placeholder-icon"></i>
-        <input type="search" placeholder="" ng-model="data.search" ng-change="search()">
-      </label>
-    </form>
-    <ion-list>
-      <ion-item class="item-thumbnail-left" ui-sref="video({&quot;videokey&quot;:&quot;&quot;+tutorial.key+&quot;&quot;})" ng-repeat="tutorial in narrowed_tutorials">
-        <img src="https://img.youtube.com/vi/{{tutorial.id}}/maxresdefault.jpg">
-        <h2>{{tutorial.name}}</h2>
-        <p>{{tutorial.description}}</p>
-      </ion-item>
-    </ion-list>
-  </ion-content>
+            [(ngModel)] = "data.search" 
+            [ngModelOptions]="{standalone: true}" 
+            (keyup.enter)="search()"
+            (ionInput) = "search()"
+        
+          ></ion-searchbar>
+        
+      
+      <ion-list>
+        <ion-item (click)="viewVideo(tutorial.key)" *ngFor="let tutorial of narrowed_tutorials" class="item-thumbnail-left">
+          
+          <img src="https://img.youtube.com/vi/{{tutorial.id}}/maxresdefault.jpg">
+          <h2>{{ tutorial.name }}</h2>
+          <h3 class="lbl">{{ tutorial.description }}</h3>
+
+        </ion-item>
+      </ion-list>
+    </ion-content>

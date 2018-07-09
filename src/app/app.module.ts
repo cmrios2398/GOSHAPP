@@ -10,6 +10,7 @@ import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 import { VesselHealthPage } from '../pages/vessel-health/vessel-health';
 import { SafetyToolkitMorePage } from '../pages/safety-toolkit-more/safety-toolkit-more';
+import { VideoPage } from '../pages/video/video'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,7 +24,7 @@ import { EmailComposer } from '@ionic-native/email-composer'
 import { WpApiProvider } from '../providers/wp-api/wp-api';
 import { AccordionComponent } from '../components/accordion/accordion';
 import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
-
+import { VideoService } from '../providers/video-service/video-service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AccordionMoreComponent } from '../components/accordion-more/accordion-m
     AddNotePage,
     AccordionComponent,
     AccordionMoreComponent,
-    ViewNotePage
+    ViewNotePage,
+    VideoPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ import { AccordionMoreComponent } from '../components/accordion-more/accordion-m
     SafetyToolkitMorePage,
     NotesToSelfPage,
     AddNotePage,
-    ViewNotePage
+    ViewNotePage,
+    VideoPage
   ],
   providers: [
     StatusBar,
@@ -67,7 +70,9 @@ import { AccordionMoreComponent } from '../components/accordion-more/accordion-m
     EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     NoteService,
-    WpApiProvider
+    WpApiProvider,
+    VideoService,
+    
   ]
 })
 export class AppModule {}

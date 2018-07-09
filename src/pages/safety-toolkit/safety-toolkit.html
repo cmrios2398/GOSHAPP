@@ -45,7 +45,7 @@
           </ion-card-content> -->
       <!-- </ion-card> --> 
 
-      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug">
+      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug" [title] = "tool.title">
           <div [innerHTML]="tool.content.rendered"></div>
         </accordion>
 
