@@ -25723,6 +25723,18 @@ accordion-more .card-content {
   max-height: 0px;
 }
 
+page-icu-new-starters .card-title {
+  font-weight: bold;
+}
+
+page-icu-new-starters .card {
+  background: #97EEFF;
+}
+
+page-icu-new-starters .item {
+  background: #97EEFF;
+}
+
 page-safety-toolkit .background {
   background-color: #9ed7e9;
 }

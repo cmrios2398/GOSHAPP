@@ -9,6 +9,7 @@ import { AboutPage } from '../pages/about/about';
 import { SafetyToolkitPage } from '../pages/safety-toolkit/safety-toolkit';
 import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
+import { IcuNewStartersPage } from '../pages/icu-new-starters/icu-new-starters';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,7 +30,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'About', component: AboutPage},
       { title: 'Safety Toolkit', component: SafetyToolkitPage },
-      { title: 'Video Library', component: VideoLibraryPage }
+      { title: 'Video Library', component: VideoLibraryPage },
+      { title: 'ICU-New Starters', component: IcuNewStartersPage }
     ];
 
 
