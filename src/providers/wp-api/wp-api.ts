@@ -20,6 +20,10 @@ export class WpApiProvider {
     return this.http.get('http://uclst.co.uk/wp-json/wp/v2/safety_toolkit')
   }
 
+  getICU(){
+    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/icu-new-starters')
+  }
+
   getVesselHealth(){
     return this.http.get('http://uclst.co.uk/wp-json/wp/v2/vessel-health')
   }

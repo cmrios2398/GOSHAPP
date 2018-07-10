@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
 import { SafetyToolkitPage } from '../pages/safety-toolkit/safety-toolkit';
+import { IcuNewStartersPage } from '../pages/icu-new-starters/icu-new-starters';
 import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 import { VesselHealthPage } from '../pages/vessel-health/vessel-health';
@@ -33,6 +34,7 @@ import { VideoService } from '../providers/video-service/video-service';
     AboutPage,
     VideoLibraryPage,
     SafetyToolkitPage,
+    IcuNewStartersPage,
     SafetyToolkitMorePage,
     VesselHealthPage,
     NotesToSelfPage,
@@ -57,6 +59,7 @@ import { VideoService } from '../providers/video-service/video-service';
     AboutPage,
     VideoLibraryPage,
     SafetyToolkitPage,
+    IcuNewStartersPage,
     VesselHealthPage,
     SafetyToolkitMorePage,
     NotesToSelfPage,
