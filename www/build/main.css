@@ -25725,6 +25725,7 @@ accordion-more .card-content {
 
 page-icu-new-starters .card-title {
   font-weight: bold;
+  font-size: 1.8rem;
 }
 
 page-icu-new-starters .card {
@@ -25733,6 +25734,10 @@ page-icu-new-starters .card {
 
 page-icu-new-starters .item {
   background: #97EEFF;
+}
+
+page-icu-new-starters .item h2 {
+  font-size: 1.5rem;
 }
 
 page-safety-toolkit .background {
@@ -25769,6 +25774,25 @@ page-safety-toolkit-more .sliderr {
 }
 
 page-safety-toolkit-more .swiper-pagination-bullet-active {
+  background: darkblue;
+}
+
+page-template-slider .card-header {
+  background-color: #184F8A;
+  color: #fff;
+  white-space: initial;
+}
+
+page-template-slider .card-content {
+  padding: 0px 16px;
+  max-height: 0px;
+}
+
+page-template-slider .sliderr {
+  max-height: 40%;
+}
+
+page-template-slider .swiper-pagination-bullet-active {
   background: darkblue;
 }
 

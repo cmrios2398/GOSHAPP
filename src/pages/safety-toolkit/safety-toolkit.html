@@ -16,35 +16,8 @@
 
 
 <ion-content padding class="has-header" overflow-scroll="true" class="background">
-  <!-- <script src="safety-toolkit.ts"></script> -->
- 
-    <!-- <!-- <ion-card id="home-card21" *ngFor="let tool of tools; let i = index">
-     
-      
-          <ion-item color="none" id="home-list-item6">
-             
-            <ion-avatar item-left (click)="safetyToolkitMore(tool)">
-              <img src="{{ tool.icon.guid }}">
-              </ion-avatar>
-              <h2>
-                  <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion(i)">
-                      <ion-icon name="ios-arrow-down"></ion-icon>
-                    </button>
-                    <div (click)="safetyToolkitMore(tool)">
-                  {{ tool.title.rendered }}
-                  </div>
-              </h2>
 
-              </ion-item>
-           
-              <ion-card-content #cc>
-                
-            <div [innerHTML] = "tool.content.rendered"></div>
-        
-          </ion-card-content> -->
-      <!-- </ion-card> --> 
-
-      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug" [title] = "tool.title">
+      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug" [template] = "tool.template_name">
           <div [innerHTML]="tool.content.rendered"></div>
         </accordion>
 

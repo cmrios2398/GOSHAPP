@@ -9,9 +9,9 @@ import { SafetyToolkitPage } from '../pages/safety-toolkit/safety-toolkit';
 import { IcuNewStartersPage } from '../pages/icu-new-starters/icu-new-starters';
 import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
-import { VesselHealthPage } from '../pages/vessel-health/vessel-health';
 import { SafetyToolkitMorePage } from '../pages/safety-toolkit-more/safety-toolkit-more';
 import { VideoPage } from '../pages/video/video'
+import { TemplateSliderPage } from '../pages/template-slider/template-slider'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +25,7 @@ import { EmailComposer } from '@ionic-native/email-composer'
 import { WpApiProvider } from '../providers/wp-api/wp-api';
 import { AccordionComponent } from '../components/accordion/accordion';
 import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
+import { CardComponent } from '../components/card/card';
 import { VideoService } from '../providers/video-service/video-service';
 
 @NgModule({
@@ -36,13 +37,14 @@ import { VideoService } from '../providers/video-service/video-service';
     SafetyToolkitPage,
     IcuNewStartersPage,
     SafetyToolkitMorePage,
-    VesselHealthPage,
     NotesToSelfPage,
     AddNotePage,
     AccordionComponent,
     AccordionMoreComponent,
+    CardComponent,
     ViewNotePage,
-    VideoPage
+    VideoPage,
+    TemplateSliderPage
   ],
   imports: [
     BrowserModule,
@@ -60,12 +62,12 @@ import { VideoService } from '../providers/video-service/video-service';
     VideoLibraryPage,
     SafetyToolkitPage,
     IcuNewStartersPage,
-    VesselHealthPage,
     SafetyToolkitMorePage,
     NotesToSelfPage,
     AddNotePage,
     ViewNotePage,
-    VideoPage
+    VideoPage,
+    TemplateSliderPage
   ],
   providers: [
     StatusBar,
