@@ -1,0 +1,19 @@
+<ion-card>
+    <ion-item (click)="template_router(slug, title, template)">  
+  <ion-card-content>
+   
+      <!-- <ion-thumbnail item-start>
+          <img [src]="tool.image.guid">
+        </ion-thumbnail> -->
+    <ion-card-title>
+      
+     {{ title }}
+
+
+      </ion-card-title>
+  
+        <ng-content></ng-content>
+     
+  </ion-card-content>
+</ion-item>
+</ion-card>

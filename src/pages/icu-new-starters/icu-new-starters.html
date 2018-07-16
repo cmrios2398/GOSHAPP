@@ -18,26 +18,8 @@
 
 <ion-content padding>
 
-<ion-card *ngFor="let tool of tools">
-    <ion-item> 
-  <ion-card-content>
-   
-      <!-- <ion-thumbnail item-start>
-          <img [src]="tool.image.guid">
-        </ion-thumbnail> -->
-    <ion-card-title>
-      
-     {{ tool.title.rendered }}
-
-
-      </ion-card-title>
-  
+    <card *ngFor="let tool of tools" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">
         <div [innerHTML]="tool.content.rendered"></div>
-     
-  </ion-card-content>
-</ion-item>
-</ion-card>
-
-
+    </card>
 
 </ion-content>

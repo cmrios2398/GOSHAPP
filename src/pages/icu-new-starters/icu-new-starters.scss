@@ -2,6 +2,7 @@ page-icu-new-starters {
 
     .card-title {
         font-weight: bold;
+        font-size: 1.8rem;
     }
 
     .card {
@@ -10,6 +11,9 @@ page-icu-new-starters {
     }
 
     .item {
-        background: #97EEFF
+        background: #97EEFF;
+    }
+    .item h2 {
+        font-size: 1.5rem;
     }
 }

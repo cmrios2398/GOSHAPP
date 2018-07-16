@@ -25,6 +25,7 @@ import { EmailComposer } from '@ionic-native/email-composer'
 import { WpApiProvider } from '../providers/wp-api/wp-api';
 import { AccordionComponent } from '../components/accordion/accordion';
 import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
+import { CardComponent } from '../components/card/card';
 import { VideoService } from '../providers/video-service/video-service';
 
 @NgModule({
@@ -40,6 +41,7 @@ import { VideoService } from '../providers/video-service/video-service';
     AddNotePage,
     AccordionComponent,
     AccordionMoreComponent,
+    CardComponent,
     ViewNotePage,
     VideoPage,
     TemplateSliderPage

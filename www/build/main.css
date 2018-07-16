@@ -25730,6 +25730,7 @@ accordion-more .card-content {
 
 page-icu-new-starters .card-title {
   font-weight: bold;
+  font-size: 1.8rem;
 }
 
 page-icu-new-starters .card {
@@ -25738,6 +25739,10 @@ page-icu-new-starters .card {
 
 page-icu-new-starters .item {
   background: #97EEFF;
+}
+
+page-icu-new-starters .item h2 {
+  font-size: 1.5rem;
 }
 
 page-safety-toolkit .background {
