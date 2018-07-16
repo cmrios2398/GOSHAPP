@@ -25713,6 +25713,11 @@ accordion .card-content {
   max-height: 0px;
 }
 
+accordion h2 {
+  word-wrap: break-word;
+  white-space: normal;
+}
+
 accordion-more .card-header {
   background-color: #184F8A;
   color: #fff;
@@ -25772,6 +25777,18 @@ page-safety-toolkit-more .swiper-pagination-bullet-active {
   background: darkblue;
 }
 
+page-safety-toolkit-more .toolbar-title-md {
+  font-size: 130%;
+}
+
+page-safety-toolkit-more .toolbar-title {
+  overflow: auto;
+  width: 100%;
+  text-overflow: initial;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
 page-template-slider .card-header {
   background-color: #184F8A;
   color: #fff;
@@ -25789,6 +25806,18 @@ page-template-slider .sliderr {
 
 page-template-slider .swiper-pagination-bullet-active {
   background: darkblue;
+}
+
+page-template-slider .toolbar-title-md {
+  font-size: 130%;
+}
+
+page-template-slider .toolbar-title {
+  overflow: auto;
+  width: 100%;
+  text-overflow: initial;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 page-video-library .item h2 {
