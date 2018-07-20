@@ -3,11 +3,12 @@ page-icu-new-starters {
     .card-title {
         font-weight: bold;
         font-size: 1.8rem;
+        white-space: initial;
     }
 
     .card {
         background: #97EEFF;
-        // max-width: 100%;
+       
     }
 
     .item {
@@ -16,4 +17,7 @@ page-icu-new-starters {
     .item h2 {
         font-size: 1.5rem;
     }
+
+   
+
 }

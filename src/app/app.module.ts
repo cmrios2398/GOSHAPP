@@ -10,9 +10,16 @@ import { IcuNewStartersPage } from '../pages/icu-new-starters/icu-new-starters';
 import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 import { SafetyToolkitMorePage } from '../pages/safety-toolkit-more/safety-toolkit-more';
+<<<<<<< HEAD
 import { VideoPage } from '../pages/video/video'
 import { TemplateSliderPage } from '../pages/template-slider/template-slider'
 import { TemplateImagetopPage } from '../pages/template-imagetop/template-imagetop'
+=======
+import { VideoPage } from '../pages/video/video';
+import { TemplateSliderPage } from '../pages/template-slider/template-slider';
+import { TemplateQuizPage } from '../pages/template-quiz/template-quiz';
+import { InfectionControlPage } from '../pages/infection-control/infection-control';
+>>>>>>> b4d3783b92388b6eccc8d1ad8be69159d4f9b2b3
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -46,7 +53,12 @@ import { VideoService } from '../providers/video-service/video-service';
     ViewNotePage,
     VideoPage,
     TemplateSliderPage,
+<<<<<<< HEAD
     TemplateImagetopPage
+=======
+    TemplateQuizPage,
+    InfectionControlPage
+>>>>>>> b4d3783b92388b6eccc8d1ad8be69159d4f9b2b3
   ],
   imports: [
     BrowserModule,
@@ -70,7 +82,12 @@ import { VideoService } from '../providers/video-service/video-service';
     ViewNotePage,
     VideoPage,
     TemplateSliderPage,
+<<<<<<< HEAD
     TemplateImagetopPage
+=======
+    TemplateQuizPage,
+    InfectionControlPage
+>>>>>>> b4d3783b92388b6eccc8d1ad8be69159d4f9b2b3
   ],
   providers: [
     StatusBar,
