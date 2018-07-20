@@ -17,7 +17,7 @@
 
 <ion-content padding class="has-header" overflow-scroll="true" class="background">
 
-      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug" [template] = "tool.template_name">
+      <accordion *ngFor="let tool of tools" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug" [template] = "tool.template_name" [imagetop] = "tool.image_top.guid">
           <div [innerHTML]="tool.content.rendered"></div>
         </accordion>
 

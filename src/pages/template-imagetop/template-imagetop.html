@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<img src="{{ imagetop }} ">
+
+  <accordion-more *ngFor="let section of sections" [title]="section.title.rendered">
+      <div [innerHTML]="section.content.rendered"></div>
+    </accordion-more>
+
+
+</ion-content>

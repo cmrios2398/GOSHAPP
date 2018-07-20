@@ -5,9 +5,13 @@ import { SafetyToolkitMorePage } from '../../pages/safety-toolkit-more/safety-to
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { registerModuleFactory } from '../../../node_modules/@angular/core/src/linker/ng_module_factory_loader';
 import { TemplateSliderPage } from '../../pages/template-slider/template-slider';
+<<<<<<< HEAD
 import { TemplateQuizPage } from '../../pages/template-quiz/template-quiz';
 import { TemplateSlidesArrowsPage } from '../../pages/template-slides-arrows/template-slides-arrows';
 import { TemplateSimplePage } from '../../pages/template-simple/template-simple';
+=======
+import { TemplateImagetopPage } from '../../pages/template-imagetop/template-imagetop';
+>>>>>>> 5d29cd8e2d6cd3ab5e05dcba6e5b6b0c9e1b505a
 
 /**
 
@@ -31,6 +35,7 @@ export class AccordionComponent implements OnInit {
   @Input('slug') slug: any;
 
   @Input('template') template: string;
+  @Input('imagetop') imagetop: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public renderer: Renderer) {
 
@@ -59,12 +64,23 @@ export class AccordionComponent implements OnInit {
   }
 
 
+<<<<<<< HEAD
+  template_router(slug,title,template,imagetop){
+    
+    if(template == "template-slider"){
+      this.template_slider(slug,title); //SLIDER TEMPLATE
+    }
+    else if(template == "template-imagetop"){
+      this.template_imagetop(slug,title,imagetop); //IMAGETOP TEMPLATE
+    }
+=======
   template_router(slug,title,template){
 
     if(template == "template-slider"){
       this.template_slider(slug,title); //SLIDER TEMPLATE
     }
 
+<<<<<<< HEAD
     if(template == "template-quiz"){
       this.template_quiz(slug,title); //QUIZ TEMPLATE
     }
@@ -78,14 +94,20 @@ export class AccordionComponent implements OnInit {
     }
 
 
+=======
+>>>>>>> b4d3783b92388b6eccc8d1ad8be69159d4f9b2b3
+>>>>>>> 5d29cd8e2d6cd3ab5e05dcba6e5b6b0c9e1b505a
     else{
       this.safetyToolkitMore(slug,title); //DEFAULT TEMPLATE
     }
   }
 
   template_slider(slug,title){
-    this.navCtrl.push(TemplateSliderPage, {slug: slug, title: title} );
+    this.navCtrl.push(TemplateSliderPage, {slug: slug, title: title});
+  }
 
+  template_imagetop(slug,title,imagetop){
+    this.navCtrl.push(TemplateImagetopPage, {slug: slug, title: title, imagetop: imagetop});
   }
 
   template_quiz(slug,title){

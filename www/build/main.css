@@ -25813,6 +25813,37 @@ page-safety-toolkit-more .toolbar-title {
   word-wrap: break-word;
 }
 
+page-template-imagetop .card-header {
+  background-color: #184F8A;
+  color: #fff;
+  white-space: initial;
+}
+
+page-template-imagetop .card-content {
+  padding: 0px 16px;
+  max-height: 0px;
+}
+
+page-template-imagetop .sliderr {
+  max-height: 40%;
+}
+
+page-template-imagetop .swiper-pagination-bullet-active {
+  background: darkblue;
+}
+
+page-template-imagetop .toolbar-title-md {
+  font-size: 130%;
+}
+
+page-template-imagetop .toolbar-title {
+  overflow: auto;
+  width: 100%;
+  text-overflow: initial;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
 page-template-slider .card-header {
   background-color: #184F8A;
   color: #fff;
