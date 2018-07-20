@@ -1,18 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 302:
+/***/ 308:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemplateSliderPageModule", function() { return TemplateSliderPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VideoLibraryPageModule", function() { return VideoLibraryPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__template_slider__ = __webpack_require__(54);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__template_slider__ = __webpack_require__(111);
->>>>>>> 40b26d2b843f0e3a5312ca91c9b3a95b69e576a6
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__video_library__ = __webpack_require__(114);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TemplateSliderPageModule = /** @class */ (function () {
-    function TemplateSliderPageModule() {
+var VideoLibraryPageModule = /** @class */ (function () {
+    function VideoLibraryPageModule() {
     }
-    TemplateSliderPageModule = __decorate([
+    VideoLibraryPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__template_slider__["a" /* TemplateSliderPage */],
+                __WEBPACK_IMPORTED_MODULE_2__video_library__["a" /* VideoLibraryPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__template_slider__["a" /* TemplateSliderPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__video_library__["a" /* VideoLibraryPage */]),
             ],
         })
-    ], TemplateSliderPageModule);
-    return TemplateSliderPageModule;
+    ], VideoLibraryPageModule);
+    return VideoLibraryPageModule;
 }());
 
-//# sourceMappingURL=template-slider.module.js.map
+//# sourceMappingURL=video-library.module.js.map
 
 /***/ })
 

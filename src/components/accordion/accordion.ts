@@ -21,7 +21,7 @@ import { TemplateSliderPage } from '../../pages/template-slider/template-slider'
 export class AccordionComponent implements OnInit {
 
   accordionExpanded = false;
-  
+
   @ViewChild("cc") cardContent: any;
   @Input('title') title: string;
   @Input('icon') icon: any;
@@ -30,10 +30,10 @@ export class AccordionComponent implements OnInit {
   @Input('template') template: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public renderer: Renderer) {
-    
+
       // this.safetyToolkitMore();
       // alert(this.tools);
-      
+
       // alert(this.slug);
       // alert(this.template);
   }
@@ -57,10 +57,11 @@ export class AccordionComponent implements OnInit {
 
 
   template_router(slug,title,template){
-    
+
     if(template == "template-slider"){
       this.template_slider(slug,title); //SLIDER TEMPLATE
     }
+
     else{
       this.safetyToolkitMore(slug,title); //DEFAULT TEMPLATE
     }
@@ -70,6 +71,8 @@ export class AccordionComponent implements OnInit {
     this.navCtrl.push(TemplateSliderPage, {slug: slug, title: title} );
 
   }
+
+  
 
   safetyToolkitMore(slug,title){
     // alert(title);

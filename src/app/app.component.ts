@@ -10,7 +10,7 @@ import { SafetyToolkitPage } from '../pages/safety-toolkit/safety-toolkit';
 import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 import { IcuNewStartersPage } from '../pages/icu-new-starters/icu-new-starters';
-
+import { InfectionControlPage } from '../pages/infection-control/infection-control';
 @Component({
   templateUrl: 'app.html'
 })
@@ -31,7 +31,8 @@ export class MyApp {
       { title: 'About', component: AboutPage},
       { title: 'Safety Toolkit', component: SafetyToolkitPage },
       { title: 'Video Library', component: VideoLibraryPage },
-      { title: 'ICU-New Starters', component: IcuNewStartersPage }
+      { title: 'ICU-New Starters', component: IcuNewStartersPage },
+      { title: 'Infection Control', component: InfectionControlPage }
     ];
 
 

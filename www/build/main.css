@@ -25726,6 +25726,7 @@ accordion-more .card-content {
 page-icu-new-starters .card-title {
   font-weight: bold;
   font-size: 1.8rem;
+  white-space: initial;
 }
 
 page-icu-new-starters .card {
@@ -25737,6 +25738,24 @@ page-icu-new-starters .item {
 }
 
 page-icu-new-starters .item h2 {
+  font-size: 1.5rem;
+}
+
+page-infection-control .card-title {
+  font-weight: bold;
+  font-size: 1.8rem;
+  white-space: initial;
+}
+
+page-infection-control .card {
+  background: #ffbe6f;
+}
+
+page-infection-control .item {
+  background: #ffbe6f;
+}
+
+page-infection-control .item h2 {
   font-size: 1.5rem;
 }
 

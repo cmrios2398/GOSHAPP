@@ -24,9 +24,9 @@ export class WpApiProvider {
     return this.http.get('http://uclst.co.uk/wp-json/wp/v2/icu-new-starters')
   }
 
-  getVesselHealth(){
-    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/vessel-health')
-  }
+ getInfectionControl(){
+   return this.http.get('http://uclst.co.uk/wp-json/wp/v2/infection_control')
+ }
 
   getSTSpecific(slug){
     return this.http.get('http://uclst.co.uk/wp-json/wp/v2/' + slug)
