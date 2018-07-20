@@ -23,6 +23,7 @@ export class InfectionControlPage {
 
  
   tools;
+ 
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider) { 
@@ -32,8 +33,5 @@ export class InfectionControlPage {
     })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InfectionControlPage');
-  }
 
 }

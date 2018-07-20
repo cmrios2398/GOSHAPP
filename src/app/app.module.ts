@@ -12,7 +12,9 @@ import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 import { SafetyToolkitMorePage } from '../pages/safety-toolkit-more/safety-toolkit-more';
 import { VideoPage } from '../pages/video/video';
 import { TemplateSliderPage } from '../pages/template-slider/template-slider';
+import { TemplateSlidesArrowsPage } from '../pages/template-slides-arrows/template-slides-arrows';
 import { TemplateQuizPage } from '../pages/template-quiz/template-quiz';
+import { TemplateSimplePage } from '../pages/template-simple/template-simple';
 import { InfectionControlPage } from '../pages/infection-control/infection-control';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -48,6 +50,8 @@ import { VideoService } from '../providers/video-service/video-service';
     VideoPage,
     TemplateSliderPage,
     TemplateQuizPage,
+    TemplateSlidesArrowsPage,
+    TemplateSimplePage,
     InfectionControlPage
   ],
   imports: [
@@ -73,6 +77,8 @@ import { VideoService } from '../providers/video-service/video-service';
     VideoPage,
     TemplateSliderPage,
     TemplateQuizPage,
+    TemplateSlidesArrowsPage,
+    TemplateSimplePage,
     InfectionControlPage
   ],
   providers: [
