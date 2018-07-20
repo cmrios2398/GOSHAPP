@@ -19,4 +19,17 @@ page-safety-toolkit-more {
         background: darkblue;
     }
 
+    .toolbar-title-md{
+        font-size: 130%;
+    }
+
+    .toolbar-title{
+        overflow: auto;
+        width: 100%;
+        text-overflow: initial;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+
 }

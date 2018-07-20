@@ -1,0 +1,43 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.moust.cordova.videoplayer": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-appcenter-analytics": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-appcenter-crashes": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-email-composer": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-ionic": {
+      "APP_ID": "6ff28bf0",
+      "CHANNEL_NAME": "Master",
+      "WARN_DEBUG": "true",
+      "UPDATE_API": "https://api.ionicjs.com",
+      "UPDATE_METHOD": "background",
+      "MAX_STORE": "2",
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-appcenter-shared": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    }
+  }
+}

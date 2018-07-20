@@ -38,4 +38,5 @@ export class AccordionMoreComponent implements OnInit {
     this.accordionExpanded = !this.accordionExpanded;
   }
 
+ 
 }

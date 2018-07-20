@@ -8,16 +8,20 @@
       <ion-avatar item-left (click)="template_router(slug,title,template)">
         <img src="{{ icon }}">
         </ion-avatar>
-        <h2>
-            <button  ion-button icon-only class="item-content" style="float:right;" (click)="toggleAccordion()">
-                <ion-icon name="ios-arrow-down"></ion-icon>
-              </button>
-              <div (click)="template_router(slug, title, template)">
-            {{ title }}
-            </div>
-        </h2>
 
-        </ion-item>
+        <div style = "width: 150px; float:left ">
+             <h2>
+                  <div (click)="template_router(slug, title, template)">
+                         {{ title }}
+                  </div>
+             </h2>
+        </div>
+       
+        <button  ion-button icon-only class= "item-content" clear style="float:right;" (click)="toggleAccordion()">
+            <ion-icon name="ios-arrow-down"></ion-icon>
+        </button>
+
+    </ion-item>
      
         <ion-card-content #cc>
           
