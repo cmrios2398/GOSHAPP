@@ -1,0 +1,33 @@
+page-template-imagetop {
+    .card-header{
+        background-color: map-get($colors, primary);
+        color: #fff;
+        white-space: initial;
+    }
+
+    .card-content {
+        padding: 0px 16px;
+        max-height: 0px;
+    }
+
+    .sliderr {
+        max-height: 40%;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: darkblue;
+    }
+
+    .toolbar-title-md{
+        font-size: 130%;
+    }
+
+    .toolbar-title{
+        overflow: auto;
+        width: 100%;
+        text-overflow: initial;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+}

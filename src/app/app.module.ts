@@ -12,6 +12,7 @@ import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 import { SafetyToolkitMorePage } from '../pages/safety-toolkit-more/safety-toolkit-more';
 import { VideoPage } from '../pages/video/video'
 import { TemplateSliderPage } from '../pages/template-slider/template-slider'
+import { TemplateImagetopPage } from '../pages/template-imagetop/template-imagetop'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -44,7 +45,8 @@ import { VideoService } from '../providers/video-service/video-service';
     CardComponent,
     ViewNotePage,
     VideoPage,
-    TemplateSliderPage
+    TemplateSliderPage,
+    TemplateImagetopPage
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,8 @@ import { VideoService } from '../providers/video-service/video-service';
     AddNotePage,
     ViewNotePage,
     VideoPage,
-    TemplateSliderPage
+    TemplateSliderPage,
+    TemplateImagetopPage
   ],
   providers: [
     StatusBar,

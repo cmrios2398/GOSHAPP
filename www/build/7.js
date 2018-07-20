@@ -1,22 +1,15 @@
 webpackJsonp([7],{
 
-<<<<<<< HEAD
-/***/ 298:
-=======
-/***/ 297:
->>>>>>> 40b26d2b843f0e3a5312ca91c9b3a95b69e576a6
+/***/ 299:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IcuNewStartersPageModule", function() { return IcuNewStartersPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotesToSelfPageModule", function() { return NotesToSelfPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__icu_new_starters__ = __webpack_require__(110);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__icu_new_starters__ = __webpack_require__(108);
->>>>>>> 40b26d2b843f0e3a5312ca91c9b3a95b69e576a6
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__add_note_add_note__ = __webpack_require__(108);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -26,23 +19,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var IcuNewStartersPageModule = /** @class */ (function () {
-    function IcuNewStartersPageModule() {
+
+var NotesToSelfPageModule = /** @class */ (function () {
+    function NotesToSelfPageModule() {
     }
-    IcuNewStartersPageModule = __decorate([
+    NotesToSelfPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__icu_new_starters__["a" /* IcuNewStartersPage */],
+                __WEBPACK_IMPORTED_MODULE_2__notes_to_self__["a" /* NotesToSelfPage */],
+                __WEBPACK_IMPORTED_MODULE_3__add_note_add_note__["a" /* AddNotePage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__icu_new_starters__["a" /* IcuNewStartersPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__notes_to_self__["a" /* NotesToSelfPage */]),
             ],
         })
-    ], IcuNewStartersPageModule);
-    return IcuNewStartersPageModule;
+    ], NotesToSelfPageModule);
+    return NotesToSelfPageModule;
 }());
 
-//# sourceMappingURL=icu-new-starters.module.js.map
+//# sourceMappingURL=notes-to-self.module.js.map
 
 /***/ })
 

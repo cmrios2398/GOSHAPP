@@ -5,6 +5,7 @@ import { SafetyToolkitMorePage } from '../../pages/safety-toolkit-more/safety-to
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { registerModuleFactory } from '../../../node_modules/@angular/core/src/linker/ng_module_factory_loader';
 import { TemplateSliderPage } from '../../pages/template-slider/template-slider';
+import { TemplateImagetopPage } from '../../pages/template-imagetop/template-imagetop';
 
 /**
 
@@ -28,6 +29,7 @@ export class AccordionComponent implements OnInit {
   @Input('slug') slug: any;
 
   @Input('template') template: string;
+  @Input('imagetop') imagetop: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public renderer: Renderer) {
     
@@ -56,10 +58,13 @@ export class AccordionComponent implements OnInit {
   }
 
 
-  template_router(slug,title,template){
+  template_router(slug,title,template,imagetop){
     
     if(template == "template-slider"){
       this.template_slider(slug,title); //SLIDER TEMPLATE
+    }
+    else if(template == "template-imagetop"){
+      this.template_imagetop(slug,title,imagetop); //IMAGETOP TEMPLATE
     }
     else{
       this.safetyToolkitMore(slug,title); //DEFAULT TEMPLATE
@@ -67,8 +72,11 @@ export class AccordionComponent implements OnInit {
   }
 
   template_slider(slug,title){
-    this.navCtrl.push(TemplateSliderPage, {slug: slug, title: title} );
+    this.navCtrl.push(TemplateSliderPage, {slug: slug, title: title});
+  }
 
+  template_imagetop(slug,title,imagetop){
+    this.navCtrl.push(TemplateImagetopPage, {slug: slug, title: title, imagetop: imagetop});
   }
 
   safetyToolkitMore(slug,title){
