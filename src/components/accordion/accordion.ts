@@ -5,13 +5,10 @@ import { SafetyToolkitMorePage } from '../../pages/safety-toolkit-more/safety-to
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { registerModuleFactory } from '../../../node_modules/@angular/core/src/linker/ng_module_factory_loader';
 import { TemplateSliderPage } from '../../pages/template-slider/template-slider';
-<<<<<<< HEAD
 import { TemplateQuizPage } from '../../pages/template-quiz/template-quiz';
 import { TemplateSlidesArrowsPage } from '../../pages/template-slides-arrows/template-slides-arrows';
 import { TemplateSimplePage } from '../../pages/template-simple/template-simple';
-=======
 import { TemplateImagetopPage } from '../../pages/template-imagetop/template-imagetop';
->>>>>>> 5d29cd8e2d6cd3ab5e05dcba6e5b6b0c9e1b505a
 
 /**
 
@@ -64,43 +61,40 @@ export class AccordionComponent implements OnInit {
   }
 
 
-<<<<<<< HEAD
-  template_router(slug,title,template,imagetop){
-    
-    if(template == "template-slider"){
-      this.template_slider(slug,title); //SLIDER TEMPLATE
-    }
-    else if(template == "template-imagetop"){
-      this.template_imagetop(slug,title,imagetop); //IMAGETOP TEMPLATE
-    }
-=======
-  template_router(slug,title,template){
 
+
+
+  template_router(slug,title,template, imagetop){
     if(template == "template-slider"){
       this.template_slider(slug,title); //SLIDER TEMPLATE
     }
 
-<<<<<<< HEAD
-    if(template == "template-quiz"){
+    else if(template == "template-quiz"){
       this.template_quiz(slug,title); //QUIZ TEMPLATE
     }
 
-    if(template == "template-slides-arrows"){
+    else if(template == "template-slides-arrows"){
       this.template_slides_arrows(slug,title); //SLIDES WITH ARROWS TEMPLATE
     }
 
-    if(template == "template-simple"){
+    else if(template == "template-imagetop"){
+      this.template_imagetop(slug,title,imagetop); //IMAGETOP TEMPLATE
+    }
+
+    else if(template == "template-simple"){
       this.template_simple(slug,title); //SIMPLE TEMPLATE
     }
 
-
-=======
->>>>>>> b4d3783b92388b6eccc8d1ad8be69159d4f9b2b3
->>>>>>> 5d29cd8e2d6cd3ab5e05dcba6e5b6b0c9e1b505a
     else{
       this.safetyToolkitMore(slug,title); //DEFAULT TEMPLATE
     }
   }
+
+
+
+
+
+
 
   template_slider(slug,title){
     this.navCtrl.push(TemplateSliderPage, {slug: slug, title: title});
@@ -124,7 +118,7 @@ export class AccordionComponent implements OnInit {
     this.navCtrl.push(TemplateSimplePage, {slug: slug, title: title} );
 
   }
-  
+
 
   safetyToolkitMore(slug,title){
     // alert(title);
