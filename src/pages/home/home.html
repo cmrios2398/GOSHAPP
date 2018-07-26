@@ -9,4 +9,17 @@
 
 <ion-content padding>
   <h3>GOSH App</h3>
+  <div class="pins">
+    <ion-card class="pin" *ngFor="let post of posts">
+      <img [src]="post.image" />
+      <div *ngIf="post.description" class="post-description">
+        <small>{{ post.description }}</small>
+      </div>
+      <ion-item>
+
+        <div class="lbl">{{ post.name }}</div>
+
+      </ion-item>
+    </ion-card>
+  </div>
 </ion-content>

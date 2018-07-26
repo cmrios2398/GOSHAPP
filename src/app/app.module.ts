@@ -7,6 +7,8 @@ import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
 import { SafetyToolkitPage } from '../pages/safety-toolkit/safety-toolkit';
 import { IcuNewStartersPage } from '../pages/icu-new-starters/icu-new-starters';
+import { ClinicalPoliciesPage } from '../pages/clinical-policies/clinical-policies';
+import { ClinicalQualityProjectsPage } from '../pages/clinical-quality-projects/clinical-quality-projects';
 import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 import { SafetyToolkitMorePage } from '../pages/safety-toolkit-more/safety-toolkit-more';
@@ -42,6 +44,8 @@ import { VideoService } from '../providers/video-service/video-service';
     VideoLibraryPage,
     SafetyToolkitPage,
     IcuNewStartersPage,
+    ClinicalQualityProjectsPage,
+    ClinicalPoliciesPage,
     SafetyToolkitMorePage,
     NotesToSelfPage,
     AddNotePage,
@@ -73,6 +77,8 @@ import { VideoService } from '../providers/video-service/video-service';
     VideoLibraryPage,
     SafetyToolkitPage,
     IcuNewStartersPage,
+    ClinicalQualityProjectsPage,
+    ClinicalPoliciesPage,
     SafetyToolkitMorePage,
     NotesToSelfPage,
     AddNotePage,
