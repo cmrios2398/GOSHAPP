@@ -17,10 +17,15 @@
 
 
 <ion-content padding>
+    
+<ion-scroll zoom="true">
+</ion-scroll>
+<div style="height:40px"></div>
 
   <accordion-more *ngFor="let section of sections" [title]="section.title.rendered">
       <div [innerHTML]="section.content.rendered"></div>
+     
     </accordion-more>
-
+ 
 
 </ion-content>
