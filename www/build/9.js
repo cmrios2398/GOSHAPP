@@ -27,7 +27,7 @@ var SafetyToolkitMorePageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__safety_toolkit_more__["a" /* SafetyToolkitMorePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__safety_toolkit_more__["a" /* SafetyToolkitMorePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__safety_toolkit_more__["a" /* SafetyToolkitMorePage */]),
             ],
         })
     ], SafetyToolkitMorePageModule);

@@ -27,7 +27,7 @@ var VideoLibraryPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__video_library__["a" /* VideoLibraryPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__video_library__["a" /* VideoLibraryPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__video_library__["a" /* VideoLibraryPage */]),
             ],
         })
     ], VideoLibraryPageModule);

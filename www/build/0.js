@@ -27,7 +27,7 @@ var ViewNotePageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__view_note__["a" /* ViewNotePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__view_note__["a" /* ViewNotePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__view_note__["a" /* ViewNotePage */]),
             ],
         })
     ], ViewNotePageModule);

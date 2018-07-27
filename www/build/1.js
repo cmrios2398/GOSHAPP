@@ -27,7 +27,7 @@ var VideoPageModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__video__["a" /* VideoPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__video__["a" /* VideoPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__video__["a" /* VideoPage */]),
             ],
         })
     ], VideoPageModule);
