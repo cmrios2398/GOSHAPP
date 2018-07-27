@@ -11,6 +11,8 @@ import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
 import { IcuNewStartersPage } from '../pages/icu-new-starters/icu-new-starters';
 import { InfectionControlPage } from '../pages/infection-control/infection-control';
+import { ClinicalPoliciesPage } from '../pages/clinical-policies/clinical-policies';
+import { ClinicalQualityProjectsPage } from '../pages/clinical-quality-projects/clinical-quality-projects';
 @Component({
   templateUrl: 'app.html'
 })
@@ -32,7 +34,10 @@ export class MyApp {
       { title: 'Safety Toolkit', component: SafetyToolkitPage },
       { title: 'Video Library', component: VideoLibraryPage },
       { title: 'ICU-New Starters', component: IcuNewStartersPage },
-      { title: 'Infection Control', component: InfectionControlPage }
+      { title: 'Infection Control', component: InfectionControlPage },
+      { title: 'Clinical Policies', component: ClinicalPoliciesPage},
+      { title: 'Clinical Quality Projects', component: ClinicalQualityProjectsPage},
+
     ];
 
 
@@ -52,5 +57,5 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
- 
+
 }

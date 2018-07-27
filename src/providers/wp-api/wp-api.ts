@@ -10,7 +10,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class WpApiProvider {
 
- 
+
 
   constructor(public http: HttpClient) {
     console.log('Hello WpApiProvider Provider');
@@ -28,9 +28,17 @@ export class WpApiProvider {
    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/infection_control')
  }
 
+ getClinicalQualityProjects(){
+   return this.http.get('http://uclst.co.uk/wp-json/wp/v2/clinical_quality_projects')
+ }
+
+ getClinicalPolicies(){
+   return this.http.get('http://uclst.co.uk/wp-json/wp/v2/clinical_policies')
+ }
+
   getSTSpecific(slug){
-    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/' + slug)
+    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/' + slug + '/?per_page=100')
   }
- 
-  
+
+
 }

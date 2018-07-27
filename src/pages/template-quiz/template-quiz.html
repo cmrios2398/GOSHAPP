@@ -1,18 +1,51 @@
-<!--
-  Generated template for the TemplateQuizPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>templateQuiz</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>
+      {{title}}
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+<ion-slides>
+  <ion-slide *ngFor="let question of questions">
+ <ion-card class="question-card">
+   <ion-card-header>{{ question.title.rendered }}</ion-card-header>
+   <ion-card-content>
+  <div [innerHTML]="question.content.rendered"></div>
+ </ion-card-content>
+ </ion-card>
+
+ <ion-list radio-group [(ngModel)]="relationship">
+    <ion-item >
+      <ion-label class="lbl">{{question.choice_1}}</ion-label>
+      <ion-radio (click)="wrongAlert()" value="friends" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label class="lbl">{{question.choice_2}}</ion-label>
+      <ion-radio (click)="wrongAlert()" value="family"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label class="lbl">{{question.choice_3}}</ion-label>
+      <ion-radio (click)="showAlert()" value="enemies"></ion-radio>
+    </ion-item>
+    <ion-item>
+        <ion-label class="lbl">{{question.choice_4}}</ion-label>
+        <ion-radio (click)="wrongAlert()" value="lovers" ></ion-radio>
+      </ion-item> 
+  </ion-list>
+  </ion-slide>
+</ion-slides>
+
+
+<div *ngIf="currentIndex > 0"
+    class="swiper-button-prev swiper-button-white"
+    (click)="previousSlide()"></div>
+<div *ngIf="currentIndex < slides.length-1"
+    class="swiper-button-next swiper-button-white"
+    (click)="nextSlide()"></div>
+
+
 
 </ion-content>
+

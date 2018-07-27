@@ -36,15 +36,15 @@ export class CardComponent {
       this.template_slider(slug,title); //SLIDER TEMPLATE
     }
 
-    if(template == "template-quiz"){
+    else if(template == "template-quiz"){
       this.template_quiz(slug,title); //QUIZ TEMPLATE
     }
 
-    if(template == "template-slides-arrows"){
+    else if(template == "template-slides-arrows"){
       this.template_slides_arrows(slug,title); //SLIDES WITH ARROWS TEMPLATE
     }
 
-    if(template == "template-simple"){
+    else if(template == "template-simple"){
       this.template_simple(slug,title); //SIMPLE TEMPLATE
     }
 
