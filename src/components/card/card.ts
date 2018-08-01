@@ -25,13 +25,13 @@ export class CardComponent {
 
   @Input('title') title: string;
   @Input('slug') slug: any;
-  @Input('template') template: string;
+  @Input('template') template: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   template_router(slug,title,template){
-
+    
     if(template == "template-slider"){
       this.template_slider(slug,title); //SLIDER TEMPLATE
     }

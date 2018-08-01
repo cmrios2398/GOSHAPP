@@ -29,8 +29,9 @@ export class TemplateSimplePage {
     console.log(this.slug);
     
     this.title = this.navParams.get('title');
-    // alert(this.title);
+        // alert(this.title);
     console.log(this.title);
+
 
     this.wpApiProvider.getSTSpecific(this.slug).subscribe( data => {
       console.log(data);
