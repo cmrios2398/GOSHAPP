@@ -17,13 +17,19 @@ import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 })
 export class VideoPage {
 
-  video;
+  id;
+  name;
+  description;
   videourl;
   trustedVideoUrl: SafeResourceUrl;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private videoService: VideoService, private domSanitizer: DomSanitizer) {
-    this.video = videoService.tutorials_keys[navParams.get('videokey')];
-    this.videourl = "https://www.youtube.com/embed/" + this.video.id;
+    // this.id = videoService.tutorials_keys[navParams.get('id')];
+    this.id = this.navParams.get('id');
+    this.name = this.navParams.get('name');
+    this.description = this.navParams.get('description');
+    this.videourl = "https://www.youtube.com/embed/" + this.id;
+    
    
   }
 

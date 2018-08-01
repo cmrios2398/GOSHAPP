@@ -21,6 +21,7 @@ export class SafetyToolkitPage {
  
  
   constructor(public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider) { 
+  
     this.wpApiProvider.getSafetyToolkit().subscribe( data => {
       console.log(data);
       this.tools = data;

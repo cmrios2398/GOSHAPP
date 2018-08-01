@@ -11,8 +11,7 @@
  
     <ion-content padding="true" class="has-header">
       
-        
-       
+               
           <ion-searchbar 
 
             [(ngModel)] = "data.search" 
@@ -24,12 +23,10 @@
         
       
       <ion-list>
-        <ion-item (click)="viewVideo(tutorial.key)" *ngFor="let tutorial of narrowed_tutorials" class="item-thumbnail-left">
+        
+      <!-- <ion-item *ngFor="let video of videos" [attr.id]="video.video_id" [attr.key]="video.video_key" [attr.name] = "video.video_name" [attr.description] = "video.video_description" (click)="viewVideo(video.key)" class="item-thumbnail-left"> -->
+        <video-item *ngFor="let video of videos" [id]="video.video_id" [key]="video.video_key" [name] = "video.video_name" [description] = "video.video_description">
           
-          <img src="https://img.youtube.com/vi/{{tutorial.id}}/maxresdefault.jpg">
-          <h2>{{ tutorial.name }}</h2>
-          <h3 class="lbl">{{ tutorial.description }}</h3>
-
-        </ion-item>
+      </video-item>
       </ion-list>
     </ion-content>
