@@ -37,6 +37,7 @@ import { CardComponent } from '../components/card/card';
 import { VideoItemComponent } from '../components/video-item/video-item';
 
 import { VideoService } from '../providers/video-service/video-service';
+import { FlashCardComponent } from '../components/flash-card/flash-card';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { VideoService } from '../providers/video-service/video-service';
     NotesToSelfPage,
     AddNotePage,
     AccordionComponent,
+    FlashCardComponent,
     AccordionMoreComponent,
     CardComponent,
     VideoItemComponent,

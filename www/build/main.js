@@ -186,7 +186,7 @@ var ClinicalQualityProjectsPage = /** @class */ (function () {
     }
     ClinicalQualityProjectsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-clinical-quality-projects',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1 - Templates\src\pages\clinical-quality-projects\clinical-quality-projects.html"*/'<!--\n\n  Generated template for the InfectionControlPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n    <ion-navbar color="primary">\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n         <ion-title>Clinical Quality Pojects</ion-title>  \n\n      </ion-navbar>\n\n\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-content padding>\n\n\n\n        <card *ngFor="let tool of tools" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">\n\n            <div [innerHTML]="tool.content.rendered"></div>\n\n        </card>\n\n\n\n    </ion-content>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1 - Templates\src\pages\clinical-quality-projects\clinical-quality-projects.html"*/,
+            selector: 'page-clinical-quality-projects',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1 - Templates\src\pages\clinical-quality-projects\clinical-quality-projects.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n         <ion-title>Clinical Quality Projects</ion-title>\n\n      </ion-navbar>\n\n\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n\n\n  <h4 class="title"><strong> A guide to defining Clinical Quality Projects at GOSH: Who to contact for support and governance</strong></h4>\n\n\n\n  <h6 class="paragraph-text"><strong>What is your project idea? Click on a card to reveal the project type and contact details</strong></h6>\n\n	<flash-card *ngFor="let tool of tools">\n\n\n\n		<div class="flash-card-front"><div [innerHTML]="tool.front"></div></div>\n\n\n\n		<div class="flash-card-back"><div [innerHTML]="tool.back"></div></div>\n\n\n\n	</flash-card>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1 - Templates\src\pages\clinical-quality-projects\clinical-quality-projects.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
     ], ClinicalQualityProjectsPage);
@@ -494,83 +494,22 @@ var TemplateImagetopPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoLibraryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
 
 var VideoLibraryPage = /** @class */ (function () {
-    function VideoLibraryPage(navCtrl, navParams, videoService, http) {
-        // this.narrowed_tutorials = this.videoService.tutorials_list;
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.videoService = videoService;
-        this.http = http;
-        this.narrowed_tutorials = [];
-        this.http.get('http://uclst.co.uk/wp-json/wp/v2/video_library').subscribe(function (data) {
-            console.log(data);
-            _this.videos = data;
-            // alert(this.videos);
-            // this.tool = data[''];
-            // this.safetyToolkitMore();
-            // alert(this.tools);
-        });
-        // alert(this.videos)
-        this.data = {
-            search: ''
-        };
-        this.narrowed_tutorials = this.videos;
+    function VideoLibraryPage() {
     }
-    VideoLibraryPage.prototype.search = function () {
-        var searchedString = this.data.search.toLocaleLowerCase();
-        if (searchedString == '') {
-            this.videos = this.videoService.tutorials_list;
-            return;
-        }
-        this.videos = this.videoService.tutorials_list.filter(function (tutorial) {
-            // alert(tutorial.video_name);
-            if (tutorial.video_name.toLocaleLowerCase().indexOf(searchedString) > -1 || tutorial.video_description.toLocaleLowerCase().indexOf(searchedString) > -1) {
-                return true;
-            }
-            return false;
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('key'),
-        __metadata("design:type", String)
-    ], VideoLibraryPage.prototype, "key", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('id'),
-        __metadata("design:type", String)
-    ], VideoLibraryPage.prototype, "id", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('description'),
-        __metadata("design:type", String)
-    ], VideoLibraryPage.prototype, "description", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('name'),
-        __metadata("design:type", String)
-    ], VideoLibraryPage.prototype, "name", void 0);
     VideoLibraryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-video-library',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1 - Templates\src\pages\video-library\video-library.html"*/'\n\n<ion-header>\n\n    <ion-navbar color="primary">\n\n      <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n      <ion-title>Video Library</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n \n\n    <ion-content padding="true" class="has-header">\n\n      \n\n               \n\n          <ion-searchbar \n\n\n\n            [(ngModel)] = "data.search" \n\n            [ngModelOptions]="{standalone: true}" \n\n            (keyup.enter)="search()"\n\n            (ionInput) = "search()"\n\n        \n\n          ></ion-searchbar>\n\n        \n\n      \n\n      <ion-list>\n\n        \n\n      <!-- <ion-item *ngFor="let video of videos" [attr.id]="video.video_id" [attr.key]="video.video_key" [attr.name] = "video.video_name" [attr.description] = "video.video_description" (click)="viewVideo(video.key)" class="item-thumbnail-left"> -->\n\n        <video-item *ngFor="let video of videos" [id]="video.video_id" [key]="video.video_key" [name] = "video.video_name" [description] = "video.video_description">\n\n          \n\n      </video-item>\n\n      </ion-list>\n\n    </ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1 - Templates\src\pages\video-library\video-library.html"*/,
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__["a" /* VideoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__["a" /* VideoService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]) === "function" && _d || Object])
+        })
     ], VideoLibraryPage);
     return VideoLibraryPage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=video-library.js.map
@@ -611,11 +550,8 @@ var VideoPage = /** @class */ (function () {
         this.navParams = navParams;
         this.videoService = videoService;
         this.domSanitizer = domSanitizer;
-        // this.id = videoService.tutorials_keys[navParams.get('id')];
-        this.id = this.navParams.get('id');
-        this.name = this.navParams.get('name');
-        this.description = this.navParams.get('description');
-        this.videourl = "https://www.youtube.com/embed/" + this.id;
+        this.video = videoService.tutorials_keys[navParams.get('videokey')];
+        this.videourl = "https://www.youtube.com/embed/" + this.video.id;
     }
     VideoPage.prototype.ionViewWillEnter = function () {
         this.trustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.videourl);
@@ -627,10 +563,9 @@ var VideoPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-video',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1 - Templates\src\pages\video\video.html"*/'<!--\n\n  Generated template for the VideoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title> {{ name }} </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;">\n\n      <iframe [src]="trustedVideoUrl" frameborder="0" allowfullscreen="" width="560" height="315" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>\n\n    </div>\n\n\n\n    <!-- {{ videourl }} -->\n\n    <div class="spacer" style="height: 10px;"></div>\n\n  {{ description }}\n\n\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1 - Templates\src\pages\video\video.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__["a" /* VideoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__["a" /* VideoService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__["a" /* VideoService */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */]])
     ], VideoPage);
     return VideoPage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=video.js.map
@@ -863,6 +798,19 @@ var HomePage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 220:
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 220;
 
 /***/ }),
 
@@ -1452,10 +1400,13 @@ var CardComponent = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoItemComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_video_service_video_service__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_angular_common_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_video_video__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__node_modules_ionic_angular___ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_ionic_angular_umd_navigation_nav_controller__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_ionic_angular_umd_navigation_nav_controller___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__node_modules_ionic_angular_umd_navigation_nav_controller__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_ionic_angular_umd_navigation_nav_params__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_ionic_angular_umd_navigation_nav_params___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__node_modules_ionic_angular_umd_navigation_nav_params__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_video_service_video_service__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__node_modules_angular_common_http__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_video_video__ = __webpack_require__(121);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1470,6 +1421,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the VideoItemComponent component.
  *
@@ -1477,17 +1429,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Components.
  */
 var VideoItemComponent = /** @class */ (function () {
-    function VideoItemComponent(videoService, http, navCtrl) {
+    function VideoItemComponent(navCtrl, navParams, videoService, http) {
         var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
         this.videoService = videoService;
         this.http = http;
-        this.navCtrl = navCtrl;
         // this.narrowed_tutorials = this.videoService.tutorials_list;
         console.log('Hello VideoItemComponent Component');
         this.http.get('http://uclst.co.uk/wp-json/wp/v2/video_library').subscribe(function (data) {
             console.log(data);
             _this.videos = data;
-            // alert(this.videos);
+            alert(_this.videos);
             // this.tool = data[''];
             // this.safetyToolkitMore();
             // alert(this.tools);
@@ -1498,6 +1451,7 @@ var VideoItemComponent = /** @class */ (function () {
         this.narrowed_tutorials = this.videos;
     }
     VideoItemComponent.prototype.search = function () {
+        // alert("working");
         var searchedString = this.data.search.toLocaleLowerCase();
         if (searchedString == '') {
             this.narrowed_tutorials = this.videoService.tutorials_list;
@@ -1510,8 +1464,8 @@ var VideoItemComponent = /** @class */ (function () {
             return false;
         });
     };
-    VideoItemComponent.prototype.viewVideo = function (id, name, description) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages_video_video__["a" /* VideoPage */], { id: id, name: name, description: description });
+    VideoItemComponent.prototype.viewVideo = function (key) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages_video_video__["a" /* VideoPage */], { videokey: key });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('key'),
@@ -1533,10 +1487,9 @@ var VideoItemComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'video-item',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1 - Templates\src\components\video-item\video-item.html"*/'<!-- Generated template for the VideoItemComponent component -->\n\n<ion-item (click)="viewVideo(id, name, description)" class="item-thumbnail-left">\n\n\n\n    <img src="https://img.youtube.com/vi/{{id}}/maxresdefault.jpg">\n\n  \n\n    <h2>{{ name }}</h2>\n\n    <h3 class="lbl">{{ description }}</h3>\n\n\n\n  </ion-item>'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_1 - Templates\src\components\video-item\video-item.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__providers_video_service_video_service__["a" /* VideoService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_video_service_video_service__["a" /* VideoService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__node_modules_angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__node_modules_angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__node_modules_ionic_angular___["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__node_modules_ionic_angular___["g" /* NavController */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__node_modules_ionic_angular_umd_navigation_nav_controller__["NavController"], __WEBPACK_IMPORTED_MODULE_2__node_modules_ionic_angular_umd_navigation_nav_params__["NavParams"], __WEBPACK_IMPORTED_MODULE_3__providers_video_service_video_service__["a" /* VideoService */], __WEBPACK_IMPORTED_MODULE_4__node_modules_angular_common_http__["a" /* HttpClient */]])
     ], VideoItemComponent);
     return VideoItemComponent;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=video-item.js.map
@@ -2083,8 +2036,7 @@ var TemplateSlidesArrowsPage = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2095,81 +2047,66 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var VideoService = /** @class */ (function () {
-    // tutorials_list = [
-    //   {
-    //     key: 'vhp1',
-    //     name: 'Vessel Health',
-    //     description: 'Engagement video',
-    //     id: 'LXChhaEAuJI'
-    //   },
-    //   {
-    //     key: 'vhp2',
-    //     name: 'Vessel Health',
-    //     description: 'Education and training video',
-    //     id: '5qQ09xz3hOo'
-    //   },
-    //   {
-    //     key: 'sa',
-    //     name: 'Situational Awareness',
-    //     description: 'Situational Awareness for Everyone (SAFE)',
-    //     id: 'UMVRgbN-AS0',
-    //   },
-    //   {
-    //     key: 'phototherapy',
-    //     name: 'Phototherapy',
-    //     description: 'Preparing the baby for phototherapy training video',
-    //     id: 'rm9tWpOZ-IY'
-    //   },
-    //   {
-    //     key: 'babycheck',
-    //     name: 'Baby check',
-    //     description: 'How to conduct a newborn examination training video',
-    //     id: 'IS8t2YaH6Jo'
-    //   },
-    //   {
-    //     key: 'tracheostomy',
-    //     name: 'Tracheostomy Support',
-    //     description: 'Basic life support of babies and children with a tracheostomy training video',
-    //     id: '5wd7KLo32fU'
-    //   },
-    //   {
-    //     key: 'tracheostomytube',
-    //     name: 'Changing a tracheostomy tube',
-    //     description: "Tracheostomy elective tube change training video",
-    //     id: "6vrYRKLhZSg"
-    //   }
-    // ];
-    function VideoService(http) {
-        var _this = this;
-        this.http = http;
+    function VideoService() {
         this.tutorials_keys = {};
-        this.http.get('http://uclst.co.uk/wp-json/wp/v2/video_library').subscribe(function (data) {
-            console.log(data);
-            _this.tutorials_list = data;
-            // alert(this.videos);
-            // this.tool = data[''];
-            // this.safetyToolkitMore();
-            // alert(this.tools);
-            // alert(this.tutorials_list);
-        });
+        this.tutorials_list = [
+            {
+                key: 'vhp1',
+                name: 'Vessel Health',
+                description: 'Engagement video',
+                id: 'LXChhaEAuJI'
+            },
+            {
+                key: 'vhp2',
+                name: 'Vessel Health',
+                description: 'Education and training video',
+                id: '5qQ09xz3hOo'
+            },
+            {
+                key: 'sa',
+                name: 'Situational Awareness',
+                description: 'Situational Awareness for Everyone (SAFE)',
+                id: 'UMVRgbN-AS0',
+            },
+            {
+                key: 'phototherapy',
+                name: 'Phototherapy',
+                description: 'Preparing the baby for phototherapy training video',
+                id: 'rm9tWpOZ-IY'
+            },
+            {
+                key: 'babycheck',
+                name: 'Baby check',
+                description: 'How to conduct a newborn examination training video',
+                id: 'IS8t2YaH6Jo'
+            },
+            {
+                key: 'tracheostomy',
+                name: 'Tracheostomy Support',
+                description: 'Basic life support of babies and children with a tracheostomy training video',
+                id: '5wd7KLo32fU'
+            },
+            {
+                key: 'tracheostomytube',
+                name: 'Changing a tracheostomy tube',
+                description: "Tracheostomy elective tube change training video",
+                id: "6vrYRKLhZSg"
+            }
+        ];
         console.log('Hello VideoService Service');
         for (var i in this.tutorials_list) {
-            alert(this.tutorials_keys[this.tutorials_list[i].key]);
             this.tutorials_keys[this.tutorials_list[i].key] = this.tutorials_list[i];
         }
-        // alert(this.tutorials_list)
     }
     VideoService.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad VideoLibraryPage');
     };
     VideoService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
     ], VideoService);
     return VideoService;
-    var _a;
 }());
 
 //# sourceMappingURL=video-service.js.map
