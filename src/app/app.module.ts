@@ -34,6 +34,8 @@ import { WpApiProvider } from '../providers/wp-api/wp-api';
 import { AccordionComponent } from '../components/accordion/accordion';
 import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
 import { CardComponent } from '../components/card/card';
+import { VideoItemComponent } from '../components/video-item/video-item';
+
 import { VideoService } from '../providers/video-service/video-service';
 import { FlashCardComponent } from '../components/flash-card/flash-card';
 
@@ -54,6 +56,7 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
     FlashCardComponent,
     AccordionMoreComponent,
     CardComponent,
+    VideoItemComponent,
     ViewNotePage,
     VideoPage,
     TemplateSliderPage,
@@ -102,6 +105,7 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
     WpApiProvider,
     VideoService,
 
-  ]
+  ],
+  
 })
 export class AppModule {}
