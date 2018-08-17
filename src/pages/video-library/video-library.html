@@ -10,7 +10,9 @@
 
  
     <ion-content padding="true" class="has-header">
-      
+       <ion-refresher (ionRefresh)="forceReload($event)">
+    <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+  </ion-refresher>
                
           <ion-searchbar 
 

@@ -18,6 +18,9 @@
 
 <ion-content padding>
 
+    <ion-refresher (ionRefresh)="forceReload($event)">
+      <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+    </ion-refresher>
     <card *ngFor="let tool of tools" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">
         <div [innerHTML]="tool.content.rendered"></div>
     </card>

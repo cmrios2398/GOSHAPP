@@ -12,6 +12,12 @@
 
 <ion-content padding>
 
+    <ion-refresher (ionRefresh)="forceReload($event)">
+
+        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+      </ion-refresher>
+      
+
 <img src="{{ imagetop }} ">
 
   <accordion-more *ngFor="let section of sections" [title]="section.title.rendered">

@@ -17,9 +17,11 @@
 
 
 <ion-content padding>
-    
-<ion-scroll zoom="true">
-</ion-scroll>
+    <ion-refresher (ionRefresh)="forceReload($event)">
+
+        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+      </ion-refresher>
+      
 <div style="height:40px"></div>
 
   <accordion-more *ngFor="let section of sections" [title]="section.title.rendered">

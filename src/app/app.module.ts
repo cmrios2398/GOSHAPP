@@ -36,8 +36,10 @@ import { AccordionMoreComponent } from '../components/accordion-more/accordion-m
 import { CardComponent } from '../components/card/card';
 import { VideoItemComponent } from '../components/video-item/video-item';
 
+import { CacheModule } from 'ionic-cache';
 import { VideoService } from '../providers/video-service/video-service';
 import { FlashCardComponent } from '../components/flash-card/flash-card';
+import { Network } from '@ionic-native/network';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,8 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
     TemplateQuizPage,
     TemplateSlidesArrowsPage,
     TemplateSimplePage,
-    InfectionControlPage
+    InfectionControlPage,
+    
   ],
   imports: [
     BrowserModule,
@@ -72,8 +75,9 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    CacheModule.forRoot()
+    ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -104,6 +108,7 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
     NoteService,
     WpApiProvider,
     VideoService,
+    Network
 
   ],
   

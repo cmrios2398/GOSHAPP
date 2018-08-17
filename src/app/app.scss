@@ -29,6 +29,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 * {
 	font-family: Poppins;
 }
+
+.has-refresher > .scroll-content {
+	border-top: #9ed7e9;
+}
 .side-menu-item {
 	background: none;
 	color: white;

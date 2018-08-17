@@ -11,6 +11,12 @@
 
 
 <ion-content padding>
+    <ion-refresher (ionRefresh)="forceReload($event)">
+
+        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+      </ion-refresher>
+      
+  <!--NEEDS WORDPRESS LINKING -->
 
 <ion-slides class="sliderr" pager>
   <ion-slide>

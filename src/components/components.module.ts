@@ -10,12 +10,14 @@ import { FlashCardComponent } from './flash-card/flash-card';
     AccordionMoreComponent,
     CardComponent,
     VideoItemComponent,
-    FlashCardComponent],
+    FlashCardComponent
+   ],
 	imports: [],
 	exports: [AccordionComponent,
     AccordionMoreComponent,
     CardComponent,
     VideoItemComponent,
-    FlashCardComponent]
+    FlashCardComponent
+  ]
 })
 export class ComponentsModule {}

@@ -5,6 +5,12 @@
 </ion-header>
 
 <ion-content>
+    <ion-refresher (ionRefresh)="forceReload($event)">
+
+        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+      </ion-refresher>
+      
+ 
   <ion-slides #slider effect="fade" (ionSlideWillChange)="onSlideChanged()">
     <ion-slide *ngFor="let tool of tools"
                class="swiper-no-swiping"

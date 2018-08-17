@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NavController } from 'ionic-angular/umd/navigation/nav-controller';
+import { Network } from '@ionic-native/network';
+import { Storage } from '@ionic/storage'
 
 
 @Injectable()
@@ -53,28 +55,43 @@ export class VideoService {
   //     id: "6vrYRKLhZSg"
   //   }
   // ];
-
-    constructor(public http: HttpClient) {
+  
+  
+  isConnected(): boolean {
+    let conntype = this._net.type;
+    return conntype && conntype !== 'unknown' && conntype !== 'none';
+  }
+  
+  
+  constructor(public http: HttpClient, public _net: Network, storage: Storage) {
+    
+    
+    if(this.isConnected()){
       this.http.get('http://uclst.co.uk/wp-json/wp/v2/video_library').subscribe( data => {
         console.log(data);
         this.tutorials_list = data;
-        // alert(this.videos);
-        // this.tool = data[''];
-        // this.safetyToolkitMore();
-        // alert(this.tools);
-        // alert(this.tutorials_list);
+        storage.set('videosKey', this.tutorials_list);
       })
-      console.log('Hello VideoService Service');
-        for(let i in this.tutorials_list){
-          alert(this.tutorials_keys[this.tutorials_list[i].key])
-            this.tutorials_keys[this.tutorials_list[i].key] = this.tutorials_list[i];
-        }
-        // alert(this.tutorials_list)
-  }
+    }
+    
+    else {
+      storage.get('videosKey').then((val) => {
+        this.tutorials_list = val;
+    }
+    )
+    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad VideoLibraryPage');
-  }
+
+      console.log('Hello VideoService Service');
+      for(let i in this.tutorials_list){
+        alert(this.tutorials_keys[this.tutorials_list[i].key])
+        this.tutorials_keys[this.tutorials_list[i].key] = this.tutorials_list[i];
+      }
+      // alert(this.tutorials_list)
+    }
+    ionViewDidLoad() {
+      console.log('ionViewDidLoad VideoLibraryPage');
+    }
   
   
  

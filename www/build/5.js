@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 468:
+/***/ 492:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemplateSimplePageModule", function() { return TemplateSimplePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemplateSliderPageModule", function() { return TemplateSliderPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__template_simple__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__template_slider__ = __webpack_require__(94);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TemplateSimplePageModule = /** @class */ (function () {
-    function TemplateSimplePageModule() {
+var TemplateSliderPageModule = /** @class */ (function () {
+    function TemplateSliderPageModule() {
     }
-    TemplateSimplePageModule = __decorate([
+    TemplateSliderPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__template_simple__["a" /* TemplateSimplePage */],
+                __WEBPACK_IMPORTED_MODULE_2__template_slider__["a" /* TemplateSliderPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__template_simple__["a" /* TemplateSimplePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__template_slider__["a" /* TemplateSliderPage */]),
             ],
         })
-    ], TemplateSimplePageModule);
-    return TemplateSimplePageModule;
+    ], TemplateSliderPageModule);
+    return TemplateSliderPageModule;
 }());
 
-//# sourceMappingURL=template-simple.module.js.map
+//# sourceMappingURL=template-slider.module.js.map
 
 /***/ })
 

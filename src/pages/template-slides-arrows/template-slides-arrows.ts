@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, Slides, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, Slides, NavController, NavParams, ToastController } from 'ionic-angular';
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { HttpClient } from '@angular/common/http';
+import { Storage } from '@ionic/storage'
 
 /**
  * Generated class for the TemplateSlidesArrowsPage page.
@@ -62,7 +63,7 @@ export class TemplateSlidesArrowsPage {
         private: true
       }
     ];
-    constructor(public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, public http: HttpClient) {
+    constructor(public storage: Storage, public toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, public http: HttpClient) {
       this.slug = this.navParams.get('slug');
       console.log(this.slug);
       
@@ -70,11 +71,45 @@ export class TemplateSlidesArrowsPage {
       // alert(this.title);
       console.log(this.title);
   
+      this.loadData();
+    }
+
+    
+  loadData(refresher?){
+    
+    if(this.wpApiProvider.isConnected() || navigator.onLine){
       this.wpApiProvider.getSTSpecific(this.slug).subscribe( data => {
         console.log(data);
         this.tools = data;
+        this.storage.set('dataFrom' + this.slug, this.tools);
       })
+      if(refresher){
+      let toast = this.toastCtrl.create({
+        message: 'Data loaded from server.',
+        duration: 2000
+      })
+      toast.present();
     }
+      }
+      else{
+        this.storage.get('dataFrom' + this.slug).then((data) => {
+          this.tools = data;
+        })
+        if(refresher){
+        let toast = this.toastCtrl.create({
+          message: 'No connection - failed to retrieve from server.',
+          duration: 2000
+        })
+        toast.present();
+      }
+      }
+  }
+
+  
+  forceReload(refresher?){
+    this.loadData(refresher)
+    refresher.complete()
+  }
 
     currentIndex = 0;
 

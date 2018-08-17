@@ -13,6 +13,9 @@ import { IcuNewStartersPage } from '../pages/icu-new-starters/icu-new-starters';
 import { InfectionControlPage } from '../pages/infection-control/infection-control';
 import { ClinicalPoliciesPage } from '../pages/clinical-policies/clinical-policies';
 import { ClinicalQualityProjectsPage } from '../pages/clinical-quality-projects/clinical-quality-projects';
+
+import { CacheService } from 'ionic-cache'
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -24,7 +27,7 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
   activePage: any;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public cache: CacheService, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -47,6 +50,9 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+
+      this.cache.setDefaultTTL(60 * 60 *24); //24 hours
+      this.cache.setOfflineInvalidate(false); 
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
