@@ -1,6 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+<<<<<<< HEAD
 import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
+=======
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { Storage } from '@ionic/storage'
 
@@ -23,6 +26,16 @@ export class IcuNewStartersPage {
 
   loadData(refresher?){
 
+<<<<<<< HEAD
+=======
+  constructor(public storage: Storage, public toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider) { 
+    this.loadData();
+  }
+
+   
+  loadData(refresher?){
+    
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
     if(this.wpApiProvider.isConnected() || navigator.onLine){
       this.wpApiProvider.getICU().subscribe( data => {
         console.log(data);
@@ -49,12 +62,26 @@ export class IcuNewStartersPage {
         toast.present();
       }
       }
+<<<<<<< HEAD
   }
 
 
   forceReload(refresher?){
     this.loadData(refresher)
     refresher.complete()
+=======
+  }
+
+  
+  forceReload(refresher?){
+    this.loadData(refresher)
+    refresher.complete()
+  }
+
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad IcuNewStartersPage');
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   }
 
 

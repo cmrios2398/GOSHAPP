@@ -32,6 +32,7 @@ export class TemplateSliderPage {
     console.log(this.title);
 
     this.loadData();
+<<<<<<< HEAD
   }
 
 
@@ -66,6 +67,42 @@ export class TemplateSliderPage {
   }
 
 
+=======
+  }
+
+  
+  loadData(refresher?){
+    
+    if(this.wpApiProvider.isConnected() || navigator.onLine){
+      this.wpApiProvider.getSTSpecific(this.slug).subscribe( data => {
+        console.log(data);
+        this.sections = data;
+        this.storage.set('dataFrom' + this.slug, this.sections);
+      })
+      if(refresher){
+      let toast = this.toastCtrl.create({
+        message: 'Data loaded from server.',
+        duration: 2000
+      })
+      toast.present();
+    }
+      }
+      else{
+        this.storage.get('dataFrom' + this.slug).then((data) => {
+          this.sections = data;
+        })
+        if(refresher){
+        let toast = this.toastCtrl.create({
+          message: 'No connection - failed to retrieve from server.',
+          duration: 2000
+        })
+        toast.present();
+      }
+      }
+  }
+
+  
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   forceReload(refresher?){
     this.loadData(refresher)
     refresher.complete()

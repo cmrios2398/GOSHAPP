@@ -1,9 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
 // import 'rxjs/add/operator/map'
 import { Network } from '@ionic-native/network';
 import { Observable } from 'rxjs/Observable';
 import { map, catchError } from 'rxjs/operators';
+=======
+import 'rxjs/add/operator/map'
+import { Network } from '@ionic-native/network';
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
 
 /*
   Generated class for the WpApiProvider provider.
@@ -14,13 +19,22 @@ import { map, catchError } from 'rxjs/operators';
 @Injectable()
 export class WpApiProvider {
 
+ 
+  isConnected(): boolean {
+    let conntype = this._net.type;
+    return conntype && conntype !== 'unknown' && conntype !== 'none';
+  }
+  
 
+<<<<<<< HEAD
   isConnected(): boolean {
     let conntype = this._net.type;
     return conntype && conntype !== 'unknown' && conntype !== 'none';
   }
 
 
+=======
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   constructor(public _net: Network, public http: HttpClient) {
     console.log('Hello WpApiProvider Provider');
   }
@@ -30,10 +44,14 @@ export class WpApiProvider {
 }
 
   getSafetyToolkit(){
+<<<<<<< HEAD
     return this.http.get('http://uclst.co.uk/wp-json/wp/v2/safety_toolkit').pipe(
       map(this.extractData),
       catchError(this.handleError)
     );
+=======
+    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/safety_toolkit')  
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   }
 
   getICU(){
@@ -65,6 +83,7 @@ export class WpApiProvider {
  }
 
   getSTSpecific(slug){
+<<<<<<< HEAD
     return this.http.get('http://uclst.co.uk/wp-json/wp/v2/' + slug).pipe(
       map(this.extractData),
       catchError(this.handleError)
@@ -86,6 +105,9 @@ export class WpApiProvider {
     }
     console.error(errMsg);
     return Observable.throw(errMsg);
+=======
+    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/' + slug)
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   }
 
 

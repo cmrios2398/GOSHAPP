@@ -21,6 +21,7 @@
 
 <ion-content padding>
     <ion-refresher (ionRefresh)="forceReload($event)">
+<<<<<<< HEAD
 
         <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
       </ion-refresher>
@@ -28,6 +29,15 @@
 
       <div *ngFor="let section of sections | search : terms" [innerHTML]="section.content.rendered"></div>
 
+=======
+
+        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+      </ion-refresher>
+      
+ 
+      <div *ngFor="let section of sections" [innerHTML]="section.content.rendered"></div>
+   
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
 
 
 

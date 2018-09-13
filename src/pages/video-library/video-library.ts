@@ -24,12 +24,21 @@ export class VideoLibraryPage {
   @Input('id') id: string;
   @Input('description') description: string;
   @Input('name') name: string;
+<<<<<<< HEAD
 
 
    constructor(public toastCtrl: ToastController, public storage: Storage, public navCtrl: NavController, public navParams: NavParams, private videoService: VideoService, public http: HttpClient) {
     // this.narrowed_tutorials = this.videoService.tutorials_list;
 
 
+=======
+  
+ 
+   constructor(public toastCtrl: ToastController, public storage: Storage, public navCtrl: NavController, public navParams: NavParams, private videoService: VideoService, public http: HttpClient) {
+    // this.narrowed_tutorials = this.videoService.tutorials_list;
+
+    
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
     // this._net.onConnect().subscribe(() => {
     //   this.http.get('http://uclst.co.uk/wp-json/wp/v2/video_library').subscribe( data => {
     //   console.log(data);
@@ -38,10 +47,17 @@ export class VideoLibraryPage {
     //   alert("worksTS")
     //  })
     // })
+<<<<<<< HEAD
 
     // this.narrowed_tutorials = this.videos;
 
 
+=======
+    
+    // this.narrowed_tutorials = this.videos;
+    
+    
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
     // this._net.onDisconnect().subscribe(() => {
     //   this.http.get('http://uclst.co.uk/wp-json/wp/v2/video_library').subscribe( data => {
     //     console.log(data);
@@ -50,12 +66,20 @@ export class VideoLibraryPage {
     this.data = {
       search: ''
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
     this.loadData();
 }
 
   loadData(refresher?){
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
     if(this.videoService.isConnected() || navigator.onLine){
       this.http.get('http://uclst.co.uk/wp-json/wp/v2/video_library').subscribe( data => {
           console.log(data);
@@ -80,6 +104,7 @@ export class VideoLibraryPage {
       message: 'No connection - failed to retrieve from server.',
       duration: 2000
     })
+<<<<<<< HEAD
     toast.present();
   }
   }
@@ -88,8 +113,17 @@ export class VideoLibraryPage {
   forceReload(refresher?){
     this.loadData(refresher)
     refresher.complete()
+=======
+    toast.present();  
+  }
+  }
+>>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   }
 
+  forceReload(refresher?){
+    this.loadData(refresher)
+    refresher.complete()
+  }
 
   search(){
     var searchedString = this.data.search.toLocaleLowerCase();
