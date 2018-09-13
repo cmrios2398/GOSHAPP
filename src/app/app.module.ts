@@ -35,9 +35,13 @@ import { AccordionComponent } from '../components/accordion/accordion';
 import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
 import { CardComponent } from '../components/card/card';
 import { VideoItemComponent } from '../components/video-item/video-item';
+import { SidebarComponent } from '../components/sidebar/sidebar';
 
+import { CacheModule } from 'ionic-cache';
+import { SearchPipe } from '../pipes/search/search';
 import { VideoService } from '../providers/video-service/video-service';
 import { FlashCardComponent } from '../components/flash-card/flash-card';
+import { Network } from '@ionic-native/network';
 
 @NgModule({
   declarations: [
@@ -56,7 +60,9 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
     FlashCardComponent,
     AccordionMoreComponent,
     CardComponent,
+    SidebarComponent,
     VideoItemComponent,
+    SearchPipe,
     ViewNotePage,
     VideoPage,
     TemplateSliderPage,
@@ -64,16 +70,24 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
     TemplateQuizPage,
     TemplateSlidesArrowsPage,
     TemplateSimplePage,
-    InfectionControlPage
+    InfectionControlPage,
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      platforms: {
+        ios: {
+          backButtontext: ''
+        }
+      }
+    }),
     IonicStorageModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    CacheModule.forRoot()
+    ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -104,8 +118,9 @@ import { FlashCardComponent } from '../components/flash-card/flash-card';
     NoteService,
     WpApiProvider,
     VideoService,
+    Network
 
   ],
-  
+
 })
 export class AppModule {}

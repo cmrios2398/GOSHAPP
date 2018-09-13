@@ -1,23 +1,14 @@
 webpackJsonp([6],{
 
-<<<<<<< HEAD
-/***/ 314:
-=======
-/***/ 470:
->>>>>>> 25db27d0c0691a2349fb50e25a4acf8189746ea2
+/***/ 492:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemplateQuizPageModule", function() { return TemplateQuizPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemplateSimplePageModule", function() { return TemplateSimplePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__template_quiz__ = __webpack_require__(55);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__template_quiz__ = __webpack_require__(91);
->>>>>>> 25db27d0c0691a2349fb50e25a4acf8189746ea2
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__template_simple__ = __webpack_require__(93);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -27,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TemplateQuizPageModule = /** @class */ (function () {
-    function TemplateQuizPageModule() {
+var TemplateSimplePageModule = /** @class */ (function () {
+    function TemplateSimplePageModule() {
     }
-    TemplateQuizPageModule = __decorate([
+    TemplateSimplePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__template_quiz__["a" /* TemplateQuizPage */],
+                __WEBPACK_IMPORTED_MODULE_2__template_simple__["a" /* TemplateSimplePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__template_quiz__["a" /* TemplateQuizPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__template_simple__["a" /* TemplateSimplePage */]),
             ],
         })
-    ], TemplateQuizPageModule);
-    return TemplateQuizPageModule;
+    ], TemplateSimplePageModule);
+    return TemplateSimplePageModule;
 }());
 
-//# sourceMappingURL=template-quiz.module.js.map
+//# sourceMappingURL=template-simple.module.js.map
 
 /***/ })
 

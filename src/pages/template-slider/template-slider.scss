@@ -1,6 +1,6 @@
 page-template-slider {
 
-    
+
     .card-header{
         background-color: map-get($colors, primary);
         color: #fff;
@@ -30,6 +30,11 @@ page-template-slider {
         text-overflow: initial;
         white-space: normal;
         word-wrap: break-word;
+    }
+
+    .searchbar{
+      background-color: #184F8A;
+
     }
 
 }

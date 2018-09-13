@@ -11,11 +11,16 @@
 
 
 <ion-content>
+    <ion-refresher (ionRefresh)="forceReload($event)">
+      <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+    </ion-refresher>
+
+          
 
   <h4 class="title"><strong> A guide to defining Clinical Quality Projects at GOSH: Who to contact for support and governance</strong></h4>
 
   <h6 class="paragraph-text"><strong>What is your project idea? Click on a card to reveal the project type and contact details</strong></h6>
-	<flash-card *ngFor="let tool of tools">
+	<flash-card *ngFor="let tool of tools | search : terms">
 
 		<div class="flash-card-front"><div [innerHTML]="tool.front"></div></div>
 

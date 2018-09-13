@@ -6,21 +6,28 @@
 -->
 <ion-header>
 
-  <ion-navbar color="primary">
-    <ion-title>{{ title }}</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>
-    </ion-buttons>
-  </ion-navbar>
-
-</ion-header>
+  <ion-header>
+    <ion-navbar color="primary">
+       <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>
+       <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>
+      <ion-buttons end>
+        <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">
+        <ion-icon name="search"></ion-icon></button>
+        <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
 
 
 <ion-content padding>
+    <ion-refresher (ionRefresh)="forceReload($event)">
 
- 
-      <div *ngFor="let section of sections" [innerHTML]="section.content.rendered"></div>
-   
+        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+      </ion-refresher>
+             <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
+
+      <div *ngFor="let section of sections | search : terms" [innerHTML]="section.content.rendered"></div>
+
 
 
 

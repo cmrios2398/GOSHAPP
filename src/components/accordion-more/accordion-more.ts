@@ -15,9 +15,11 @@ export class AccordionMoreComponent implements OnInit {
   accordionExpanded = false;
   @ViewChild("cc") cardContent: any;
   @Input('title') title: string;
+  
 
 
   constructor(public renderer: Renderer) {
+  
 
   }
 
@@ -25,7 +27,6 @@ export class AccordionMoreComponent implements OnInit {
     console.log(this.cardContent.nativeElement);
     this.renderer.setElementStyle(this.cardContent.nativeElement, "webkitTransition", "max-height 300ms, padding 300ms")
   }
-
   toggleAccordion() {
     if(this.accordionExpanded){
       this.renderer.setElementStyle(this.cardContent.nativeElement, "max-height" , "0px");

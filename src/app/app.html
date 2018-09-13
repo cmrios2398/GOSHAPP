@@ -1,6 +1,6 @@
 <ion-menu [content]="content">
   <ion-header>
-    
+
   </ion-header>
 
   <ion-content class="side-menu-gradient">
@@ -11,7 +11,8 @@
       <button class="side-menu-item" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" no-line>
         {{p.title}}
       </button>
-    </ion-list>
+  <!-- <sidebar *ngFor="let tool of tools" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name"></sidebar> -->
+     </ion-list>
   </ion-content>
 
 </ion-menu>

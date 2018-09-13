@@ -6,10 +6,16 @@
 -->
 <ion-header>
     <ion-navbar color="primary">
-        <button ion-button menuToggle>
+        <button ion-button menuToggle *ngIf ="!searchOpen">
           <ion-icon name="menu"></ion-icon>
         </button>
-         <ion-title>Clinical Policies</ion-title>
+         <ion-title *ngIf ="!searchOpen">Clinical Policies</ion-title>
+         <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>
+        <ion-buttons end>
+          <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">
+          <ion-icon name="search"></ion-icon></button>
+          <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>
+        </ion-buttons>
       </ion-navbar>
 
 
@@ -17,9 +23,13 @@
 
 
 <ion-content padding>
+        <ion-refresher (ionRefresh)="forceReload($event)">
+                <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+              </ion-refresher>
+              
     <ion-content padding>
 
-        <card *ngFor="let tool of tools" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">
+        <card *ngFor="let tool of tools | search : terms" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">
             <div [innerHTML]="tool.content.rendered"></div>
         </card>
 
