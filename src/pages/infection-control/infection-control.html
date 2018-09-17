@@ -6,10 +6,10 @@
 -->
 <ion-header>
     <ion-navbar color="primary">
-        <button ion-button menuToggle ngIf ="!searchOpen">
+        <button ion-button menuToggle *ngIf ="!searchOpen">
           <ion-icon name="menu"></ion-icon>
         </button>
-         <ion-title ngIf ="!searchOpen">Infection Control</ion-title>
+         <ion-title *ngIf ="!searchOpen">Infection Control</ion-title>
          <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>
         <ion-buttons end>
           <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">
@@ -26,7 +26,6 @@
         <ion-refresher (ionRefresh)="forceReload($event)">
             <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
         </ion-refresher>
-<<<<<<< HEAD
             
 
             <card *ngFor="let tool of tools | search : terms" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">
@@ -34,13 +33,3 @@
             </card>
 
         </ion-content>
-=======
-        <ion-content padding>
-
-            <card *ngFor="let tool of tools" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">
-                <div [innerHTML]="tool.content.rendered"></div>
-            </card>
-    
-        </ion-content>
-</ion-content>
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef

@@ -20,21 +20,9 @@
 
 <ion-content padding class="has-header" overflow-scroll="true" class="background">
   
-  <ion-refresher (ionRefresh)="forceReload($event)">
 
-<<<<<<< HEAD
-  <ion-refresher (ionRefresh)="forceReload($event)">
-=======
-    <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
-  </ion-refresher>
-  
-  <accordion *ngFor="let tool of tools | async" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug" [template] = "tool.template_name" [imagetop] = "tool.image_top.guid">
-      <div [innerHTML]="tool.content.rendered"></div>
-    </accordion>
 
-  
-        
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
+  <ion-refresher (ionRefresh)="forceReload($event)">
 
     <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
   </ion-refresher>

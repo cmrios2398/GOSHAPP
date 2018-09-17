@@ -1,22 +1,14 @@
 webpackJsonp([8],{
 
-<<<<<<< HEAD
-/***/ 490:
-=======
-/***/ 485:
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
+/***/ 492:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemplateImagetopPageModule", function() { return TemplateImagetopPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TemplateQuizScorePageModule", function() { return TemplateQuizScorePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__template_imagetop__ = __webpack_require__(167);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__template_imagetop__ = __webpack_require__(166);
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__template_quiz_score__ = __webpack_require__(168);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -26,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TemplateImagetopPageModule = /** @class */ (function () {
-    function TemplateImagetopPageModule() {
+var TemplateQuizScorePageModule = /** @class */ (function () {
+    function TemplateQuizScorePageModule() {
     }
-    TemplateImagetopPageModule = __decorate([
+    TemplateQuizScorePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__template_imagetop__["a" /* TemplateImagetopPage */],
+                __WEBPACK_IMPORTED_MODULE_2__template_quiz_score__["a" /* TemplateQuizScorePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__template_imagetop__["a" /* TemplateImagetopPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__template_quiz_score__["a" /* TemplateQuizScorePage */]),
             ],
         })
-    ], TemplateImagetopPageModule);
-    return TemplateImagetopPageModule;
+    ], TemplateQuizScorePageModule);
+    return TemplateQuizScorePageModule;
 }());
 
-//# sourceMappingURL=template-imagetop.module.js.map
+//# sourceMappingURL=template-quiz-score.module.js.map
 
 /***/ })
 

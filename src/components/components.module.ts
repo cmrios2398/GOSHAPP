@@ -11,24 +11,16 @@ import { SidebarComponent } from './sidebar/sidebar';
     AccordionMoreComponent,
     CardComponent,
     VideoItemComponent,
-<<<<<<< HEAD
     FlashCardComponent,
     SidebarComponent
-=======
-    FlashCardComponent
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
    ],
 	imports: [],
 	exports: [AccordionComponent,
     AccordionMoreComponent,
     CardComponent,
     VideoItemComponent,
-<<<<<<< HEAD
     FlashCardComponent,
     SidebarComponent
-=======
-    FlashCardComponent
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   ]
 })
 export class ComponentsModule {}

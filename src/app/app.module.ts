@@ -17,6 +17,7 @@ import { TemplateImagetopPage } from '../pages/template-imagetop/template-imaget
 import { VideoPage } from '../pages/video/video';
 import { TemplateSlidesArrowsPage } from '../pages/template-slides-arrows/template-slides-arrows';
 import { TemplateQuizPage } from '../pages/template-quiz/template-quiz';
+import { TemplateQuizScorePage } from '../pages/template-quiz-score/template-quiz-score';
 import { TemplateSimplePage } from '../pages/template-simple/template-simple';
 import { InfectionControlPage } from '../pages/infection-control/infection-control';
 
@@ -38,10 +39,7 @@ import { VideoItemComponent } from '../components/video-item/video-item';
 import { SidebarComponent } from '../components/sidebar/sidebar';
 
 import { CacheModule } from 'ionic-cache';
-<<<<<<< HEAD
 import { SearchPipe } from '../pipes/search/search';
-=======
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
 import { VideoService } from '../providers/video-service/video-service';
 import { FlashCardComponent } from '../components/flash-card/flash-card';
 import { Network } from '@ionic-native/network';
@@ -71,14 +69,10 @@ import { Network } from '@ionic-native/network';
     TemplateSliderPage,
     TemplateImagetopPage,
     TemplateQuizPage,
+    TemplateQuizScorePage,
     TemplateSlidesArrowsPage,
     TemplateSimplePage,
     InfectionControlPage,
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   ],
   imports: [
     BrowserModule,
@@ -113,6 +107,7 @@ import { Network } from '@ionic-native/network';
     TemplateSliderPage,
     TemplateImagetopPage,
     TemplateQuizPage,
+    TemplateQuizScorePage,
     TemplateSlidesArrowsPage,
     TemplateSimplePage,
     InfectionControlPage

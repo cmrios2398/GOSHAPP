@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { AlertController, IonicPage, Slides, NavController, NavParams, ToastController } from 'ionic-angular';
+import { AlertController, IonicPage, Slides, NavController, NavParams, ToastController,  } from 'ionic-angular';
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage'
@@ -18,51 +18,30 @@ import { Storage } from '@ionic/storage'
 })
 export class TemplateQuizPage {
 
-  questions;
+  @ViewChild(Slides) slides: Slides;
+
+  answeredFinally: boolean = false;
+	
+	// Our total score counter
+	score: number = 0;
+
+  questions: any;
+  
+  selectFirst: boolean;
+	selectSecond: boolean;
+	selectThird: boolean;
+  selectFourth: boolean;
+
+  alert: boolean;
+  
+	
+  
   slug;
   title;
   images;
   
-  @ViewChild('slider') slider: Slides;
-  //NEEDS TO BE AUTOMATED - WORDPRESS 
-  slides = [
-    {
-        title: 'Dream\'s Adventure',
-        imageUrl: 'assets/img/lists/wishlist-1.jpg',
-        songs: 2,
-        private: false
-      },
-      {
-        title: 'For the Weekend',
-        imageUrl: 'assets/img/lists/wishlist-2.jpg',
-        songs: 4,
-        private: false
-      },
-      {
-        title: 'Family Time',
-        imageUrl: 'assets/img/lists/wishlist-3.jpg',
-        songs: 5,
-        private: true
-      },
-      {
-        title: 'My Trip',
-        imageUrl: 'assets/img/lists/wishlist-4.jpg',
-        songs: 12,
-        private: true
-      },
-      {
-        title: 'My Trip',
-        imageUrl: 'assets/img/lists/wishlist-4.jpg',
-        songs: 12,
-        private: true
-      },
-      {
-        title: 'My Trip',
-        imageUrl: 'assets/img/lists/wishlist-4.jpg',
-        songs: 12,
-        private: true
-      }
-    ];
+ 
+
 
     constructor(public toastCtrl: ToastController, public storage: Storage, public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, public http: HttpClient) {
       this.slug = this.navParams.get('slug');
@@ -111,11 +90,99 @@ export class TemplateQuizPage {
     this.loadData(refresher)
     refresher.complete()
   }
+  
+  changeSlide(){
+    this.slides.lockSwipes(false);
+		this.slides.slideNext();
+		this.slides.lockSwipes(true);
+  }
+  
 
-  showAlert() {
+  
+  checkAllFalse() {
+		this.selectFirst = false;
+		this.selectSecond = false;
+		this.selectThird = false;
+		this.selectFourth = false;
+  }
+  
+  selectAnswer(question, selection, choice){
+
+
+		if (selection == "first") {
+			this.checkAllFalse();
+      this.selectFirst = true;
+      this.answeredFinally = true;
+      if (question.correct == "first")
+      {
+       this.correctAlert();
+       this.changeSlide();
+      }
+      else if (question.correct != "first"){
+        this.wrongAlert();
+      }
+      
+		}
+
+		else if (selection == "second") {
+			this.checkAllFalse();
+      this.selectSecond = true;
+      this.answeredFinally = true;
+      if (question.correct == "second")
+      {
+        this.correctAlert();
+        this.changeSlide();
+      }
+      else if (question.correct != "second"){
+        this.wrongAlert();
+      }
+		}
+
+		else if (selection == "third") {
+			this.checkAllFalse();
+      this.selectThird = true;
+      this.answeredFinally = true;
+      if (question.correct == "third")
+      {
+        this.correctAlert();
+        this.changeSlide();
+      }
+      else if (question.correct != "third"){
+        this.wrongAlert();
+      }
+		}
+
+		else if (selection == "fourth") {
+			this.checkAllFalse();
+      this.selectFourth = true;
+      this.answeredFinally = true;
+      if (question.correct == "fourth")
+      {
+        this.correctAlert();
+        this.changeSlide();
+      }
+      else if (question.correct != "fourth"){
+        this.wrongAlert();
+      }
+		}
+
+
+
+		setTimeout(() => {
+			this.answeredFinally = false;
+			this.checkAllFalse();
+		}, 1000);
+	}
+  
+  restartQuiz(){
+		this.slides.lockSwipes(false);
+		this.slides.slideTo(1, 1000);
+		this.slides.lockSwipes(true);
+	}
+  
+  correctAlert() {
     const alert = this.alertCtrl.create({
       title: 'Excellent!',
-      subTitle: 'Now move onto the next question...',
       buttons: ['Next']
     });
     alert.present();
@@ -123,8 +190,7 @@ export class TemplateQuizPage {
 
 wrongAlert() {
   const alert = this.alertCtrl.create({
-    title: 'Think about this again',
-    subTitle: 'Return to your step by step process for blood gas interpretation...',
+    title: 'Think about this again...',
     buttons: ['Return']
   });
   alert.present();

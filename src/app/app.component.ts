@@ -16,11 +16,8 @@ import { ClinicalQualityProjectsPage } from '../pages/clinical-quality-projects/
 
 import { CacheService } from 'ionic-cache'
 
-<<<<<<< HEAD
 import { WpApiProvider } from '../providers/wp-api/wp-api';
 
-=======
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
 @Component({
   templateUrl: 'app.html'
 })
@@ -34,11 +31,7 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
   activePage: any;
 
-<<<<<<< HEAD
   constructor(public platform: Platform, public cache: CacheService, private wpApiProvider: WpApiProvider, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-=======
-  constructor(public platform: Platform, public cache: CacheService, public statusBar: StatusBar, public splashScreen: SplashScreen) {
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -62,11 +55,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
 
       this.cache.setDefaultTTL(60 * 60 *24); //24 hours
-<<<<<<< HEAD
       this.cache.setOfflineInvalidate(false);
-=======
-      this.cache.setOfflineInvalidate(false); 
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

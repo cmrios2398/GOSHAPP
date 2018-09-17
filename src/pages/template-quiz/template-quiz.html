@@ -12,7 +12,14 @@
         <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
       </ion-refresher>
 <ion-slides>
-  <ion-slide *ngFor="let question of questions">
+    <ion-slide>
+       
+        <button ion-button color="primary" (click)="changeSlide()">Start Quiz!</button>
+      </ion-slide>
+
+  <ion-slide *ngFor="let question of questions; let i = index;">
+      <p class="pp">{{question.intro}}</p>
+      
  <ion-card class="question-card">
    <ion-card-header>{{ question.title.rendered }}</ion-card-header>
    <ion-card-content>
@@ -20,34 +27,32 @@
  </ion-card-content>
  </ion-card>
 
- <ion-list radio-group [(ngModel)]="relationship">
-    <ion-item >
+	<ion-list no-lines radio-group>
+				<ion-item>
       <ion-label class="lbl">{{question.choice_1}}</ion-label>
-      <ion-radio (click)="wrongAlert()" value="friends" checked></ion-radio>
-    </ion-item>
+      <ion-radio (click)="selectAnswer(question, 'first', question.firstChoice)" [checked]="selectFirst" [disabled]="answeredFinally"></ion-radio>
+				</ion-item>
     <ion-item>
       <ion-label class="lbl">{{question.choice_2}}</ion-label>
-      <ion-radio (click)="wrongAlert()" value="family"></ion-radio>
-    </ion-item>
+      <ion-radio (click)="selectAnswer(question, 'second', question.secondChoice)" [checked]="selectSecond" [disabled]="answeredFinally"></ion-radio>
+				</ion-item>
     <ion-item>
       <ion-label class="lbl">{{question.choice_3}}</ion-label>
-      <ion-radio (click)="showAlert()" value="enemies"></ion-radio>
-    </ion-item>
+      <ion-radio (click)="selectAnswer(question, 'third', question.thirdChoice)" [checked]="selectThird" [disabled]="answeredFinally"></ion-radio>
+				</ion-item>
     <ion-item>
         <ion-label class="lbl">{{question.choice_4}}</ion-label>
-        <ion-radio (click)="wrongAlert()" value="lovers" ></ion-radio>
-      </ion-item> 
+        <ion-radio (click)="selectAnswer(question, 'fourth', question.fourthChoice)" [checked]="selectFourth" [disabled]="answeredFinally"></ion-radio>
+      </ion-item>
   </ion-list>
   </ion-slide>
+
+  <ion-slide>
+			
+			<button (click)="restartQuiz()" ion-button full color="primary">Start Quiz Again</button>
+		</ion-slide>
 </ion-slides>
 
-
-<div *ngIf="currentIndex > 0"
-    class="swiper-button-prev swiper-button-white"
-    (click)="previousSlide()"></div>
-<div *ngIf="currentIndex < slides.length-1"
-    class="swiper-button-next swiper-button-white"
-    (click)="nextSlide()"></div>
 
 
 

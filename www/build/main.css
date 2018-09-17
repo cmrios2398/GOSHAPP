@@ -25121,6 +25121,26 @@ page-template-quiz .lbl {
   white-space: inherit;
 }
 
+page-template-quiz .pp {
+  color: #003764;
+}
+
+page-template-quiz-score .card-header {
+  font-weight: bold;
+}
+
+page-template-quiz-score .question-card {
+  background: #80ffff;
+}
+
+page-template-quiz-score .lbl {
+  white-space: inherit;
+}
+
+page-template-quiz-score .pp {
+  color: #003764;
+}
+
 page-template-simple .searchbar {
   background-color: #184F8A;
 }

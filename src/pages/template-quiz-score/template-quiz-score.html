@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>
+        {{title}}
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-refresher (ionRefresh)="forceReload($event)">
+  
+          <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
+        </ion-refresher>
+  <ion-slides>
+      <ion-slide>
+          <button ion-button color="primary" (click)="changeSlide()">Start Quiz!</button>
+        </ion-slide>
+  
+    <ion-slide *ngFor="let question of questions; let i = index;">
+        <p class="pp">{{question.intro}}</p>
+   <ion-card class="question-card">
+     <ion-card-header>{{ question.title.rendered }}</ion-card-header>
+     <ion-card-content>
+    <div [innerHTML]="question.content.rendered"></div>
+   </ion-card-content>
+   </ion-card>
+  
+    <ion-list no-lines radio-group>
+          <ion-item>
+        <ion-label class="lbl">{{question.choice_1}}</ion-label>
+        <ion-radio (click)="selectAnswer(question, 'first', question.firstChoice)" [checked]="selectFirst" [disabled]="answeredFinally"></ion-radio>
+          </ion-item>
+      <ion-item>
+        <ion-label class="lbl">{{question.choice_2}}</ion-label>
+        <ion-radio (click)="selectAnswer(question, 'second', question.secondChoice)" [checked]="selectSecond" [disabled]="answeredFinally"></ion-radio>
+          </ion-item>
+      <ion-item>
+        <ion-label class="lbl">{{question.choice_3}}</ion-label>
+        <ion-radio (click)="selectAnswer(question, 'third', question.thirdChoice)" [checked]="selectThird" [disabled]="answeredFinally"></ion-radio>
+          </ion-item>
+      <ion-item>
+          <ion-label class="lbl">{{question.choice_4}}</ion-label>
+          <ion-radio (click)="selectAnswer(question, 'fourth', question.fourthChoice)" [checked]="selectFourth" [disabled]="answeredFinally"></ion-radio>
+        </ion-item>
+    </ion-list>
+    </ion-slide>
+  
+    <ion-slide>
+        <h2>Your Final Score: {{score}}</h2>
+        <button (click)="restartQuiz()" ion-button full color="primary">Start Quiz Again</button>
+      </ion-slide>
+  </ion-slides>
+  
+  
+  
+  
+  </ion-content>
+  
+  
