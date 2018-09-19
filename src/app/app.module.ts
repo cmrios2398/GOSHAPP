@@ -35,13 +35,11 @@ import { AccordionComponent } from '../components/accordion/accordion';
 import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
 import { CardComponent } from '../components/card/card';
 import { VideoItemComponent } from '../components/video-item/video-item';
+
 import { SidebarComponent } from '../components/sidebar/sidebar';
 
 import { CacheModule } from 'ionic-cache';
-<<<<<<< HEAD
 import { SearchPipe } from '../pipes/search/search';
-=======
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
 import { VideoService } from '../providers/video-service/video-service';
 import { FlashCardComponent } from '../components/flash-card/flash-card';
 import { Network } from '@ionic-native/network';
@@ -74,11 +72,7 @@ import { Network } from '@ionic-native/network';
     TemplateSlidesArrowsPage,
     TemplateSimplePage,
     InfectionControlPage,
-<<<<<<< HEAD
-
-=======
     
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   ],
   imports: [
     BrowserModule,

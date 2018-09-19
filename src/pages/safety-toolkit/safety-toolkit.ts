@@ -22,18 +22,11 @@ import { Observable } from 'rxjs';
 })
 export class SafetyToolkitPage {
   tools: Observable<any>;
-<<<<<<< HEAD
   public searchOpen = false;
   // tool;
 
 
   constructor(private http: HttpClient, public navCtrl: NavController, public navParams: NavParams, private cache: CacheService, public wpApiProvider: WpApiProvider, private toastCtrl: ToastController) {
-=======
-  // tool;
- 
- 
-  constructor(private http: HttpClient, public navCtrl: NavController, public navParams: NavParams, private cache: CacheService, public wpApiProvider: WpApiProvider, private toastCtrl: ToastController) { 
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
     // console.log(this.loadData());
     // this.tools = this.loadData();
     this.loadData();
@@ -47,12 +40,6 @@ export class SafetyToolkitPage {
     //   toast.present();
     //   this.tools = res;
     // })
-<<<<<<< HEAD
-
-    // this.tools = this.cache.loadFromObservable('safetyTools', req)
-
-  }
-=======
    
     // this.tools = this.cache.loadFromObservable('safetyTools', req)
 
@@ -73,7 +60,6 @@ export class SafetyToolkitPage {
       return res;
       
     })
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
 
     if (refresher) {
       
@@ -87,45 +73,6 @@ export class SafetyToolkitPage {
       let delayType = 'all';
       this.tools = this.cache.loadFromDelayedObservable(url, req, undefined, undefined, delayType);
 
-<<<<<<< HEAD
-  loadData(refresher?){
-
-
-    let url = 'http://uclst.co.uk/wp-json/wp/v2/safety_toolkit'
-    let req = this.http.get(url)
-    .map(res => {
-      let toast = this.toastCtrl.create({
-        message: 'Data loaded from server.',
-        duration: 2000
-      })
-      toast.present();
-      return res;
-
-    })
-
-    if (refresher) {
-
-    if(!this.wpApiProvider.isConnected()){
-      let toast = this.toastCtrl.create({
-        message: 'No connection - failed to retrieve from server.',
-        duration: 2000
-      })
-      toast.present();
-    }
-      let delayType = 'all';
-      this.tools = this.cache.loadFromDelayedObservable(url, req, undefined, undefined, delayType);
-
-      this.tools.subscribe(data=> {
-        refresher.complete();
-      })
-    } else {
-      this.tools = this.cache.loadFromObservable(url, req);
-
-    }
-
-  }
-
-=======
       this.tools.subscribe(data=> {
         refresher.complete();
       })
@@ -136,7 +83,6 @@ export class SafetyToolkitPage {
     
   }
  
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   forceReload(refresher){
     this.loadData(refresher);
   }
