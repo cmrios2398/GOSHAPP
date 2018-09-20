@@ -16,10 +16,12 @@
     </ion-refresher>
 
           
-
+<!-- 
   <h4 class="title"><strong> A guide to defining Clinical Quality Projects at GOSH: Who to contact for support and governance</strong></h4>
 
-  <h6 class="paragraph-text"><strong>What is your project idea? Click on a card to reveal the project type and contact details</strong></h6>
+  <h6 class="paragraph-text"><strong></strong></h6> -->
+<div *ngFor="let tool of tools | search : terms" class="txt">  <div [innerHTML]="tool.content.rendered"></div></div>
+
 	<flash-card *ngFor="let tool of tools | search : terms">
 
 		<div class="flash-card-front"><div [innerHTML]="tool.front"></div></div>

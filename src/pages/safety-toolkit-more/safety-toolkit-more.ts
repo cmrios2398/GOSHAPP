@@ -3,7 +3,8 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { HttpClient } from '@angular/common/http';
-import { Storage } from '@ionic/storage'
+import { Storage } from '@ionic/storage';
+import { ImageViewerController } from 'ionic-img-viewer';
 
 /**
  * Generated class for the SafetyToolkitMorePage page.
@@ -19,6 +20,8 @@ import { Storage } from '@ionic/storage'
 })
 export class SafetyToolkitMorePage {
 
+  _imageViewerCtrl: ImageViewerController;
+
 
   sections;
   slug;
@@ -26,7 +29,10 @@ export class SafetyToolkitMorePage {
   images;
   public searchOpen = false;
 
-  constructor(public storage: Storage, public toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, public http: HttpClient) {
+  constructor(public storage: Storage, public toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, public http: HttpClient, imageViewerCtrl: ImageViewerController) {
+    
+    this._imageViewerCtrl = imageViewerCtrl;
+
     this.slug = this.navParams.get('slug');
     console.log(this.slug);
 
@@ -35,6 +41,12 @@ export class SafetyToolkitMorePage {
     console.log(this.title);
 
     this.loadData();
+  }
+
+  presentImage(myImage) {
+    const imageViewer = this._imageViewerCtrl.create(myImage);
+    imageViewer.present();
+
   }
 
 

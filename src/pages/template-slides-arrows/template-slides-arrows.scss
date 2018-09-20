@@ -3,5 +3,11 @@ page-template-slides-arrows {
     .toolbar-title {
         white-space: normal;
     }
-
+    .swiper-slide img {
+        width: auto;
+        max-width: 70%;
+        height: auto;
+        max-height: 100%
+    }
+    
 }

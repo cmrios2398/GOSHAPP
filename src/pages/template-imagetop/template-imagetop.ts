@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { Storage } from '@ionic/storage';
+import { ImageViewerController } from 'ionic-img-viewer';
 
 
 /**
@@ -21,13 +22,18 @@ import { Storage } from '@ionic/storage';
 })
 export class TemplateImagetopPage {
 
+  _imageViewerCtrl: ImageViewerController;
+
   sections;
   slug;
   title;
   imagetop;
   public searchOpen = false;
 
-  constructor(public toastCtrl: ToastController, public storage: Storage, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider) {
+  constructor(public toastCtrl: ToastController, public storage: Storage, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, imageViewerCtrl: ImageViewerController) {
+    
+    this._imageViewerCtrl = imageViewerCtrl;
+
     this.slug = this.navParams.get('slug');
     console.log(this.slug);
 
@@ -38,6 +44,12 @@ export class TemplateImagetopPage {
     console.log(this.imagetop);
 
     this.loadData();
+
+  }
+
+  presentImage(myImage) {
+    const imageViewer = this._imageViewerCtrl.create(myImage);
+    imageViewer.present();
 
   }
 

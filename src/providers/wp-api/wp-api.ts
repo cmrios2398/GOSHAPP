@@ -5,6 +5,7 @@ import { Network } from '@ionic-native/network';
 import { Observable } from 'rxjs/Observable';
 import { map, catchError } from 'rxjs/operators';
 
+
 /*
   Generated class for the WpApiProvider provider.
 
@@ -53,6 +54,13 @@ export class WpApiProvider {
    );
  }
 
+ getClinicalPolicies(){
+  return this.http.get('http://uclst.co.uk/wp-json/wp/v2/clinical_policies').pipe(
+    map(this.extractData),
+    catchError(this.handleError)
+  );
+}
+
  getClinicalQualityProjects(){
    return this.http.get('http://uclst.co.uk/wp-json/wp/v2/clinical_quality_projects').pipe(
      map(this.extractData),
@@ -60,12 +68,7 @@ export class WpApiProvider {
    );
  }
 
- getClinicalPolicies(){
-   return this.http.get('http://uclst.co.uk/wp-json/wp/v2/clinical_policies').pipe(
-     map(this.extractData),
-     catchError(this.handleError)
-   );
- }
+
 
   getSTSpecific(slug){
     return this.http.get('http://uclst.co.uk/wp-json/wp/v2/' + slug).pipe(

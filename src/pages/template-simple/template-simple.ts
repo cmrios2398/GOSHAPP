@@ -1,16 +1,11 @@
-import { Component, ViewChild, OnInit, Renderer } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
-import { HttpClient } from '@angular/common/http';
-import { Storage } from '@ionic/storage'
+import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
+import { Storage } from '@ionic/storage';
+import { ImageViewerController } from 'ionic-img-viewer';
 
-/**
- * Generated class for the SafetyToolkitMorePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -19,6 +14,7 @@ import { Storage } from '@ionic/storage'
 })
 export class TemplateSimplePage {
 
+  _imageViewerCtrl: ImageViewerController;
 
   sections;
   slug;
@@ -26,18 +22,27 @@ export class TemplateSimplePage {
   images;
   public searchOpen = false;
 
-  constructor(public storage: Storage, public toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, public http: HttpClient) {
+  constructor(public storage: Storage, public toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, imageViewerCtrl: ImageViewerController) {
+    
+    this._imageViewerCtrl = imageViewerCtrl;
+
     this.slug = this.navParams.get('slug');
     console.log(this.slug);
 
     this.title = this.navParams.get('title');
-        // alert(this.title);
+    // alert(this.title);
     console.log(this.title);
-
 
     this.loadData();
   }
 
+  presentImage(myImage) {
+    const imageViewer = this._imageViewerCtrl.create(myImage);
+    imageViewer.present();
+
+  }
+
+  
 
 
   loadData(refresher?){
@@ -77,12 +82,13 @@ export class TemplateSimplePage {
   }
 
 
-
-
-
   notesToSelf(){
     this.navCtrl.push(NotesToSelfPage);
   }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad TemplateSliderPage');
+  }
 
 }
+

@@ -21,10 +21,11 @@
       </ion-refresher>
     
 
-<img src="{{ imagetop }} ">
+<img #myImage (click)="presentImage(myImage)" src="{{ imagetop }} ">
 
   <accordion-more *ngFor="let section of sections | search : terms" [title]="section.title.rendered">
       <div [innerHTML]="section.content.rendered"></div>
+      <img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} ">
     </accordion-more>
 
 

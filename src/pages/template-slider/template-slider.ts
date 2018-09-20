@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
-import { Storage } from '@ionic/storage'
+import { Storage } from '@ionic/storage';
+import { ImageViewerController } from 'ionic-img-viewer';
 
 /**
  * Generated class for the TemplateSliderPage page.
@@ -17,13 +18,19 @@ import { Storage } from '@ionic/storage'
   templateUrl: 'template-slider.html',
 })
 export class TemplateSliderPage {
+
+  _imageViewerCtrl: ImageViewerController;
+
   sections;
   slug;
   title;
   images;
   public searchOpen = false;
 
-  constructor(public storage: Storage, public toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider) {
+  constructor(public storage: Storage, public toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private wpApiProvider: WpApiProvider, imageViewerCtrl: ImageViewerController) {
+   
+    this._imageViewerCtrl = imageViewerCtrl;
+
     this.slug = this.navParams.get('slug');
     console.log(this.slug);
 
@@ -32,6 +39,12 @@ export class TemplateSliderPage {
     console.log(this.title);
 
     this.loadData();
+  }
+
+  presentImage(myImage) {
+    const imageViewer = this._imageViewerCtrl.create(myImage);
+    imageViewer.present();
+
   }
 
 

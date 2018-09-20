@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 
-import { AboutPage } from '../pages/about/about';
 import { SafetyToolkitPage } from '../pages/safety-toolkit/safety-toolkit';
 import { VideoLibraryPage } from '../pages/video-library/video-library';
 import { NotesToSelfPage } from '../pages/notes-to-self/notes-to-self';
@@ -31,17 +30,12 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
   activePage: any;
 
-<<<<<<< HEAD
   constructor(public platform: Platform, public cache: CacheService, private wpApiProvider: WpApiProvider, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-=======
-  constructor(public platform: Platform, public cache: CacheService, public statusBar: StatusBar, public splashScreen: SplashScreen) {
->>>>>>> 7b282311baf4b4b07c70f758f34a437250675e4b
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'About', component: AboutPage},
       { title: 'Safety Toolkit', component: SafetyToolkitPage },
       { title: 'Video Library', component: VideoLibraryPage },
       { title: 'ICU-New Starters', component: IcuNewStartersPage },
@@ -59,11 +53,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
 
       this.cache.setDefaultTTL(60 * 60 *24); //24 hours
-<<<<<<< HEAD
       this.cache.setOfflineInvalidate(false);
-=======
-      this.cache.setOfflineInvalidate(false); 
->>>>>>> 7b282311baf4b4b07c70f758f34a437250675e4b
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

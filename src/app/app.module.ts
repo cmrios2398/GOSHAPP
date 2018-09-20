@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { AboutPage } from '../pages/about/about';
 import { SafetyToolkitPage } from '../pages/safety-toolkit/safety-toolkit';
 import { IcuNewStartersPage } from '../pages/icu-new-starters/icu-new-starters';
 import { ClinicalPoliciesPage } from '../pages/clinical-policies/clinical-policies';
@@ -39,6 +38,7 @@ import { VideoItemComponent } from '../components/video-item/video-item';
 import { SidebarComponent } from '../components/sidebar/sidebar';
 
 import { CacheModule } from 'ionic-cache';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 import { SearchPipe } from '../pipes/search/search';
 import { VideoService } from '../providers/video-service/video-service';
 import { FlashCardComponent } from '../components/flash-card/flash-card';
@@ -48,7 +48,6 @@ import { Network } from '@ionic-native/network';
   declarations: [
     MyApp,
     HomePage,
-    AboutPage,
     VideoLibraryPage,
     SafetyToolkitPage,
     IcuNewStartersPage,
@@ -87,13 +86,13 @@ import { Network } from '@ionic-native/network';
     IonicStorageModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
+    IonicImageViewerModule,
     CacheModule.forRoot()
     ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    AboutPage,
     VideoLibraryPage,
     SafetyToolkitPage,
     IcuNewStartersPage,

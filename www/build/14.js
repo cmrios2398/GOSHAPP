@@ -1,14 +1,14 @@
 webpackJsonp([14],{
 
-/***/ 484:
+/***/ 496:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IcuNewStartersPageModule", function() { return IcuNewStartersPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InfectionControlPageModule", function() { return InfectionControlPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__icu_new_starters__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__infection_control__ = __webpack_require__(169);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var IcuNewStartersPageModule = /** @class */ (function () {
-    function IcuNewStartersPageModule() {
+var InfectionControlPageModule = /** @class */ (function () {
+    function InfectionControlPageModule() {
     }
-    IcuNewStartersPageModule = __decorate([
+    InfectionControlPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__icu_new_starters__["a" /* IcuNewStartersPage */],
+                __WEBPACK_IMPORTED_MODULE_2__infection_control__["a" /* InfectionControlPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__icu_new_starters__["a" /* IcuNewStartersPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__infection_control__["a" /* InfectionControlPage */]),
             ],
         })
-    ], IcuNewStartersPageModule);
-    return IcuNewStartersPageModule;
+    ], InfectionControlPageModule);
+    return InfectionControlPageModule;
 }());
 
-//# sourceMappingURL=icu-new-starters.module.js.map
+//# sourceMappingURL=infection-control.module.js.map
 
 /***/ })
 

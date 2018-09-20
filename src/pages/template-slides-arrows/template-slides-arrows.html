@@ -14,9 +14,10 @@
   <ion-slides #slider effect="fade" (ionSlideWillChange)="onSlideChanged()">
     <ion-slide *ngFor="let tool of tools"
                class="swiper-no-swiping"
-               [ngStyle]="{'background' : 'url(' + tool.image.guid + ')'}">
+               [ngStyle]="{'background' : 'url(' + tool.background.guid + ')'}">
 
                <div [innerHTML]="tool.content.rendered"></div>
+               <img #myImage (click)="presentImage(myImage)" src="{{ tool.img.guid }} ">
     </ion-slide>
     <!-- Add Pagination -->
     <div *ngIf="currentIndex > 0"
