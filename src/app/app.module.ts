@@ -35,6 +35,7 @@ import { AccordionComponent } from '../components/accordion/accordion';
 import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
 import { CardComponent } from '../components/card/card';
 import { VideoItemComponent } from '../components/video-item/video-item';
+
 import { SidebarComponent } from '../components/sidebar/sidebar';
 
 import { CacheModule } from 'ionic-cache';
@@ -72,6 +73,7 @@ import { Network } from '@ionic-native/network';
     TemplateSlidesArrowsPage,
     TemplateSimplePage,
     InfectionControlPage,
+    
   ],
   imports: [
     BrowserModule,

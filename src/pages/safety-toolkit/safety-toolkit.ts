@@ -48,7 +48,6 @@ export class SafetyToolkitPage {
 
   loadData(refresher?){
 
-
     let url = 'http://uclst.co.uk/wp-json/wp/v2/safety_toolkit'
     let req = this.http.get(url)
     .map(res => {
