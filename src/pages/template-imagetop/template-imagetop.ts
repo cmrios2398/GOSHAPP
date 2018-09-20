@@ -42,11 +42,6 @@ export class TemplateImagetopPage {
   }
 
   loadData(refresher?){
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
     if(this.wpApiProvider.isConnected() || navigator.onLine){
       this.wpApiProvider.getSTSpecific(this.slug).subscribe( data => {
         console.log(data);
@@ -75,11 +70,6 @@ export class TemplateImagetopPage {
       }
   }
 
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> f5f3f1477f80a851585f1e3aa2477a58b30ecaef
   forceReload(refresher?){
     this.loadData(refresher)
     refresher.complete()

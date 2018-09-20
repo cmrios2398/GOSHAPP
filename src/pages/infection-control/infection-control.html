@@ -6,10 +6,10 @@
 -->
 <ion-header>
     <ion-navbar color="primary">
-        <button ion-button menuToggle ngIf ="!searchOpen">
+        <button ion-button menuToggle *ngIf ="!searchOpen">
           <ion-icon name="menu"></ion-icon>
         </button>
-         <ion-title ngIf ="!searchOpen">Infection Control</ion-title>
+         <ion-title *ngIf ="!searchOpen">Infection Control</ion-title>
          <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>
         <ion-buttons end>
           <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">

@@ -17,6 +17,7 @@ import { TemplateImagetopPage } from '../pages/template-imagetop/template-imaget
 import { VideoPage } from '../pages/video/video';
 import { TemplateSlidesArrowsPage } from '../pages/template-slides-arrows/template-slides-arrows';
 import { TemplateQuizPage } from '../pages/template-quiz/template-quiz';
+import { TemplateQuizScorePage } from '../pages/template-quiz-score/template-quiz-score';
 import { TemplateSimplePage } from '../pages/template-simple/template-simple';
 import { InfectionControlPage } from '../pages/infection-control/infection-control';
 
@@ -69,6 +70,7 @@ import { Network } from '@ionic-native/network';
     TemplateSliderPage,
     TemplateImagetopPage,
     TemplateQuizPage,
+    TemplateQuizScorePage,
     TemplateSlidesArrowsPage,
     TemplateSimplePage,
     InfectionControlPage,
@@ -107,6 +109,7 @@ import { Network } from '@ionic-native/network';
     TemplateSliderPage,
     TemplateImagetopPage,
     TemplateQuizPage,
+    TemplateQuizScorePage,
     TemplateSlidesArrowsPage,
     TemplateSimplePage,
     InfectionControlPage

@@ -13,10 +13,10 @@ import { Storage } from '@ionic/storage'
 
 @IonicPage()
 @Component({
-  selector: 'page-template-quiz',
-  templateUrl: 'template-quiz.html',
+  selector: 'page-template-quiz-score',
+  templateUrl: 'template-quiz-score.html',
 })
-export class TemplateQuizPage {
+export class TemplateQuizScorePage {
 
   @ViewChild(Slides) slides: Slides;
 
@@ -106,8 +106,7 @@ export class TemplateQuizPage {
 		this.selectFourth = false;
   }
   
-  selectAnswer(question, selection, choice){
-
+	selectAnswer(question, selection, choice){
 
 		if (selection == "first") {
 			this.checkAllFalse();
@@ -115,11 +114,7 @@ export class TemplateQuizPage {
       this.answeredFinally = true;
       if (question.correct == "first")
       {
-       this.correctAlert();
-       this.changeSlide();
-      }
-      else if (question.correct != "first"){
-        this.wrongAlert();
+        this.score++;
       }
       
 		}
@@ -130,11 +125,7 @@ export class TemplateQuizPage {
       this.answeredFinally = true;
       if (question.correct == "second")
       {
-        this.correctAlert();
-        this.changeSlide();
-      }
-      else if (question.correct != "second"){
-        this.wrongAlert();
+        this.score++;
       }
 		}
 
@@ -144,11 +135,7 @@ export class TemplateQuizPage {
       this.answeredFinally = true;
       if (question.correct == "third")
       {
-        this.correctAlert();
-        this.changeSlide();
-      }
-      else if (question.correct != "third"){
-        this.wrongAlert();
+        this.score++;
       }
 		}
 
@@ -158,11 +145,7 @@ export class TemplateQuizPage {
       this.answeredFinally = true;
       if (question.correct == "fourth")
       {
-        this.correctAlert();
-        this.changeSlide();
-      }
-      else if (question.correct != "fourth"){
-        this.wrongAlert();
+        this.score++;
       }
 		}
 
@@ -170,31 +153,19 @@ export class TemplateQuizPage {
 
 		setTimeout(() => {
 			this.answeredFinally = false;
+			this.changeSlide();
 			this.checkAllFalse();
 		}, 1000);
 	}
   
   restartQuiz(){
+    this.score = 0;
 		this.slides.lockSwipes(false);
 		this.slides.slideTo(1, 1000);
 		this.slides.lockSwipes(true);
 	}
   
-  correctAlert() {
-    const alert = this.alertCtrl.create({
-      title: 'Excellent!',
-      buttons: ['Next']
-    });
-    alert.present();
-}
 
-wrongAlert() {
-  const alert = this.alertCtrl.create({
-    title: 'Think about this again...',
-    buttons: ['Return']
-  });
-  alert.present();
-}
 
 
 }

@@ -40,15 +40,14 @@ export class SafetyToolkitPage {
     //   toast.present();
     //   this.tools = res;
     // })
-   
+
     // this.tools = this.cache.loadFromObservable('safetyTools', req)
 
   }
-  
+
 
   loadData(refresher?){
 
-    
     let url = 'http://uclst.co.uk/wp-json/wp/v2/safety_toolkit'
     let req = this.http.get(url)
     .map(res => {
@@ -58,11 +57,11 @@ export class SafetyToolkitPage {
       })
       toast.present();
       return res;
-      
+
     })
 
     if (refresher) {
-      
+
     if(!this.wpApiProvider.isConnected()){
       let toast = this.toastCtrl.create({
         message: 'No connection - failed to retrieve from server.',
@@ -80,9 +79,9 @@ export class SafetyToolkitPage {
       this.tools = this.cache.loadFromObservable(url, req);
 
     }
-    
+
   }
- 
+
   forceReload(refresher){
     this.loadData(refresher);
   }
