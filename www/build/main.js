@@ -887,11 +887,11 @@ var map = {
 		12
 	],
 	"../pages/safety-toolkit/safety-toolkit.module": [
-		498,
+		499,
 		11
 	],
 	"../pages/template-flashcard/template-flashcard.module": [
-		501,
+		498,
 		10
 	],
 	"../pages/template-imagetop/template-imagetop.module": [
@@ -1244,8 +1244,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/infection-control/infection-control.module#InfectionControlPageModule', name: 'InfectionControlPage', segment: 'infection-control', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notes-to-self/notes-to-self.module#NotesToSelfPageModule', name: 'NotesToSelfPage', segment: 'notes-to-self', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/safety-toolkit-more/safety-toolkit-more.module#SafetyToolkitMorePageModule', name: 'SafetyToolkitMorePage', segment: 'safety-toolkit-more', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/safety-toolkit/safety-toolkit.module#SafetyToolkitPageModule', name: 'SafetyToolkitPage', segment: 'safety-toolkit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-flashcard/template-flashcard.module#TemplateFlashcardPageModule', name: 'TemplateFlashcardPage', segment: 'template-flashcard', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/safety-toolkit/safety-toolkit.module#SafetyToolkitPageModule', name: 'SafetyToolkitPage', segment: 'safety-toolkit', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-imagetop/template-imagetop.module#TemplateImagetopPageModule', name: 'TemplateImagetopPage', segment: 'template-imagetop', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-quiz-score/template-quiz-score.module#TemplateQuizScorePageModule', name: 'TemplateQuizScorePage', segment: 'template-quiz-score', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-simple/template-simple.module#TemplateSimplePageModule', name: 'TemplateSimplePage', segment: 'template-simple', priority: 'low', defaultHistory: [] },
