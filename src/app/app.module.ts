@@ -18,6 +18,7 @@ import { TemplateSlidesArrowsPage } from '../pages/template-slides-arrows/templa
 import { TemplateQuizPage } from '../pages/template-quiz/template-quiz';
 import { TemplateQuizScorePage } from '../pages/template-quiz-score/template-quiz-score';
 import { TemplateSimplePage } from '../pages/template-simple/template-simple';
+import { TemplateFlashcardPage } from '../pages/template-flashcard/template-flashcard';
 import { InfectionControlPage } from '../pages/infection-control/infection-control';
 
 
@@ -35,7 +36,6 @@ import { AccordionComponent } from '../components/accordion/accordion';
 import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
 import { CardComponent } from '../components/card/card';
 import { VideoItemComponent } from '../components/video-item/video-item';
-
 import { SidebarComponent } from '../components/sidebar/sidebar';
 
 import { CacheModule } from 'ionic-cache';
@@ -72,8 +72,8 @@ import { Network } from '@ionic-native/network';
     TemplateQuizScorePage,
     TemplateSlidesArrowsPage,
     TemplateSimplePage,
+    TemplateFlashcardPage,
     InfectionControlPage,
-    
   ],
   imports: [
     BrowserModule,
@@ -111,6 +111,7 @@ import { Network } from '@ionic-native/network';
     TemplateQuizScorePage,
     TemplateSlidesArrowsPage,
     TemplateSimplePage,
+    TemplateFlashcardPage,
     InfectionControlPage
   ],
   providers: [

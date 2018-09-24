@@ -23,26 +23,15 @@
 
 
 <ion-content padding>
-<<<<<<< HEAD
       <ion-refresher (ionRefresh)="forceReload($event)">
               <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
             </ion-refresher>
             
   <ion-content padding>
-=======
-        <ion-refresher (ionRefresh)="forceReload($event)">
-                <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
-              </ion-refresher>
-    
->>>>>>> 5dae4d08e5fd47007fe4e479838624057997aa7e
 
       <card *ngFor="let tool of tools | search : terms" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">
           <div [innerHTML]="tool.content.rendered"></div>
       </card>
 
-<<<<<<< HEAD
   </ion-content>
-=======
-   
->>>>>>> 5dae4d08e5fd47007fe4e479838624057997aa7e
 </ion-content>

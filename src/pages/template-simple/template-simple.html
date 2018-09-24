@@ -12,24 +12,11 @@
 
 
 <ion-content padding>
-  <ion-refresher (ionRefresh)="forceReload($event)">
+    <ion-refresher (ionRefresh)="forceReload($event)">
 
-    <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
-  </ion-refresher>
-
-<<<<<<< HEAD
         <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>
       </ion-refresher>
 <div *ngFor="let section of sections | search : terms"> <div [innerHTML]="section.content.rendered"></div>
 <img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} "></div>
      
-=======
-             <ion-searchbar [(ngModel)]="terms"></ion-searchbar>
-
-      <div *ngFor="let section of sections | search : terms" [innerHTML]="section.content.rendered"></div>
-
-
-
-
->>>>>>> 5dae4d08e5fd47007fe4e479838624057997aa7e
 </ion-content>

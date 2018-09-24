@@ -29,8 +29,8 @@ export class WpApiProvider {
     console.log('Hello WpApiProvider Provider');
   }
 
-  getSidebar(){
-  return this.http.get('http://uclst.co.uk/wp-json/wp/v2/sidebar_sections')
+  getHome(){
+  return this.http.get('http://uclst.co.uk/wp-json/wp/v2/home')
 }
 
   getSafetyToolkit(){

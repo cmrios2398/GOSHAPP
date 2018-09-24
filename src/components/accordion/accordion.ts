@@ -9,6 +9,8 @@ import { TemplateQuizPage } from '../../pages/template-quiz/template-quiz';
 import { TemplateSlidesArrowsPage } from '../../pages/template-slides-arrows/template-slides-arrows';
 import { TemplateSimplePage } from '../../pages/template-simple/template-simple';
 import { TemplateImagetopPage } from '../../pages/template-imagetop/template-imagetop';
+import { TemplateFlashcardPage } from '../../pages/template-flashcard/template-flashcard';
+import { TemplateQuizScorePage } from '../../pages/template-quiz-score/template-quiz-score';
 
 /**
 
@@ -85,6 +87,14 @@ export class AccordionComponent implements OnInit {
       this.template_simple(slug,title); //SIMPLE TEMPLATE
     }
 
+    else if(template == "template-flashcard"){
+      this.template_flashcard(slug,title); //FLASHCARD TEMPLATE
+    }
+
+    else if(template == "template-quiz-score"){
+      this.template_quiz_score(slug,title); //QUIZ SCORE TEMPLATE
+    }
+
     else{
       this.safetyToolkitMore(slug,title); //DEFAULT TEMPLATE
     }
@@ -118,6 +128,17 @@ export class AccordionComponent implements OnInit {
     this.navCtrl.push(TemplateSimplePage, {slug: slug, title: title} );
 
   }
+
+  template_flashcard(slug,title){
+    this.navCtrl.push(TemplateFlashcardPage, {slug: slug, title: title} );
+
+  }
+
+  template_quiz_score(slug,title){
+    this.navCtrl.push(TemplateQuizScorePage, {slug: slug, title: title} );
+
+  }
+  
 
 
   safetyToolkitMore(slug,title){

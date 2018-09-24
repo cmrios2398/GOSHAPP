@@ -16,9 +16,9 @@ export class ClinicalQualityProjectsPage {
      this.loadData();
    }
 
-   
+
   loadData(refresher?){
-    
+
     if(this.wpApiProvider.isConnected() || navigator.onLine){
       this.wpApiProvider.getClinicalQualityProjects().subscribe( data => {
         console.log(data);
@@ -47,7 +47,7 @@ export class ClinicalQualityProjectsPage {
       }
   }
 
-  
+
   forceReload(refresher?){
     this.loadData(refresher)
     refresher.complete()

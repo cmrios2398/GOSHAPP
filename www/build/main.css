@@ -24994,49 +24994,9 @@ page-clinical-quality-projects .txt {
   color: #11436B;
 }
 
-page-home .lbl {
-  white-space: normal;
+page-home .txt {
   text-align: center;
-}
-
-page-home .pins {
-  -webkit-column-count: 2;
-  column-count: 2;
-}
-
-page-home .pin {
-  display: inline-block;
-}
-
-page-home .card {
-  margin-top: 10px;
-}
-
-page-home .item {
-  background: #b3f0ff;
-}
-
-@media (min-width: 480px) {
-  page-home .pins {
-    -webkit-column-count: 3;
-    column-count: 3;
-  }
-  page-home .item ion-avatar img {
-    width: 7vw !important;
-    height: 7vw !important;
-  }
-}
-
-@media (min-width: 640px) {
-  page-home .pins {
-    -webkit-column-count: 4;
-    column-count: 4;
-  }
-  page-home .item ion-avatar img {
-    width: 5vw !important;
-    height: 5vw !important;
-    margin: 6px;
-  }
+  font-size: 18px;
 }
 
 page-icu-new-starters .card-title {
@@ -25138,6 +25098,11 @@ page-safety-toolkit-more .toolbar-title {
 
 page-safety-toolkit-more .searchbar {
   background-color: #184F8A;
+}
+
+page-template-flashcard .txt {
+  margin-left: 1.9rem;
+  color: #11436B;
 }
 
 page-template-imagetop .card-header {
