@@ -887,11 +887,11 @@ var map = {
 		12
 	],
 	"../pages/safety-toolkit/safety-toolkit.module": [
-		499,
+		498,
 		11
 	],
 	"../pages/template-flashcard/template-flashcard.module": [
-		498,
+		501,
 		10
 	],
 	"../pages/template-imagetop/template-imagetop.module": [
@@ -903,31 +903,31 @@ var map = {
 		8
 	],
 	"../pages/template-quiz/template-quiz.module": [
-		510,
+		504,
 		7
 	],
 	"../pages/template-simple/template-simple.module": [
-		504,
+		505,
 		6
 	],
 	"../pages/template-slider/template-slider.module": [
-		505,
+		506,
 		5
 	],
 	"../pages/template-slides-arrows/template-slides-arrows.module": [
-		506,
+		507,
 		4
 	],
 	"../pages/video-library/video-library.module": [
-		507,
+		508,
 		3
 	],
 	"../pages/video/video.module": [
-		508,
+		509,
 		2
 	],
 	"../pages/view-note/view-note.module": [
-		509,
+		510,
 		1
 	]
 };
@@ -1114,13 +1114,13 @@ var NotesToSelfPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_video_library_video_library__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_notes_to_self_notes_to_self__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_template_slider_template_slider__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_template_slider_template_slider__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_template_imagetop_template_imagetop__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_video_video__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_template_quiz_template_quiz__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_template_quiz_template_quiz__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_template_quiz_score_template_quiz_score__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_template_simple_template_simple__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_template_simple_template_simple__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_template_flashcard_template_flashcard__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_infection_control_infection_control__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_status_bar__ = __webpack_require__(298);
@@ -1244,17 +1244,17 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/infection-control/infection-control.module#InfectionControlPageModule', name: 'InfectionControlPage', segment: 'infection-control', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notes-to-self/notes-to-self.module#NotesToSelfPageModule', name: 'NotesToSelfPage', segment: 'notes-to-self', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/safety-toolkit-more/safety-toolkit-more.module#SafetyToolkitMorePageModule', name: 'SafetyToolkitMorePage', segment: 'safety-toolkit-more', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/template-flashcard/template-flashcard.module#TemplateFlashcardPageModule', name: 'TemplateFlashcardPage', segment: 'template-flashcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/safety-toolkit/safety-toolkit.module#SafetyToolkitPageModule', name: 'SafetyToolkitPage', segment: 'safety-toolkit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/template-flashcard/template-flashcard.module#TemplateFlashcardPageModule', name: 'TemplateFlashcardPage', segment: 'template-flashcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-imagetop/template-imagetop.module#TemplateImagetopPageModule', name: 'TemplateImagetopPage', segment: 'template-imagetop', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-quiz-score/template-quiz-score.module#TemplateQuizScorePageModule', name: 'TemplateQuizScorePage', segment: 'template-quiz-score', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/template-quiz/template-quiz.module#TemplateQuizPageModule', name: 'TemplateQuizPage', segment: 'template-quiz', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-simple/template-simple.module#TemplateSimplePageModule', name: 'TemplateSimplePage', segment: 'template-simple', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-slider/template-slider.module#TemplateSliderPageModule', name: 'TemplateSliderPage', segment: 'template-slider', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-slides-arrows/template-slides-arrows.module#TemplateSlidesArrowsPageModule', name: 'TemplateSlidesArrowsPage', segment: 'template-slides-arrows', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/video-library/video-library.module#VideoLibraryPageModule', name: 'VideoLibraryPage', segment: 'video-library', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/video/video.module#VideoPageModule', name: 'VideoPage', segment: 'video', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/view-note/view-note.module#ViewNotePageModule', name: 'ViewNotePage', segment: 'view-note', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/template-quiz/template-quiz.module#TemplateQuizPageModule', name: 'TemplateQuizPage', segment: 'template-quiz', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/view-note/view-note.module#ViewNotePageModule', name: 'ViewNotePage', segment: 'view-note', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_26__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
@@ -1409,10 +1409,10 @@ var MyApp = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_template_slider_template_slider__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_template_quiz_template_quiz__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_template_simple_template_simple__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_template_slider_template_slider__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_template_quiz_template_quiz__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_template_simple_template_simple__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_template_imagetop_template_imagetop__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_template_flashcard_template_flashcard__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_template_quiz_score_template_quiz_score__ = __webpack_require__(95);
@@ -1628,10 +1628,10 @@ var AccordionMoreComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_template_slider_template_slider__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_template_quiz_template_quiz__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_template_simple_template_simple__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_template_slider_template_slider__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_template_quiz_template_quiz__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_template_simple_template_simple__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_template_imagetop_template_imagetop__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_template_flashcard_template_flashcard__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_template_quiz_score_template_quiz_score__ = __webpack_require__(95);
@@ -2598,329 +2598,6 @@ var TemplateQuizScorePage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSimplePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var TemplateSimplePage = /** @class */ (function () {
-    function TemplateSimplePage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, imageViewerCtrl) {
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.wpApiProvider = wpApiProvider;
-        this.searchOpen = false;
-        this._imageViewerCtrl = imageViewerCtrl;
-        this.slug = this.navParams.get('slug');
-        console.log(this.slug);
-        this.title = this.navParams.get('title');
-        // alert(this.title);
-        console.log(this.title);
-        this.loadData();
-    }
-    TemplateSimplePage.prototype.presentImage = function (myImage) {
-        var imageViewer = this._imageViewerCtrl.create(myImage);
-        imageViewer.present();
-    };
-    TemplateSimplePage.prototype.loadData = function (refresher) {
-        var _this = this;
-        if (this.wpApiProvider.isConnected() || navigator.onLine) {
-            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
-                console.log(data);
-                _this.sections = data;
-                _this.storage.set('dataFrom' + _this.slug, _this.sections);
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'Data loaded from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-        else {
-            this.storage.get('dataFrom' + this.slug).then(function (data) {
-                _this.sections = data;
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'No connection - failed to retrieve from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-    };
-    TemplateSimplePage.prototype.forceReload = function (refresher) {
-        this.loadData(refresher);
-        refresher.complete();
-    };
-    TemplateSimplePage.prototype.notesToSelf = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
-    };
-    TemplateSimplePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TemplateSliderPage');
-    };
-    TemplateSimplePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-template-simple',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-simple/template-simple.html"*/'<ion-header>\n  <ion-navbar color="primary">\n     <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n<div *ngFor="let section of sections | search : terms"> <div [innerHTML]="section.content.rendered"></div>\n<img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} "></div>\n     \n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-simple/template-simple.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
-    ], TemplateSimplePage);
-    return TemplateSimplePage;
-}());
-
-//# sourceMappingURL=template-simple.js.map
-
-/***/ }),
-
-/***/ 97:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSliderPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the TemplateSliderPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TemplateSliderPage = /** @class */ (function () {
-    function TemplateSliderPage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, imageViewerCtrl) {
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.wpApiProvider = wpApiProvider;
-        this.searchOpen = false;
-        this._imageViewerCtrl = imageViewerCtrl;
-        this.slug = this.navParams.get('slug');
-        console.log(this.slug);
-        this.title = this.navParams.get('title');
-        // alert(this.title);
-        console.log(this.title);
-        this.loadData();
-    }
-    TemplateSliderPage.prototype.presentImage = function (myImage) {
-        var imageViewer = this._imageViewerCtrl.create(myImage);
-        imageViewer.present();
-    };
-    TemplateSliderPage.prototype.loadData = function (refresher) {
-        var _this = this;
-        if (this.wpApiProvider.isConnected() || navigator.onLine) {
-            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
-                console.log(data);
-                _this.sections = data;
-                _this.storage.set('dataFrom' + _this.slug, _this.sections);
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'Data loaded from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-        else {
-            this.storage.get('dataFrom' + this.slug).then(function (data) {
-                _this.sections = data;
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'No connection - failed to retrieve from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-    };
-    TemplateSliderPage.prototype.forceReload = function (refresher) {
-        this.loadData(refresher);
-        refresher.complete();
-    };
-    TemplateSliderPage.prototype.notesToSelf = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
-    };
-    TemplateSliderPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TemplateSliderPage');
-    };
-    TemplateSliderPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-template-slider',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slider/template-slider.html"*/'<ion-header>\n  <ion-navbar color="primary">\n     <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n  <!--NEEDS WORDPRESS LINKING -->\n\n<ion-slides class="sliderr" pager>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-01.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-02.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-03.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-04.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-05.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-06.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-07.jpg">\n  </ion-slide>\n</ion-slides>\n\n  <accordion-more *ngFor="let section of sections | search : terms" [title]="section.title.rendered">\n\n      <div [innerHTML]="section.content.rendered"></div>\n      <img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} ">\n    </accordion-more>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slider/template-slider.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
-    ], TemplateSliderPage);
-    return TemplateSliderPage;
-}());
-
-//# sourceMappingURL=template-slider.js.map
-
-/***/ }),
-
-/***/ 98:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSlidesArrowsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the TemplateSlidesArrowsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TemplateSlidesArrowsPage = /** @class */ (function () {
-    function TemplateSlidesArrowsPage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, http, imageViewerCtrl) {
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.wpApiProvider = wpApiProvider;
-        this.http = http;
-        this.slides = [
-            {},
-            {},
-            {},
-            {},
-            {},
-            {}
-        ];
-        this.currentIndex = 0;
-        this._imageViewerCtrl = imageViewerCtrl;
-        this.slug = this.navParams.get('slug');
-        console.log(this.slug);
-        this.title = this.navParams.get('title');
-        // alert(this.title);
-        console.log(this.title);
-        this.loadData();
-    }
-    TemplateSlidesArrowsPage.prototype.presentImage = function (myImage) {
-        var imageViewer = this._imageViewerCtrl.create(myImage);
-        imageViewer.present();
-    };
-    TemplateSlidesArrowsPage.prototype.loadData = function (refresher) {
-        var _this = this;
-        if (this.wpApiProvider.isConnected() || navigator.onLine) {
-            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
-                console.log(data);
-                _this.tools = data;
-                _this.storage.set('dataFrom' + _this.slug, _this.tools);
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'Data loaded from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-        else {
-            this.storage.get('dataFrom' + this.slug).then(function (data) {
-                _this.tools = data;
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'No connection - failed to retrieve from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-    };
-    TemplateSlidesArrowsPage.prototype.forceReload = function (refresher) {
-        this.loadData(refresher);
-        refresher.complete();
-    };
-    TemplateSlidesArrowsPage.prototype.nextSlide = function () {
-        this.slider.slideNext();
-    };
-    TemplateSlidesArrowsPage.prototype.previousSlide = function () {
-        this.slider.slidePrev();
-    };
-    TemplateSlidesArrowsPage.prototype.onSlideChanged = function () {
-        this.currentIndex = this.slider.getActiveIndex();
-        console.log('Slide changed! Current index is', this.currentIndex);
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('slider'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* Slides */])
-    ], TemplateSlidesArrowsPage.prototype, "slider", void 0);
-    TemplateSlidesArrowsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-template-slides-arrows',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slides-arrows/template-slides-arrows.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Blood Culture Collection</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n      \n \n  <ion-slides #slider effect="fade" (ionSlideWillChange)="onSlideChanged()">\n    <ion-slide *ngFor="let tool of tools"\n               class="swiper-no-swiping"\n               [ngStyle]="{\'background\' : \'url(\' + tool.background.guid + \')\'}">\n\n               <div [innerHTML]="tool.content.rendered"></div>\n               <img #myImage (click)="presentImage(myImage)" src="{{ tool.img.guid }} ">\n    </ion-slide>\n    <!-- Add Pagination -->\n    <div *ngIf="currentIndex > 0"\n         class="swiper-button-prev swiper-button-white"\n         (click)="previousSlide()"></div>\n    <div *ngIf="currentIndex < slides.length-1"\n         class="swiper-button-next swiper-button-white"\n         (click)="nextSlide()"></div>\n  </ion-slides>\n</ion-content>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slides-arrows/template-slides-arrows.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
-    ], TemplateSlidesArrowsPage);
-    return TemplateSlidesArrowsPage;
-}());
-
-//# sourceMappingURL=template-slides-arrows.js.map
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateQuizPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
@@ -3098,6 +2775,329 @@ var TemplateQuizPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=template-quiz.js.map
+
+/***/ }),
+
+/***/ 97:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSimplePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var TemplateSimplePage = /** @class */ (function () {
+    function TemplateSimplePage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, imageViewerCtrl) {
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.wpApiProvider = wpApiProvider;
+        this.searchOpen = false;
+        this._imageViewerCtrl = imageViewerCtrl;
+        this.slug = this.navParams.get('slug');
+        console.log(this.slug);
+        this.title = this.navParams.get('title');
+        // alert(this.title);
+        console.log(this.title);
+        this.loadData();
+    }
+    TemplateSimplePage.prototype.presentImage = function (myImage) {
+        var imageViewer = this._imageViewerCtrl.create(myImage);
+        imageViewer.present();
+    };
+    TemplateSimplePage.prototype.loadData = function (refresher) {
+        var _this = this;
+        if (this.wpApiProvider.isConnected() || navigator.onLine) {
+            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
+                console.log(data);
+                _this.sections = data;
+                _this.storage.set('dataFrom' + _this.slug, _this.sections);
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'Data loaded from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+        else {
+            this.storage.get('dataFrom' + this.slug).then(function (data) {
+                _this.sections = data;
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'No connection - failed to retrieve from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+    };
+    TemplateSimplePage.prototype.forceReload = function (refresher) {
+        this.loadData(refresher);
+        refresher.complete();
+    };
+    TemplateSimplePage.prototype.notesToSelf = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
+    };
+    TemplateSimplePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TemplateSliderPage');
+    };
+    TemplateSimplePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-template-simple',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-simple/template-simple.html"*/'<ion-header>\n  <ion-navbar color="primary">\n     <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n<div *ngFor="let section of sections | search : terms"> <div [innerHTML]="section.content.rendered"></div>\n<img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} "></div>\n     \n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-simple/template-simple.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
+    ], TemplateSimplePage);
+    return TemplateSimplePage;
+}());
+
+//# sourceMappingURL=template-simple.js.map
+
+/***/ }),
+
+/***/ 98:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSliderPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the TemplateSliderPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TemplateSliderPage = /** @class */ (function () {
+    function TemplateSliderPage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, imageViewerCtrl) {
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.wpApiProvider = wpApiProvider;
+        this.searchOpen = false;
+        this._imageViewerCtrl = imageViewerCtrl;
+        this.slug = this.navParams.get('slug');
+        console.log(this.slug);
+        this.title = this.navParams.get('title');
+        // alert(this.title);
+        console.log(this.title);
+        this.loadData();
+    }
+    TemplateSliderPage.prototype.presentImage = function (myImage) {
+        var imageViewer = this._imageViewerCtrl.create(myImage);
+        imageViewer.present();
+    };
+    TemplateSliderPage.prototype.loadData = function (refresher) {
+        var _this = this;
+        if (this.wpApiProvider.isConnected() || navigator.onLine) {
+            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
+                console.log(data);
+                _this.sections = data;
+                _this.storage.set('dataFrom' + _this.slug, _this.sections);
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'Data loaded from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+        else {
+            this.storage.get('dataFrom' + this.slug).then(function (data) {
+                _this.sections = data;
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'No connection - failed to retrieve from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+    };
+    TemplateSliderPage.prototype.forceReload = function (refresher) {
+        this.loadData(refresher);
+        refresher.complete();
+    };
+    TemplateSliderPage.prototype.notesToSelf = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
+    };
+    TemplateSliderPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TemplateSliderPage');
+    };
+    TemplateSliderPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-template-slider',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slider/template-slider.html"*/'<ion-header>\n  <ion-navbar color="primary">\n     <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n  <!--NEEDS WORDPRESS LINKING -->\n\n<ion-slides class="sliderr" pager>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-01.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-02.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-03.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-04.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-05.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-06.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-07.jpg">\n  </ion-slide>\n</ion-slides>\n\n  <accordion-more *ngFor="let section of sections | search : terms" [title]="section.title.rendered">\n\n      <div [innerHTML]="section.content.rendered"></div>\n      <img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} ">\n    </accordion-more>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slider/template-slider.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
+    ], TemplateSliderPage);
+    return TemplateSliderPage;
+}());
+
+//# sourceMappingURL=template-slider.js.map
+
+/***/ }),
+
+/***/ 99:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSlidesArrowsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the TemplateSlidesArrowsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TemplateSlidesArrowsPage = /** @class */ (function () {
+    function TemplateSlidesArrowsPage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, http, imageViewerCtrl) {
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.wpApiProvider = wpApiProvider;
+        this.http = http;
+        this.slides = [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ];
+        this.currentIndex = 0;
+        this._imageViewerCtrl = imageViewerCtrl;
+        this.slug = this.navParams.get('slug');
+        console.log(this.slug);
+        this.title = this.navParams.get('title');
+        // alert(this.title);
+        console.log(this.title);
+        this.loadData();
+    }
+    TemplateSlidesArrowsPage.prototype.presentImage = function (myImage) {
+        var imageViewer = this._imageViewerCtrl.create(myImage);
+        imageViewer.present();
+    };
+    TemplateSlidesArrowsPage.prototype.loadData = function (refresher) {
+        var _this = this;
+        if (this.wpApiProvider.isConnected() || navigator.onLine) {
+            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
+                console.log(data);
+                _this.tools = data;
+                _this.storage.set('dataFrom' + _this.slug, _this.tools);
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'Data loaded from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+        else {
+            this.storage.get('dataFrom' + this.slug).then(function (data) {
+                _this.tools = data;
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'No connection - failed to retrieve from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+    };
+    TemplateSlidesArrowsPage.prototype.forceReload = function (refresher) {
+        this.loadData(refresher);
+        refresher.complete();
+    };
+    TemplateSlidesArrowsPage.prototype.nextSlide = function () {
+        this.slider.slideNext();
+    };
+    TemplateSlidesArrowsPage.prototype.previousSlide = function () {
+        this.slider.slidePrev();
+    };
+    TemplateSlidesArrowsPage.prototype.onSlideChanged = function () {
+        this.currentIndex = this.slider.getActiveIndex();
+        console.log('Slide changed! Current index is', this.currentIndex);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('slider'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* Slides */])
+    ], TemplateSlidesArrowsPage.prototype, "slider", void 0);
+    TemplateSlidesArrowsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-template-slides-arrows',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slides-arrows/template-slides-arrows.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Blood Culture Collection</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n      \n \n  <ion-slides #slider effect="fade" (ionSlideWillChange)="onSlideChanged()">\n    <ion-slide *ngFor="let tool of tools"\n               class="swiper-no-swiping"\n               [ngStyle]="{\'background\' : \'url(\' + tool.background.guid + \')\'}">\n\n               <div [innerHTML]="tool.content.rendered"></div>\n               <img #myImage (click)="presentImage(myImage)" src="{{ tool.img.guid }} ">\n    </ion-slide>\n    <!-- Add Pagination -->\n    <div *ngIf="currentIndex > 0"\n         class="swiper-button-prev swiper-button-white"\n         (click)="previousSlide()"></div>\n    <div *ngIf="currentIndex < slides.length-1"\n         class="swiper-button-next swiper-button-white"\n         (click)="nextSlide()"></div>\n  </ion-slides>\n</ion-content>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slides-arrows/template-slides-arrows.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
+    ], TemplateSlidesArrowsPage);
+    return TemplateSlidesArrowsPage;
+}());
+
+//# sourceMappingURL=template-slides-arrows.js.map
 
 /***/ })
 
