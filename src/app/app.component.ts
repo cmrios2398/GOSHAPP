@@ -58,10 +58,6 @@ export class MyApp {
       this.splashScreen.hide();
     });
 
-  //   this.wpApiProvider.getSidebar().subscribe( data => {
-  //   console.log(data);
-  //   this.tools = data;
-  // })
 
   }
 

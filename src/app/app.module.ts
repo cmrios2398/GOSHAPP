@@ -36,7 +36,7 @@ import { AccordionComponent } from '../components/accordion/accordion';
 import { AccordionMoreComponent } from '../components/accordion-more/accordion-more';
 import { CardComponent } from '../components/card/card';
 import { VideoItemComponent } from '../components/video-item/video-item';
-import { SidebarComponent } from '../components/sidebar/sidebar';
+
 
 import { CacheModule } from 'ionic-cache';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
@@ -61,7 +61,6 @@ import { Network } from '@ionic-native/network';
     FlashCardComponent,
     AccordionMoreComponent,
     CardComponent,
-    SidebarComponent,
     VideoItemComponent,
     SearchPipe,
     ViewNotePage,

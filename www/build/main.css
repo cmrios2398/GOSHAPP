@@ -3920,10 +3920,6 @@ textarea::-webkit-input-placeholder {
   padding-left: 2px;
 }
 
-textarea:-ms-input-placeholder {
-  padding-left: 2px;
-}
-
 textarea::-ms-input-placeholder {
   padding-left: 2px;
 }
@@ -24803,6 +24799,18 @@ image-viewer.ion-page img {
 
 * {
   font-family: Poppins;
+}
+
+.toolbar-title-md {
+  font-size: 130%;
+}
+
+.toolbar-title {
+  overflow: auto;
+  width: 100%;
+  text-overflow: initial;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .has-refresher > .scroll-content {
