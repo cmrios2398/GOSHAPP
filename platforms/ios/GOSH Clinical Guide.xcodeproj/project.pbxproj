@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
-		0D955D06DAA2456783A5187B /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 9817FD7D53F04AF59A869765 /* CDVDevice.m */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		2EC1AE35CF184168B2EDB415 /* APPEmailComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D00DFC636CA4FCB978A634A /* APPEmailComposer.m */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
+		5AD2DB1B9406481E8AF77A55 /* APPEmailComposerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4259432EFF0F4E2E919E66D8 /* APPEmailComposerImpl.m */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
-		AF175BB445404C08887000B0 /* APPEmailComposerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F08DAA15C448499CA121E95B /* APPEmailComposerImpl.m */; };
-		B2749F09234245B9A32E991D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEE02F4A2414934BFD7FAB0 /* MessageUI.framework */; };
+		7836B89AAD2041CB907BC284 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B060CA14CEA1439EAEDD044D /* MessageUI.framework */; };
+		BEDC54A098AD470EBDA5D907 /* APPEmailComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = D69931C2D9164203B27B2A06 /* APPEmailComposer.m */; };
+		FCD52358F9A44D4C85862F30 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B32B706774074B9098B00786 /* CDVDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CordovaLib;
 		};
-		62EB5F292162D37200E08ECE /* PBXContainerItemProxy */ = {
+		62EB5F2F2162E3CB00E08ECE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
 			proxyType = 2;
@@ -59,18 +59,18 @@
 		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = "cordova/build-release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
 		32CA4F630368D1EE00C91783 /* GOSH Clinical Guide-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GOSH Clinical Guide-Prefix.pch"; sourceTree = "<group>"; };
+		402748FC9C924FD29AC1E8EA /* APPEmailComposer.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = APPEmailComposer.h; path = "cordova-plugin-email-composer/APPEmailComposer.h"; sourceTree = "<group>"; };
+		4259432EFF0F4E2E919E66D8 /* APPEmailComposerImpl.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = APPEmailComposerImpl.m; path = "cordova-plugin-email-composer/APPEmailComposerImpl.m"; sourceTree = "<group>"; };
+		45BB528F0C5445D6ACF7EAFD /* CDVDevice.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVDevice.h; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; };
 		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = "GOSH Clinical Guide/CDVLaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
-		81FE1E45A8BF49FBBBA69FE2 /* APPEmailComposerImpl.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = APPEmailComposerImpl.h; path = "cordova-plugin-email-composer/APPEmailComposerImpl.h"; sourceTree = "<group>"; };
+		82238F82190A40BA9ECF4CB8 /* APPEmailComposerImpl.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = APPEmailComposerImpl.h; path = "cordova-plugin-email-composer/APPEmailComposerImpl.h"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* GOSH Clinical Guide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GOSH Clinical Guide-Info.plist"; path = "GOSH Clinical Guide/GOSH Clinical Guide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
-		9817FD7D53F04AF59A869765 /* CDVDevice.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVDevice.m; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; };
-		9D00DFC636CA4FCB978A634A /* APPEmailComposer.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = APPEmailComposer.m; path = "cordova-plugin-email-composer/APPEmailComposer.m"; sourceTree = "<group>"; };
-		CD50164739DA441CA8AE6852 /* CDVDevice.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVDevice.h; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; };
-		DDEE02F4A2414934BFD7FAB0 /* MessageUI.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B060CA14CEA1439EAEDD044D /* MessageUI.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B32B706774074B9098B00786 /* CDVDevice.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVDevice.m; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; };
+		D69931C2D9164203B27B2A06 /* APPEmailComposer.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = APPEmailComposer.m; path = "cordova-plugin-email-composer/APPEmailComposer.m"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
-		ECF2B7127D8140EEA896AE18 /* APPEmailComposer.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = APPEmailComposer.h; path = "cordova-plugin-email-composer/APPEmailComposer.h"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		F08DAA15C448499CA121E95B /* APPEmailComposerImpl.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = APPEmailComposerImpl.m; path = "cordova-plugin-email-composer/APPEmailComposerImpl.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "GOSH Clinical Guide/config.xml"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				B2749F09234245B9A32E991D /* MessageUI.framework in Frameworks */,
+				7836B89AAD2041CB907BC284 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +151,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DDEE02F4A2414934BFD7FAB0 /* MessageUI.framework */,
+				B060CA14CEA1439EAEDD044D /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				301BF535109A57CC0062928A /* libCordova.a */,
-				62EB5F2A2162D37200E08ECE /* Cordova.framework */,
+				62EB5F302162E3CB00E08ECE /* Cordova.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,12 +178,12 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				9817FD7D53F04AF59A869765 /* CDVDevice.m */,
-				CD50164739DA441CA8AE6852 /* CDVDevice.h */,
-				9D00DFC636CA4FCB978A634A /* APPEmailComposer.m */,
-				F08DAA15C448499CA121E95B /* APPEmailComposerImpl.m */,
-				ECF2B7127D8140EEA896AE18 /* APPEmailComposer.h */,
-				81FE1E45A8BF49FBBBA69FE2 /* APPEmailComposerImpl.h */,
+				B32B706774074B9098B00786 /* CDVDevice.m */,
+				45BB528F0C5445D6ACF7EAFD /* CDVDevice.h */,
+				D69931C2D9164203B27B2A06 /* APPEmailComposer.m */,
+				4259432EFF0F4E2E919E66D8 /* APPEmailComposerImpl.m */,
+				402748FC9C924FD29AC1E8EA /* APPEmailComposer.h */,
+				82238F82190A40BA9ECF4CB8 /* APPEmailComposerImpl.h */,
 			);
 			name = Plugins;
 			path = "GOSH Clinical Guide/Plugins";
@@ -263,11 +263,11 @@
 			remoteRef = 301BF534109A57CC0062928A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		62EB5F2A2162D37200E08ECE /* Cordova.framework */ = {
+		62EB5F302162E3CB00E08ECE /* Cordova.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Cordova.framework;
-			remoteRef = 62EB5F292162D37200E08ECE /* PBXContainerItemProxy */;
+			remoteRef = 62EB5F2F2162E3CB00E08ECE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -311,9 +311,9 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				0D955D06DAA2456783A5187B /* CDVDevice.m in Sources */,
-				2EC1AE35CF184168B2EDB415 /* APPEmailComposer.m in Sources */,
-				AF175BB445404C08887000B0 /* APPEmailComposerImpl.m in Sources */,
+				FCD52358F9A44D4C85862F30 /* CDVDevice.m in Sources */,
+				BEDC54A098AD470EBDA5D907 /* APPEmailComposer.m in Sources */,
+				5AD2DB1B9406481E8AF77A55 /* APPEmailComposerImpl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

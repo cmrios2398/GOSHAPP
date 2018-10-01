@@ -10,31 +10,12 @@
     "com.moust.cordova.videoplayer": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-appcenter-analytics": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-appcenter-crashes": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-email-composer": {
       "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
-  "dependent_plugins": {
-    "cordova-plugin-appcenter-shared": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    }
-  }
+  "dependent_plugins": {}
 }
