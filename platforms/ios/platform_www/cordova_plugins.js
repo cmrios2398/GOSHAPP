@@ -31,7 +31,8 @@ module.exports.metadata =
 {
   "com.moust.cordova.videoplayer": "1.0.1",
   "cordova-plugin-device": "2.0.2",
-  "cordova-plugin-email-composer": "0.8.15"
+  "cordova-plugin-email-composer": "0.8.15",
+  "cordova-plugin-whitelist": "1.3.3"
 };
 // BOTTOM OF METADATA
 });

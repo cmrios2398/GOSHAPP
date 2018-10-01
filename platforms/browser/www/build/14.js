@@ -1,14 +1,14 @@
 webpackJsonp([14],{
 
-/***/ 480:
+/***/ 495:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClinicalQualityProjectsPageModule", function() { return ClinicalQualityProjectsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InfectionControlPageModule", function() { return InfectionControlPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__clinical_quality_projects__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__infection_control__ = __webpack_require__(171);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ClinicalQualityProjectsPageModule = /** @class */ (function () {
-    function ClinicalQualityProjectsPageModule() {
+var InfectionControlPageModule = /** @class */ (function () {
+    function InfectionControlPageModule() {
     }
-    ClinicalQualityProjectsPageModule = __decorate([
+    InfectionControlPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__clinical_quality_projects__["a" /* ClinicalQualityProjectsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__infection_control__["a" /* InfectionControlPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__clinical_quality_projects__["a" /* ClinicalQualityProjectsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__infection_control__["a" /* InfectionControlPage */]),
             ],
         })
-    ], ClinicalQualityProjectsPageModule);
-    return ClinicalQualityProjectsPageModule;
+    ], InfectionControlPageModule);
+    return InfectionControlPageModule;
 }());
 
-//# sourceMappingURL=clinical-quality-projects.module.js.map
+//# sourceMappingURL=infection-control.module.js.map
 
 /***/ })
 

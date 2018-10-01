@@ -8,7 +8,7 @@ webpackJsonp([20],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_note_service_note_service__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(29);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ var AddNotePage = /** @class */ (function () {
     };
     AddNotePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-note',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/add-note/add-note.html"*/'<!--\n  Generated template for the AddNotePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add Note</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <form [formGroup]="formGroup" (ngSubmit)="saveNote(formGroup.value)"> \n      <ion-item>\n          <ion-label>Date</ion-label>\n          <ion-datetime displayFormat="MM/DD/YYYY" formControlName="date"></ion-datetime>\n         </ion-item>\n    <ion-item>\n      <ion-label>Title</ion-label>\n      <ion-input type = "text" name="title" formControlName="title" required></ion-input>\n      <div class ="alert" *ngIf="!formGroup.controls[\'title\'].valid\n       && formGroup.controls[\'title\'].touched">{{ titleAlert }}</div>\n    </ion-item>\n    <ion-item>\n        <ion-label>Note</ion-label>\n        <ion-input type = "text" name="content" formControlName="content" required></ion-input>\n        <div class ="alert" *ngIf="!formGroup.controls[\'content\'].valid\n         && formGroup.controls[\'content\'].touched">{{ contentAlert }}</div>\n      </ion-item>\n      <div style="margin-left: 15px;">\n        <button block ion-button type="submit" [disabled]="!formGroup.valid">Save Note</button>\n      </div>  \n  </form>\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/add-note/add-note.html"*/,
+            selector: 'page-add-note',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\add-note\add-note.html"*/'<!--\n\n  Generated template for the AddNotePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Add Note</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <form [formGroup]="formGroup" (ngSubmit)="saveNote(formGroup.value)"> \n\n      <ion-item>\n\n          <ion-label>Date</ion-label>\n\n          <ion-datetime displayFormat="MM/DD/YYYY" formControlName="date"></ion-datetime>\n\n         </ion-item>\n\n    <ion-item>\n\n      <ion-label>Title</ion-label>\n\n      <ion-input type = "text" name="title" formControlName="title" required></ion-input>\n\n      <div class ="alert" *ngIf="!formGroup.controls[\'title\'].valid\n\n       && formGroup.controls[\'title\'].touched">{{ titleAlert }}</div>\n\n    </ion-item>\n\n    <ion-item>\n\n        <ion-label>Note</ion-label>\n\n        <ion-input type = "text" name="content" formControlName="content" required></ion-input>\n\n        <div class ="alert" *ngIf="!formGroup.controls[\'content\'].valid\n\n         && formGroup.controls[\'content\'].touched">{{ contentAlert }}</div>\n\n      </ion-item>\n\n      <div style="margin-left: 15px;">\n\n        <button block ion-button type="submit" [disabled]="!formGroup.valid">Save Note</button>\n\n      </div>  \n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\add-note\add-note.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_note_service_note_service__["a" /* NoteService */]])
     ], AddNotePage);
@@ -56,12 +56,159 @@ var AddNotePage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClinicalQualityProjectsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notes_to_self_notes_to_self__ = __webpack_require__(25);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ClinicalQualityProjectsPage = /** @class */ (function () {
+    function ClinicalQualityProjectsPage(storage, toastCtrl, navCtrl, navParams, wpApiProvider) {
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.wpApiProvider = wpApiProvider;
+        this.loadData();
+    }
+    ClinicalQualityProjectsPage.prototype.loadData = function (refresher) {
+        var _this = this;
+        if (this.wpApiProvider.isConnected() || navigator.onLine) {
+            this.wpApiProvider.getClinicalQualityProjects().subscribe(function (data) {
+                console.log(data);
+                _this.tools = data;
+                _this.storage.set('dataFrom' + 'CQProjects', _this.tools);
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'Data loaded from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+        else {
+            this.storage.get('dataFrom' + 'CQProjects').then(function (data) {
+                _this.tools = data;
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'No connection - failed to retrieve from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+    };
+    ClinicalQualityProjectsPage.prototype.notesToSelf = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
+    };
+    ClinicalQualityProjectsPage.prototype.forceReload = function (refresher) {
+        this.loadData(refresher);
+        refresher.complete();
+    };
+    ClinicalQualityProjectsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-clinical-quality-projects',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\clinical-quality-projects\clinical-quality-projects.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n        <button ion-button menuToggle>\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n         <ion-title>Clinical Quality Projects</ion-title>\n\n         <ion-buttons end>\n\n          \n\n          <button ion-button icon-only  (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n        </ion-buttons>\n\n      </ion-navbar>\n\n\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n      <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n    </ion-refresher>\n\n\n\n\n\n<!--\n\n  <h4 class="title"><strong> A guide to defining Clinical Quality Projects at GOSH: Who to contact for support and governance</strong></h4>\n\n\n\n  <h6 class="paragraph-text"><strong></strong></h6> -->\n\n<div *ngFor="let tool of tools | search : terms" class="txt">  <div [innerHTML]="tool.content.rendered"></div></div>\n\n\n\n	<flash-card *ngFor="let tool of tools | search : terms">\n\n\n\n		<div class="flash-card-front"><div [innerHTML]="tool.front"></div></div>\n\n\n\n		<div class="flash-card-back"><div [innerHTML]="tool.back"></div></div>\n\n\n\n	</flash-card>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\clinical-quality-projects\clinical-quality-projects.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
+    ], ClinicalQualityProjectsPage);
+    return ClinicalQualityProjectsPage;
+}());
+
+//# sourceMappingURL=clinical-quality-projects.js.map
+
+/***/ }),
+
+/***/ 168:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewNotePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_note_service_note_service__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(253);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ViewNotePage = /** @class */ (function () {
+    function ViewNotePage(navCtrl, navParams, noteService, emailComposer) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.noteService = noteService;
+        this.emailComposer = emailComposer;
+        this.note = this.navParams.get('note');
+    }
+    // subject=this.note.title;
+    // body=this.note.content;
+    // to='';
+    ViewNotePage.prototype.deleteNote = function (createDate) {
+        this.noteService.deleteNote(createDate);
+        this.navCtrl.pop();
+    };
+    ViewNotePage.prototype.send = function () {
+        var email = {
+            // to: this.to,
+            cc: [],
+            bcc: [],
+            attachment: [],
+            subject: this.note.title,
+            body: this.note.content,
+            isHtml: false,
+        };
+        this.emailComposer.open(email);
+    };
+    ViewNotePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-view-note',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\view-note\view-note.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n \n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-card class="note">\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        {{ note.title }}\n\n      </ion-card-title>\n\n      <div class="note-date">{{ note.date }}</div>\n\n      <hr>\n\n      <div>{{ note.content }}</div>\n\n    </ion-card-content>\n\n  </ion-card>\n\n</ion-content>\n\n<ion-footer>\n\n  <button ion-button color="balanced" block (click)="send()">Send</button>\n\n  <button ion-button color="danger" block (click)="deleteNote(note.createDate)">Delete Note</button>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\view-note\view-note.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_note_service_note_service__["a" /* NoteService */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */]])
+    ], ViewNotePage);
+    return ViewNotePage;
+}());
+
+//# sourceMappingURL=view-note.js.map
+
+/***/ }),
+
+/***/ 169:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClinicalPoliciesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notes_to_self_notes_to_self__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notes_to_self_notes_to_self__ = __webpack_require__(25);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -130,7 +277,7 @@ var ClinicalPoliciesPage = /** @class */ (function () {
     };
     ClinicalPoliciesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-clinical-policies',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/clinical-policies/clinical-policies.html"*/'<!--\n  Generated template for the InfectionControlPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n      <button ion-button menuToggle *ngIf ="!searchOpen">\n        <ion-icon name="menu"></ion-icon>\n      </button>\n       <ion-title *ngIf ="!searchOpen">Clinical Policies</ion-title>\n       <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n      <ion-buttons end>\n        <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n        <ion-icon name="search"></ion-icon></button>\n        <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n      </ion-buttons>\n    </ion-navbar>\n\n\n</ion-header>\n\n\n<ion-content padding>\n      <ion-refresher (ionRefresh)="forceReload($event)">\n              <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n            </ion-refresher>\n            \n  <ion-content padding>\n\n      <card *ngFor="let tool of tools | search : terms" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">\n          <div [innerHTML]="tool.content.rendered"></div>\n      </card>\n\n  </ion-content>\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/clinical-policies/clinical-policies.html"*/,
+            selector: 'page-clinical-policies',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\clinical-policies\clinical-policies.html"*/'<!--\n\n  Generated template for the InfectionControlPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar color="primary">\n\n      <button ion-button menuToggle *ngIf ="!searchOpen">\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n       <ion-title *ngIf ="!searchOpen">Clinical Policies</ion-title>\n\n       <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n\n      <ion-buttons end>\n\n        <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n\n        <ion-icon name="search"></ion-icon></button>\n\n        <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n      <ion-refresher (ionRefresh)="forceReload($event)">\n\n              <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n            </ion-refresher>\n\n            \n\n  <ion-content padding>\n\n\n\n      <card *ngFor="let tool of tools | search : terms" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">\n\n          <div [innerHTML]="tool.content.rendered"></div>\n\n      </card>\n\n\n\n  </ion-content>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\clinical-policies\clinical-policies.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
     ], ClinicalPoliciesPage);
@@ -141,148 +288,6 @@ var ClinicalPoliciesPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 168:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewNotePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_note_service_note_service__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(253);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var ViewNotePage = /** @class */ (function () {
-    function ViewNotePage(navCtrl, navParams, noteService, emailComposer) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.noteService = noteService;
-        this.emailComposer = emailComposer;
-        this.note = this.navParams.get('note');
-    }
-    // subject=this.note.title;
-    // body=this.note.content;
-    // to='';
-    ViewNotePage.prototype.deleteNote = function (createDate) {
-        this.noteService.deleteNote(createDate);
-        this.navCtrl.pop();
-    };
-    ViewNotePage.prototype.send = function () {
-        var email = {
-            // to: this.to,
-            cc: [],
-            bcc: [],
-            attachment: [],
-            subject: this.note.title,
-            body: this.note.content,
-            isHtml: false,
-        };
-        this.emailComposer.open(email);
-    };
-    ViewNotePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-view-note',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/view-note/view-note.html"*/'<ion-header>\n\n  <ion-navbar>\n \n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card class="note">\n    <ion-card-content>\n      <ion-card-title>\n        {{ note.title }}\n      </ion-card-title>\n      <div class="note-date">{{ note.date }}</div>\n      <hr>\n      <div>{{ note.content }}</div>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n<ion-footer>\n  <button ion-button color="balanced" block (click)="send()">Send</button>\n  <button ion-button color="danger" block (click)="deleteNote(note.createDate)">Delete Note</button>\n</ion-footer>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/view-note/view-note.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_note_service_note_service__["a" /* NoteService */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */]])
-    ], ViewNotePage);
-    return ViewNotePage;
-}());
-
-//# sourceMappingURL=view-note.js.map
-
-/***/ }),
-
-/***/ 169:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClinicalQualityProjectsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(16);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var ClinicalQualityProjectsPage = /** @class */ (function () {
-    function ClinicalQualityProjectsPage(storage, toastCtrl, navCtrl, navParams, wpApiProvider) {
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.wpApiProvider = wpApiProvider;
-        this.loadData();
-    }
-    ClinicalQualityProjectsPage.prototype.loadData = function (refresher) {
-        var _this = this;
-        if (this.wpApiProvider.isConnected() || navigator.onLine) {
-            this.wpApiProvider.getClinicalQualityProjects().subscribe(function (data) {
-                console.log(data);
-                _this.tools = data;
-                _this.storage.set('dataFrom' + 'CQProjects', _this.tools);
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'Data loaded from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-        else {
-            this.storage.get('dataFrom' + 'CQProjects').then(function (data) {
-                _this.tools = data;
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'No connection - failed to retrieve from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-    };
-    ClinicalQualityProjectsPage.prototype.forceReload = function (refresher) {
-        this.loadData(refresher);
-        refresher.complete();
-    };
-    ClinicalQualityProjectsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-clinical-quality-projects',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/clinical-quality-projects/clinical-quality-projects.html"*/'<ion-header>\n    <ion-navbar color="primary">\n        <button ion-button menuToggle>\n          <ion-icon name="menu"></ion-icon>\n        </button>\n         <ion-title>Clinical Quality Projects</ion-title>\n      </ion-navbar>\n\n\n</ion-header>\n\n\n<ion-content>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n      <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n    </ion-refresher>\n\n\n<!--\n  <h4 class="title"><strong> A guide to defining Clinical Quality Projects at GOSH: Who to contact for support and governance</strong></h4>\n\n  <h6 class="paragraph-text"><strong></strong></h6> -->\n<div *ngFor="let tool of tools | search : terms" class="txt">  <div [innerHTML]="tool.content.rendered"></div></div>\n\n	<flash-card *ngFor="let tool of tools | search : terms">\n\n		<div class="flash-card-front"><div [innerHTML]="tool.front"></div></div>\n\n		<div class="flash-card-back"><div [innerHTML]="tool.back"></div></div>\n\n	</flash-card>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/clinical-quality-projects/clinical-quality-projects.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
-    ], ClinicalQualityProjectsPage);
-    return ClinicalQualityProjectsPage;
-}());
-
-//# sourceMappingURL=clinical-quality-projects.js.map
-
-/***/ }),
-
 /***/ 170:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -290,7 +295,7 @@ var ClinicalQualityProjectsPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IcuNewStartersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -355,7 +360,7 @@ var IcuNewStartersPage = /** @class */ (function () {
     };
     IcuNewStartersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-icu-new-starters',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/icu-new-starters/icu-new-starters.html"*/'<!--\n  Generated template for the IcuNewStartersPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <button ion-button menuToggle *ngIf ="!searchOpen">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n     <ion-title *ngIf ="!searchOpen">ICU-New Starters</ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n      <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n    </ion-refresher>\n           \n    <card *ngFor="let tool of tools | search : terms" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">\n        <div [innerHTML]="tool.content.rendered"></div>\n    </card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/icu-new-starters/icu-new-starters.html"*/,
+            selector: 'page-icu-new-starters',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\icu-new-starters\icu-new-starters.html"*/'<!--\n\n  Generated template for the IcuNewStartersPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle *ngIf ="!searchOpen">\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n     <ion-title *ngIf ="!searchOpen">ICU-New Starters</ion-title>\n\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n\n      <ion-icon name="search"></ion-icon></button>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n      <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n    </ion-refresher>\n\n           \n\n    <card *ngFor="let tool of tools | search : terms" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">\n\n        <div [innerHTML]="tool.content.rendered"></div>\n\n    </card>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\icu-new-starters\icu-new-starters.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
     ], IcuNewStartersPage);
@@ -375,7 +380,7 @@ var IcuNewStartersPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notes_to_self_notes_to_self__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notes_to_self_notes_to_self__ = __webpack_require__(25);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -438,7 +443,7 @@ var InfectionControlPage = /** @class */ (function () {
     };
     InfectionControlPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-infection-control',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/infection-control/infection-control.html"*/'<!--\n  Generated template for the InfectionControlPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <ion-navbar color="primary">\n        <button ion-button menuToggle *ngIf ="!searchOpen">\n          <ion-icon name="menu"></ion-icon>\n        </button>\n         <ion-title *ngIf ="!searchOpen">Infection Control</ion-title>\n         <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n        <ion-buttons end>\n          <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n          <ion-icon name="search"></ion-icon></button>\n          <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n        </ion-buttons>\n      </ion-navbar>\n\n\n</ion-header>\n\n\n<ion-content padding>\n        <ion-refresher (ionRefresh)="forceReload($event)">\n                <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n              </ion-refresher>\n              \n \n\n        <card *ngFor="let tool of tools | search : terms" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">\n            <div [innerHTML]="tool.content.rendered"></div>\n        </card>\n\n    \n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/infection-control/infection-control.html"*/,
+            selector: 'page-infection-control',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\infection-control\infection-control.html"*/'<!--\n\n  Generated template for the InfectionControlPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n    <ion-navbar color="primary">\n\n        <button ion-button menuToggle *ngIf ="!searchOpen">\n\n          <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n         <ion-title *ngIf ="!searchOpen">Infection Control</ion-title>\n\n         <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n\n        <ion-buttons end>\n\n          <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n\n          <ion-icon name="search"></ion-icon></button>\n\n          <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n        </ion-buttons>\n\n      </ion-navbar>\n\n\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n        <ion-refresher (ionRefresh)="forceReload($event)">\n\n                <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n              </ion-refresher>\n\n              \n\n \n\n\n\n        <card *ngFor="let tool of tools | search : terms" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name">\n\n            <div [innerHTML]="tool.content.rendered"></div>\n\n        </card>\n\n\n\n    \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\infection-control\infection-control.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
     ], InfectionControlPage);
@@ -456,7 +461,7 @@ var InfectionControlPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafetyToolkitPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(453);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
@@ -547,7 +552,7 @@ var SafetyToolkitPage = /** @class */ (function () {
     };
     SafetyToolkitPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-safety-toolkit',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit/safety-toolkit.html"*/'<!--\n  Generated template for the SafetyToolkitPage page.\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation. -->\n<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle *ngIf ="!searchOpen">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n     <ion-title *ngIf ="!searchOpen">Safety Toolkit</ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding class="has-header" overflow-scroll="true" class="background">\n  \n\n\n  <ion-refresher (ionRefresh)="forceReload($event)">\n\n    <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n  </ion-refresher>\n\n  <accordion *ngFor="let tool of tools | async | search : terms" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug" [template] = "tool.template_name" [imagetop] = "tool.image_top.guid">\n      <div [innerHTML]="tool.content.rendered"></div>\n    </accordion>\n\n\n\n\n\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit/safety-toolkit.html"*/,
+            selector: 'page-safety-toolkit',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\safety-toolkit\safety-toolkit.html"*/'<!--\n\n  Generated template for the SafetyToolkitPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation. -->\n\n<ion-header>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle *ngIf ="!searchOpen">\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n     <ion-title *ngIf ="!searchOpen">Safety Toolkit</ion-title>\n\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n\n      <ion-icon name="search"></ion-icon></button>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="has-header" overflow-scroll="true" class="background">\n\n  \n\n\n\n\n\n  <ion-refresher (ionRefresh)="forceReload($event)">\n\n\n\n    <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n  </ion-refresher>\n\n\n\n  <accordion *ngFor="let tool of tools | async | search : terms" [title]="tool.title.rendered" [icon]="tool.icon.guid" [slug] = "tool.slug" [template] = "tool.template_name" [imagetop] = "tool.image_top.guid">\n\n      <div [innerHTML]="tool.content.rendered"></div>\n\n    </accordion>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\safety-toolkit\safety-toolkit.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5_ionic_cache__["b" /* CacheService */], __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */]])
     ], SafetyToolkitPage);
@@ -559,6 +564,65 @@ var SafetyToolkitPage = /** @class */ (function () {
 /***/ }),
 
 /***/ 173:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the VideoPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var VideoPage = /** @class */ (function () {
+    function VideoPage(navCtrl, navParams, videoService, domSanitizer) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.videoService = videoService;
+        this.domSanitizer = domSanitizer;
+        // this.id = videoService.tutorials_keys[navParams.get('id')];
+        this.id = this.navParams.get('id');
+        this.name = this.navParams.get('name');
+        this.description = this.navParams.get('description');
+        this.videourl = "https://www.youtube.com/embed/" + this.id;
+    }
+    VideoPage.prototype.ionViewWillEnter = function () {
+        this.trustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.videourl);
+    };
+    VideoPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad VideoPage');
+    };
+    VideoPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-video',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\video\video.html"*/'<!--\n\n  Generated template for the VideoPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title> {{ name }} </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <div style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;">\n\n      <iframe [src]="trustedVideoUrl" frameborder="0" allowfullscreen="" width="560" height="315" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>\n\n    </div>\n\n\n\n    <!-- {{ videourl }} -->\n\n    <div class="spacer" style="height: 10px;"></div>\n\n  {{ description }}\n\n\n\n  \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\video\video.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__["a" /* VideoService */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */]])
+    ], VideoPage);
+    return VideoPage;
+}());
+
+//# sourceMappingURL=video.js.map
+
+/***/ }),
+
+/***/ 174:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -677,7 +741,7 @@ var VideoLibraryPage = /** @class */ (function () {
     ], VideoLibraryPage.prototype, "name", void 0);
     VideoLibraryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-video-library',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/video-library/video-library.html"*/'\n<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle *ngIf ="!searchOpen">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n     <ion-title *ngIf ="!searchOpen">Video Library</ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false"\n     [(ngModel)] = "data.search"\n     [ngModelOptions]="{standalone: true}"\n     (keyup.enter)="search()"\n     (ionInput) = "search()"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n    <ion-content padding="true" class="has-header">\n       <ion-refresher (ionRefresh)="forceReload($event)">\n    <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n  </ion-refresher>\n\n\n\n\n      <ion-list>\n\n      <!-- <ion-item *ngFor="let video of videos" [attr.id]="video.video_id" [attr.key]="video.video_key" [attr.name] = "video.video_name" [attr.description] = "video.video_description" (click)="viewVideo(video.key)" class="item-thumbnail-left"> -->\n        <video-item *ngFor="let video of videos" [id]="video.video_id" [key]="video.video_key" [name] = "video.video_name" [description] = "video.video_description">\n\n      </video-item>\n      </ion-list>\n    </ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/video-library/video-library.html"*/,
+            selector: 'page-video-library',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\video-library\video-library.html"*/'\n\n<ion-header>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle *ngIf ="!searchOpen">\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n     <ion-title *ngIf ="!searchOpen">Video Library</ion-title>\n\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false"\n\n     [(ngModel)] = "data.search"\n\n     [ngModelOptions]="{standalone: true}"\n\n     (keyup.enter)="search()"\n\n     (ionInput) = "search()"></ion-searchbar>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n\n      <ion-icon name="search"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n    <ion-content padding="true" class="has-header">\n\n       <ion-refresher (ionRefresh)="forceReload($event)">\n\n    <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n  </ion-refresher>\n\n\n\n\n\n\n\n\n\n      <ion-list>\n\n\n\n      <!-- <ion-item *ngFor="let video of videos" [attr.id]="video.video_id" [attr.key]="video.video_key" [attr.name] = "video.video_name" [attr.description] = "video.video_description" (click)="viewVideo(video.key)" class="item-thumbnail-left"> -->\n\n        <video-item *ngFor="let video of videos" [id]="video.video_id" [key]="video.video_key" [name] = "video.video_name" [description] = "video.video_description">\n\n\n\n      </video-item>\n\n      </ion-list>\n\n    </ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\video-library\video-library.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__["a" /* VideoService */], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]])
     ], VideoLibraryPage);
@@ -685,65 +749,6 @@ var VideoLibraryPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=video-library.js.map
-
-/***/ }),
-
-/***/ 174:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VideoPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(41);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the VideoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var VideoPage = /** @class */ (function () {
-    function VideoPage(navCtrl, navParams, videoService, domSanitizer) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.videoService = videoService;
-        this.domSanitizer = domSanitizer;
-        // this.id = videoService.tutorials_keys[navParams.get('id')];
-        this.id = this.navParams.get('id');
-        this.name = this.navParams.get('name');
-        this.description = this.navParams.get('description');
-        this.videourl = "https://www.youtube.com/embed/" + this.id;
-    }
-    VideoPage.prototype.ionViewWillEnter = function () {
-        this.trustedVideoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.videourl);
-    };
-    VideoPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad VideoPage');
-    };
-    VideoPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-video',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/video/video.html"*/'<!--\n  Generated template for the VideoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title> {{ name }} </ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <div style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;">\n      <iframe [src]="trustedVideoUrl" frameborder="0" allowfullscreen="" width="560" height="315" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>\n    </div>\n\n    <!-- {{ videourl }} -->\n    <div class="spacer" style="height: 10px;"></div>\n  {{ description }}\n\n  \n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/video/video.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_video_service_video_service__["a" /* VideoService */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */]])
-    ], VideoPage);
-    return VideoPage;
-}());
-
-//# sourceMappingURL=video.js.map
 
 /***/ }),
 
@@ -863,11 +868,11 @@ var map = {
 		18
 	],
 	"../pages/clinical-policies/clinical-policies.module": [
-		492,
+		493,
 		17
 	],
 	"../pages/clinical-quality-projects/clinical-quality-projects.module": [
-		493,
+		492,
 		16
 	],
 	"../pages/icu-new-starters/icu-new-starters.module": [
@@ -887,47 +892,47 @@ var map = {
 		12
 	],
 	"../pages/safety-toolkit/safety-toolkit.module": [
-		499,
+		498,
 		11
 	],
 	"../pages/template-flashcard/template-flashcard.module": [
-		498,
+		501,
 		10
 	],
 	"../pages/template-imagetop/template-imagetop.module": [
-		502,
+		503,
 		9
 	],
 	"../pages/template-quiz-score/template-quiz-score.module": [
-		503,
+		502,
 		8
 	],
 	"../pages/template-quiz/template-quiz.module": [
-		510,
+		504,
 		7
 	],
 	"../pages/template-simple/template-simple.module": [
-		504,
+		505,
 		6
 	],
 	"../pages/template-slider/template-slider.module": [
-		505,
+		506,
 		5
 	],
 	"../pages/template-slides-arrows/template-slides-arrows.module": [
-		506,
+		508,
 		4
 	],
 	"../pages/video-library/video-library.module": [
-		507,
+		509,
 		3
 	],
 	"../pages/video/video.module": [
-		508,
+		507,
 		2
 	],
 	"../pages/view-note/view-note.module": [
-		509,
+		510,
 		1
 	]
 };
@@ -947,98 +952,7 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 300:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(16);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var HomePage = /** @class */ (function () {
-    function HomePage(storage, toastCtrl, navCtrl, navParams, wpApiProvider) {
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.wpApiProvider = wpApiProvider;
-        this.loadData();
-    }
-    HomePage.prototype.loadData = function (refresher) {
-        var _this = this;
-        if (this.wpApiProvider.isConnected() || navigator.onLine) {
-            this.wpApiProvider.getHome().subscribe(function (data) {
-                console.log(data);
-                _this.tools = data;
-                _this.storage.set('dataFrom' + 'Home', _this.tools);
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'Data loaded from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-        else {
-            this.storage.get('dataFrom' + 'Home').then(function (data) {
-                _this.tools = data;
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'No connection - failed to retrieve from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-    };
-    HomePage.prototype.forceReload = function (refresher) {
-        this.loadData(refresher);
-        refresher.complete();
-    };
-    HomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-refresher (ionRefresh)="forceReload($event)">\n\n    <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n  </ion-refresher>\n\n<div *ngFor="let tool of tools"> <div class="txt" [innerHTML]="tool.content.rendered"></div></div>\n \n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/home/home.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
-    ], HomePage);
-    return HomePage;
-}());
-
-//# sourceMappingURL=home.js.map
-
-/***/ }),
-
-/***/ 301:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(416);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
-
-/***/ }),
-
-/***/ 33:
+/***/ 25:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1086,7 +1000,7 @@ var NotesToSelfPage = /** @class */ (function () {
     };
     NotesToSelfPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-notes-to-self',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/notes-to-self/notes-to-self.html"*/'<!--\n  Generated template for the NotesToSelfPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>Notes To Self</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <button ion-item *ngFor="let note of notes | async" (click)="getNote(note.createDate)">\n        {{ note.title }}\n    </button>\n  </ion-list>\n    \n</ion-content>\n<ion-footer>\n  <button ion-button (click)="addNote()" block>Add Note</button>\n</ion-footer>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/notes-to-self/notes-to-self.html"*/,
+            selector: 'page-notes-to-self',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\notes-to-self\notes-to-self.html"*/'<!--\n\n  Generated template for the NotesToSelfPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="primary">\n\n    <ion-title>Notes To Self</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <button ion-item *ngFor="let note of notes | async" (click)="getNote(note.createDate)">\n\n        {{ note.title }}\n\n    </button>\n\n  </ion-list>\n\n    \n\n</ion-content>\n\n<ion-footer>\n\n  <button ion-button (click)="addNote()" block>Add Note</button>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\notes-to-self\notes-to-self.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_note_service_note_service__["a" /* NoteService */]])
     ], NotesToSelfPage);
@@ -1094,6 +1008,102 @@ var NotesToSelfPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=notes-to-self.js.map
+
+/***/ }),
+
+/***/ 300:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__notes_to_self_notes_to_self__ = __webpack_require__(25);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(storage, toastCtrl, navCtrl, navParams, wpApiProvider) {
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.wpApiProvider = wpApiProvider;
+        this.loadData();
+    }
+    HomePage.prototype.loadData = function (refresher) {
+        var _this = this;
+        if (this.wpApiProvider.isConnected() || navigator.onLine) {
+            this.wpApiProvider.getHome().subscribe(function (data) {
+                console.log(data);
+                _this.tools = data;
+                _this.storage.set('dataFrom' + 'Home', _this.tools);
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'Data loaded from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+        else {
+            this.storage.get('dataFrom' + 'Home').then(function (data) {
+                _this.tools = data;
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'No connection - failed to retrieve from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+    };
+    HomePage.prototype.notesToSelf = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
+    };
+    HomePage.prototype.forceReload = function (refresher) {
+        this.loadData(refresher);
+        refresher.complete();
+    };
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Home</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-refresher (ionRefresh)="forceReload($event)">\n\n\n\n    <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n  </ion-refresher>\n\n\n\n<div *ngFor="let tool of tools"> <div class="txt" [innerHTML]="tool.content.rendered"></div></div>\n\n \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\home\home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ }),
+
+/***/ 301:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(416);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
 
 /***/ }),
 
@@ -1109,18 +1119,18 @@ var NotesToSelfPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(300);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_safety_toolkit_safety_toolkit__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_icu_new_starters_icu_new_starters__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_clinical_policies_clinical_policies__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_clinical_quality_projects_clinical_quality_projects__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_video_library_video_library__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_notes_to_self_notes_to_self__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_clinical_policies_clinical_policies__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_clinical_quality_projects_clinical_quality_projects__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_video_library_video_library__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_notes_to_self_notes_to_self__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_template_slider_template_slider__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_template_imagetop_template_imagetop__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_video_video__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_template_quiz_template_quiz__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_template_quiz_score_template_quiz_score__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_template_simple_template_simple__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_template_slider_template_slider__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_template_imagetop_template_imagetop__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_video_video__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_template_quiz_template_quiz__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_template_quiz_score_template_quiz_score__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_template_simple_template_simple__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_template_flashcard_template_flashcard__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_infection_control_infection_control__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_status_bar__ = __webpack_require__(298);
@@ -1129,7 +1139,7 @@ var NotesToSelfPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_add_note_add_note__ = __webpack_require__(166);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_note_service_note_service__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__ionic_storage__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__angular_forms__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__angular_forms__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_view_note_view_note__ = __webpack_require__(168);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_email_composer__ = __webpack_require__(253);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__providers_wp_api_wp_api__ = __webpack_require__(18);
@@ -1238,23 +1248,23 @@ var AppModule = /** @class */ (function () {
                 }, {
                     links: [
                         { loadChildren: '../pages/add-note/add-note.module#AddNotePageModule', name: 'AddNotePage', segment: 'add-note', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/clinical-policies/clinical-policies.module#ClinicalPoliciesPageModule', name: 'ClinicalPoliciesPage', segment: 'clinical-policies', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/clinical-quality-projects/clinical-quality-projects.module#ClinicalQualityProjectsPageModule', name: 'ClinicalQualityProjectsPage', segment: 'clinical-quality-projects', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/clinical-policies/clinical-policies.module#ClinicalPoliciesPageModule', name: 'ClinicalPoliciesPage', segment: 'clinical-policies', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/icu-new-starters/icu-new-starters.module#IcuNewStartersPageModule', name: 'IcuNewStartersPage', segment: 'icu-new-starters', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/infection-control/infection-control.module#InfectionControlPageModule', name: 'InfectionControlPage', segment: 'infection-control', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/notes-to-self/notes-to-self.module#NotesToSelfPageModule', name: 'NotesToSelfPage', segment: 'notes-to-self', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/safety-toolkit-more/safety-toolkit-more.module#SafetyToolkitMorePageModule', name: 'SafetyToolkitMorePage', segment: 'safety-toolkit-more', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/template-flashcard/template-flashcard.module#TemplateFlashcardPageModule', name: 'TemplateFlashcardPage', segment: 'template-flashcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/safety-toolkit/safety-toolkit.module#SafetyToolkitPageModule', name: 'SafetyToolkitPage', segment: 'safety-toolkit', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/template-imagetop/template-imagetop.module#TemplateImagetopPageModule', name: 'TemplateImagetopPage', segment: 'template-imagetop', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/template-flashcard/template-flashcard.module#TemplateFlashcardPageModule', name: 'TemplateFlashcardPage', segment: 'template-flashcard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-quiz-score/template-quiz-score.module#TemplateQuizScorePageModule', name: 'TemplateQuizScorePage', segment: 'template-quiz-score', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/template-imagetop/template-imagetop.module#TemplateImagetopPageModule', name: 'TemplateImagetopPage', segment: 'template-imagetop', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/template-quiz/template-quiz.module#TemplateQuizPageModule', name: 'TemplateQuizPage', segment: 'template-quiz', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-simple/template-simple.module#TemplateSimplePageModule', name: 'TemplateSimplePage', segment: 'template-simple', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-slider/template-slider.module#TemplateSliderPageModule', name: 'TemplateSliderPage', segment: 'template-slider', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/video/video.module#VideoPageModule', name: 'VideoPage', segment: 'video', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/template-slides-arrows/template-slides-arrows.module#TemplateSlidesArrowsPageModule', name: 'TemplateSlidesArrowsPage', segment: 'template-slides-arrows', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/video-library/video-library.module#VideoLibraryPageModule', name: 'VideoLibraryPage', segment: 'video-library', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/video/video.module#VideoPageModule', name: 'VideoPage', segment: 'video', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/view-note/view-note.module#ViewNotePageModule', name: 'ViewNotePage', segment: 'view-note', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/template-quiz/template-quiz.module#TemplateQuizPageModule', name: 'TemplateQuizPage', segment: 'template-quiz', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/view-note/view-note.module#ViewNotePageModule', name: 'ViewNotePage', segment: 'view-note', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_26__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
@@ -1316,11 +1326,11 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(299);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(300);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_safety_toolkit_safety_toolkit__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_video_library_video_library__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_video_library_video_library__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_icu_new_starters_icu_new_starters__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_infection_control_infection_control__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_clinical_policies_clinical_policies__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_clinical_quality_projects_clinical_quality_projects__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_clinical_policies_clinical_policies__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_clinical_quality_projects_clinical_quality_projects__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ionic_cache__ = __webpack_require__(144);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_wp_api_wp_api__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1390,7 +1400,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n\n  </ion-header>\n\n  <ion-content class="side-menu-gradient">\n    <ion-list>\n        <div class="spacer" style="height: 40px;"></div>\n        <h2 style="color:rgba(255, 255, 255, 0.927);text-align:center;font-weight:400;">GOSH App</h2>\n        <div class="spacer" style="height: 10px;"></div>\n      <button class="side-menu-item" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" no-line>\n        {{p.title}}\n      </button>\n  <!-- <sidebar *ngFor="let tool of tools" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name"></sidebar> -->\n     </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\app\app.html"*/'<ion-menu [content]="content">\n\n  <ion-header>\n\n\n\n  </ion-header>\n\n\n\n  <ion-content class="side-menu-gradient">\n\n    <ion-list>\n\n        <div class="spacer" style="height: 40px;"></div>\n\n        <h2 style="color:rgba(255, 255, 255, 0.927);text-align:center;font-weight:400;">GOSH App</h2>\n\n        <div class="spacer" style="height: 10px;"></div>\n\n      <button class="side-menu-item" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" no-line>\n\n        {{p.title}}\n\n      </button>\n\n  <!-- <sidebar *ngFor="let tool of tools" [title]="tool.title.rendered" [slug] = "tool.slug" [template] = "tool.template_name"></sidebar> -->\n\n     </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* Platform */], __WEBPACK_IMPORTED_MODULE_11_ionic_cache__["b" /* CacheService */], __WEBPACK_IMPORTED_MODULE_12__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -1409,13 +1419,13 @@ var MyApp = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_template_slider_template_slider__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_template_quiz_template_quiz__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_template_simple_template_simple__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_template_imagetop_template_imagetop__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_template_slider_template_slider__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_template_quiz_template_quiz__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_template_simple_template_simple__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_template_imagetop_template_imagetop__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_template_flashcard_template_flashcard__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_template_quiz_score_template_quiz_score__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_template_quiz_score_template_quiz_score__ = __webpack_require__(94);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1546,7 +1556,7 @@ var AccordionComponent = /** @class */ (function () {
     ], AccordionComponent.prototype, "imagetop", void 0);
     AccordionComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'accordion',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion/accordion.html"*/'\n\n<ion-card id="home-card21">\n     \n      \n    <ion-item color="none" id="home-list-item6">\n       \n      <ion-avatar item-left (click)="template_router(slug,title,template,imagetop)">\n        <img src="{{ icon }}">\n        </ion-avatar>\n\n        <div style = "width: 150px; float:left ">\n             <h2>\n                  <div (click)="template_router(slug, title, template, imagetop)">\n                         {{ title }}\n                  </div>\n             </h2>\n        </div>\n       \n        <button  ion-button icon-only class= "item-content" clear style="float:right;" (click)="toggleAccordion()">\n            <ion-icon name="ios-arrow-down"></ion-icon>\n        </button>\n\n    </ion-item>\n     \n        <ion-card-content #cc>\n                \n     <ng-content></ng-content>\n                \n    </ion-card-content>\n</ion-card>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion/accordion.html"*/
+            selector: 'accordion',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\accordion\accordion.html"*/'\n\n\n\n<ion-card id="home-card21">\n\n     \n\n      \n\n    <ion-item color="none" id="home-list-item6">\n\n       \n\n      <ion-avatar item-left (click)="template_router(slug,title,template,imagetop)">\n\n        <img src="{{ icon }}">\n\n        </ion-avatar>\n\n\n\n        <div style = "width: 150px; float:left ">\n\n             <h2>\n\n                  <div (click)="template_router(slug, title, template, imagetop)">\n\n                         {{ title }}\n\n                  </div>\n\n             </h2>\n\n        </div>\n\n       \n\n        <button  ion-button icon-only class= "item-content" clear style="float:right;" (click)="toggleAccordion()">\n\n            <ion-icon name="ios-arrow-down"></ion-icon>\n\n        </button>\n\n\n\n    </ion-item>\n\n     \n\n        <ion-card-content #cc>\n\n                \n\n     <ng-content></ng-content>\n\n                \n\n    </ion-card-content>\n\n</ion-card>'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\accordion\accordion.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
     ], AccordionComponent);
@@ -1609,7 +1619,7 @@ var AccordionMoreComponent = /** @class */ (function () {
     ], AccordionMoreComponent.prototype, "title", void 0);
     AccordionMoreComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'accordion-more',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion-more/accordion-more.html"*/'<ion-card>\n  <ion-card-header (click)="toggleAccordion()">\n    {{ title }}\n  </ion-card-header>\n  <!-- <ion-scroll zoom="true" scrollX="true" scrollY="true" overflow-scroll="false"> -->\n\n\n\n    <ion-card-content #cc>\n      <!-- <ion-scroll overflow-scroll="visible" zoom="true" zooming="true" max-zoom="3" min-zoom="1" scrollX="true" scrollY="true"> -->\n            <!-- <ion-scroll zooming="true" scrollY="true" scrollX="true" maxZoom="300px"> -->\n\n       \n            <ng-content></ng-content>\n          \n          \n        </ion-card-content>\n    <!-- </ion-scroll> -->\n  </ion-card>\n  \n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/components/accordion-more/accordion-more.html"*/
+            selector: 'accordion-more',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\accordion-more\accordion-more.html"*/'<ion-card>\n\n  <ion-card-header (click)="toggleAccordion()">\n\n    {{ title }}\n\n  </ion-card-header>\n\n  <!-- <ion-scroll zoom="true" scrollX="true" scrollY="true" overflow-scroll="false"> -->\n\n\n\n\n\n\n\n    <ion-card-content #cc>\n\n      <!-- <ion-scroll overflow-scroll="visible" zoom="true" zooming="true" max-zoom="3" min-zoom="1" scrollX="true" scrollY="true"> -->\n\n            <!-- <ion-scroll zooming="true" scrollY="true" scrollX="true" maxZoom="300px"> -->\n\n\n\n       \n\n            <ng-content></ng-content>\n\n          \n\n          \n\n        </ion-card-content>\n\n    <!-- </ion-scroll> -->\n\n  </ion-card>\n\n  \n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\accordion-more\accordion-more.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
     ], AccordionMoreComponent);
@@ -1628,13 +1638,13 @@ var AccordionMoreComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_safety_toolkit_more_safety_toolkit_more__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_template_slider_template_slider__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_template_quiz_template_quiz__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_template_simple_template_simple__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_template_imagetop_template_imagetop__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_template_slider_template_slider__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_template_quiz_template_quiz__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_template_slides_arrows_template_slides_arrows__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_template_simple_template_simple__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_template_imagetop_template_imagetop__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_template_flashcard_template_flashcard__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_template_quiz_score_template_quiz_score__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_template_quiz_score_template_quiz_score__ = __webpack_require__(94);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1734,7 +1744,7 @@ var CardComponent = /** @class */ (function () {
     ], CardComponent.prototype, "imagetop", void 0);
     CardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'card',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/components/card/card.html"*/'<ion-card>\n    <ion-item (click)="template_router(slug, title, template)">  \n  <ion-card-content>\n   \n      <!-- <ion-thumbnail item-start>\n          <img [src]="tool.image.guid">\n        </ion-thumbnail> -->\n    <ion-card-title>\n      \n     {{ title }}\n\n\n      </ion-card-title>\n  \n        <ng-content></ng-content>\n     \n  </ion-card-content>\n</ion-item>\n</ion-card>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/components/card/card.html"*/
+            selector: 'card',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\card\card.html"*/'<ion-card>\n\n    <ion-item (click)="template_router(slug, title, template)">  \n\n  <ion-card-content>\n\n   \n\n      <!-- <ion-thumbnail item-start>\n\n          <img [src]="tool.image.guid">\n\n        </ion-thumbnail> -->\n\n    <ion-card-title>\n\n      \n\n     {{ title }}\n\n\n\n\n\n      </ion-card-title>\n\n  \n\n        <ng-content></ng-content>\n\n     \n\n  </ion-card-content>\n\n</ion-item>\n\n</ion-card>'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\card\card.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]])
     ], CardComponent);
@@ -1753,7 +1763,7 @@ var CardComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_video_service_video_service__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_angular_common_http__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_video_video__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_video_video__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__node_modules_ionic_angular___ = __webpack_require__(6);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1830,7 +1840,7 @@ var VideoItemComponent = /** @class */ (function () {
     ], VideoItemComponent.prototype, "name", void 0);
     VideoItemComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'video-item',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/components/video-item/video-item.html"*/'<!-- Generated template for the VideoItemComponent component -->\n<ion-item (click)="viewVideo(id, name, description)" class="item-thumbnail-left">\n\n    <img src="https://img.youtube.com/vi/{{id}}/maxresdefault.jpg">\n  \n    <h2>{{ name }}</h2>\n    <h3 class="lbl">{{ description }}</h3>\n\n  </ion-item>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/components/video-item/video-item.html"*/
+            selector: 'video-item',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\video-item\video-item.html"*/'<!-- Generated template for the VideoItemComponent component -->\n\n<ion-item (click)="viewVideo(id, name, description)" class="item-thumbnail-left">\n\n\n\n    <img src="https://img.youtube.com/vi/{{id}}/maxresdefault.jpg">\n\n  \n\n    <h2>{{ name }}</h2>\n\n    <h3 class="lbl">{{ description }}</h3>\n\n\n\n  </ion-item>'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\video-item\video-item.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_video_service_video_service__["a" /* VideoService */], __WEBPACK_IMPORTED_MODULE_2__node_modules_angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__node_modules_ionic_angular___["o" /* NavController */]])
     ], VideoItemComponent);
@@ -1880,7 +1890,7 @@ var SidebarComponent = /** @class */ (function () {
     ], SidebarComponent.prototype, "template", void 0);
     SidebarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'sidebar',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/components/sidebar/sidebar.html"*/'<button class="side-menu-item" menuClose ion-item no-line>\n  {{title}}\n</button>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/components/sidebar/sidebar.html"*/
+            selector: 'sidebar',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\sidebar\sidebar.html"*/'<button class="side-menu-item" menuClose ion-item no-line>\n\n  {{title}}\n\n</button>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\sidebar\sidebar.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], SidebarComponent);
@@ -1959,7 +1969,7 @@ var FlashCardComponent = /** @class */ (function () {
     };
     FlashCardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'flash-card',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/components/flash-card/flash-card.html"*/'<div class="flip-container" (click)="flip()" [class.flipped]="flipped">\n\n	<div class="flipper">\n\n		<div class="front">\n			<ng-content select=".flash-card-front"></ng-content>\n		</div>\n\n		<div class="back">\n			<ng-content select=".flash-card-back"></ng-content>\n		</div>\n\n	</div>\n\n</div>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/components/flash-card/flash-card.html"*/
+            selector: 'flash-card',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\flash-card\flash-card.html"*/'<div class="flip-container" (click)="flip()" [class.flipped]="flipped">\n\n\n\n	<div class="flipper">\n\n\n\n		<div class="front">\n\n			<ng-content select=".flash-card-front"></ng-content>\n\n		</div>\n\n\n\n		<div class="back">\n\n			<ng-content select=".flash-card-back"></ng-content>\n\n		</div>\n\n\n\n	</div>\n\n\n\n</div>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\components\flash-card\flash-card.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], FlashCardComponent);
@@ -2145,7 +2155,7 @@ var VideoService = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SafetyToolkitMorePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(16);
@@ -2231,7 +2241,7 @@ var SafetyToolkitMorePage = /** @class */ (function () {
     };
     SafetyToolkitMorePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-safety-toolkit-more',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit-more/safety-toolkit-more.html"*/'<!--\n  Generated template for the SafetyToolkitDetailsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n     <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n<div style="height:40px"></div>\n\n  <accordion-more *ngFor="let section of sections | search : terms" [title]="section.title.rendered">\n      <div [innerHTML]="section.content.rendered"></div>\n      <img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} ">\n\n    </accordion-more>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/safety-toolkit-more/safety-toolkit-more.html"*/,
+            selector: 'page-safety-toolkit-more',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\safety-toolkit-more\safety-toolkit-more.html"*/'<!--\n\n  Generated template for the SafetyToolkitDetailsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar color="primary">\n\n     <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>\n\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n\n      <ion-icon name="search"></ion-icon></button>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n      </ion-refresher>\n\n<div style="height:40px"></div>\n\n\n\n  <accordion-more *ngFor="let section of sections | search : terms" [title]="section.title.rendered">\n\n      <div [innerHTML]="section.content.rendered"></div>\n\n      <img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} ">\n\n\n\n    </accordion-more>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\safety-toolkit-more\safety-toolkit-more.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_6_ionic_img_viewer__["a" /* ImageViewerController */]])
     ], SafetyToolkitMorePage);
@@ -2250,7 +2260,7 @@ var SafetyToolkitMorePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2322,7 +2332,7 @@ var TemplateFlashcardPage = /** @class */ (function () {
     };
     TemplateFlashcardPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-template-flashcard',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-flashcard/template-flashcard.html"*/'<ion-header>\n  <ion-navbar color="primary">\n     <ion-title *ngIf ="!searchOpen"> {{title}} </ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n      <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n    </ion-refresher>\n\n\n\n<div *ngFor="let section of sections | search : terms" class="txt">  <div [innerHTML]="section.content.rendered"></div></div>\n\n	<flash-card *ngFor="let section of sections | search : terms">\n\n		<div class="flash-card-front"><div [innerHTML]="section.front"></div></div>\n\n		<div class="flash-card-back"><div [innerHTML]="section.back"></div></div>\n\n	</flash-card>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-flashcard/template-flashcard.html"*/,
+            selector: 'page-template-flashcard',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-flashcard\template-flashcard.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n     <ion-title *ngIf ="!searchOpen"> {{title}} </ion-title>\n\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n\n      <ion-icon name="search"></ion-icon></button>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n      <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n    </ion-refresher>\n\n\n\n\n\n\n\n<div *ngFor="let section of sections | search : terms" class="txt">  <div [innerHTML]="section.content.rendered"></div></div>\n\n\n\n	<flash-card *ngFor="let section of sections | search : terms">\n\n\n\n		<div class="flash-card-front"><div [innerHTML]="section.front"></div></div>\n\n\n\n		<div class="flash-card-back"><div [innerHTML]="section.back"></div></div>\n\n\n\n	</flash-card>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-flashcard\template-flashcard.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */]])
     ], TemplateFlashcardPage);
@@ -2334,111 +2344,6 @@ var TemplateFlashcardPage = /** @class */ (function () {
 /***/ }),
 
 /***/ 94:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateImagetopPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the TemplateImagetopPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TemplateImagetopPage = /** @class */ (function () {
-    function TemplateImagetopPage(toastCtrl, storage, navCtrl, navParams, wpApiProvider, imageViewerCtrl) {
-        this.toastCtrl = toastCtrl;
-        this.storage = storage;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.wpApiProvider = wpApiProvider;
-        this.searchOpen = false;
-        this._imageViewerCtrl = imageViewerCtrl;
-        this.slug = this.navParams.get('slug');
-        console.log(this.slug);
-        this.title = this.navParams.get('title');
-        console.log(this.title);
-        this.imagetop = this.navParams.get('imagetop');
-        console.log(this.imagetop);
-        this.loadData();
-    }
-    TemplateImagetopPage.prototype.presentImage = function (myImage) {
-        var imageViewer = this._imageViewerCtrl.create(myImage);
-        imageViewer.present();
-    };
-    TemplateImagetopPage.prototype.loadData = function (refresher) {
-        var _this = this;
-        if (this.wpApiProvider.isConnected() || navigator.onLine) {
-            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
-                console.log(data);
-                _this.sections = data;
-                _this.storage.set('dataFrom' + _this.slug, _this.sections);
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'Data loaded from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-        else {
-            this.storage.get('dataFrom' + this.slug).then(function (data) {
-                _this.sections = data;
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'No connection - failed to retrieve from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-    };
-    TemplateImagetopPage.prototype.forceReload = function (refresher) {
-        this.loadData(refresher);
-        refresher.complete();
-    };
-    TemplateImagetopPage.prototype.notesToSelf = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
-    };
-    TemplateImagetopPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TemplateImagetopPage');
-    };
-    TemplateImagetopPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-template-imagetop',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-imagetop/template-imagetop.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title *ngIf ="!searchOpen">{{ title }}</ion-title>\n    <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n   <ion-buttons end>\n     <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n     <ion-icon name="search"></ion-icon></button>\n     <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n   </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n    \n\n<img #myImage (click)="presentImage(myImage)" src="{{ imagetop }} ">\n\n  <accordion-more *ngFor="let section of sections | search : terms" [title]="section.title.rendered">\n      <div [innerHTML]="section.content.rendered"></div>\n      <img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} ">\n    </accordion-more>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-imagetop/template-imagetop.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
-    ], TemplateImagetopPage);
-    return TemplateImagetopPage;
-}());
-
-//# sourceMappingURL=template-imagetop.js.map
-
-/***/ }),
-
-/***/ 95:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2583,7 +2488,7 @@ var TemplateQuizScorePage = /** @class */ (function () {
     ], TemplateQuizScorePage.prototype, "slides", void 0);
     TemplateQuizScorePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-template-quiz-score',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-quiz-score/template-quiz-score.html"*/'<ion-header>\n    <ion-navbar color="primary">\n      <ion-title>\n        {{title}}\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content padding>\n      <ion-refresher (ionRefresh)="forceReload($event)">\n  \n          <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n        </ion-refresher>\n  <ion-slides>\n      <ion-slide>\n          <button ion-button color="primary" (click)="changeSlide()">Start Quiz!</button>\n        </ion-slide>\n  \n    <ion-slide *ngFor="let question of questions; let i = index;">\n        <p class="pp">{{question.intro}}</p>\n   <ion-card class="question-card">\n     <ion-card-header>{{ question.title.rendered }}</ion-card-header>\n     <ion-card-content>\n    <div [innerHTML]="question.content.rendered"></div>\n   </ion-card-content>\n   </ion-card>\n  \n    <ion-list no-lines radio-group>\n          <ion-item>\n        <ion-label class="lbl">{{question.choice_1}}</ion-label>\n        <ion-radio (click)="selectAnswer(question, \'first\', question.firstChoice)" [checked]="selectFirst" [disabled]="answeredFinally"></ion-radio>\n          </ion-item>\n      <ion-item>\n        <ion-label class="lbl">{{question.choice_2}}</ion-label>\n        <ion-radio (click)="selectAnswer(question, \'second\', question.secondChoice)" [checked]="selectSecond" [disabled]="answeredFinally"></ion-radio>\n          </ion-item>\n      <ion-item>\n        <ion-label class="lbl">{{question.choice_3}}</ion-label>\n        <ion-radio (click)="selectAnswer(question, \'third\', question.thirdChoice)" [checked]="selectThird" [disabled]="answeredFinally"></ion-radio>\n          </ion-item>\n      <ion-item>\n          <ion-label class="lbl">{{question.choice_4}}</ion-label>\n          <ion-radio (click)="selectAnswer(question, \'fourth\', question.fourthChoice)" [checked]="selectFourth" [disabled]="answeredFinally"></ion-radio>\n        </ion-item>\n    </ion-list>\n    </ion-slide>\n  \n    <ion-slide>\n        <h2>Your Final Score: {{score}}</h2>\n        <button (click)="restartQuiz()" ion-button full color="primary">Start Quiz Again</button>\n      </ion-slide>\n  </ion-slides>\n  \n  \n  \n  \n  </ion-content>\n  \n  '/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-quiz-score/template-quiz-score.html"*/,
+            selector: 'page-template-quiz-score',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-quiz-score\template-quiz-score.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n      <ion-title>\n\n        {{title}}\n\n      </ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  \n\n  <ion-content padding>\n\n      <ion-refresher (ionRefresh)="forceReload($event)">\n\n  \n\n          <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n        </ion-refresher>\n\n  <ion-slides>\n\n      <ion-slide>\n\n          <button ion-button color="primary" (click)="changeSlide()">Start Quiz!</button>\n\n        </ion-slide>\n\n  \n\n    <ion-slide *ngFor="let question of questions; let i = index;">\n\n        <p class="pp">{{question.intro}}</p>\n\n   <ion-card class="question-card">\n\n     <ion-card-header>{{ question.title.rendered }}</ion-card-header>\n\n     <ion-card-content>\n\n    <div [innerHTML]="question.content.rendered"></div>\n\n   </ion-card-content>\n\n   </ion-card>\n\n  \n\n    <ion-list no-lines radio-group>\n\n          <ion-item>\n\n        <ion-label class="lbl">{{question.choice_1}}</ion-label>\n\n        <ion-radio (click)="selectAnswer(question, \'first\', question.firstChoice)" [checked]="selectFirst" [disabled]="answeredFinally"></ion-radio>\n\n          </ion-item>\n\n      <ion-item>\n\n        <ion-label class="lbl">{{question.choice_2}}</ion-label>\n\n        <ion-radio (click)="selectAnswer(question, \'second\', question.secondChoice)" [checked]="selectSecond" [disabled]="answeredFinally"></ion-radio>\n\n          </ion-item>\n\n      <ion-item>\n\n        <ion-label class="lbl">{{question.choice_3}}</ion-label>\n\n        <ion-radio (click)="selectAnswer(question, \'third\', question.thirdChoice)" [checked]="selectThird" [disabled]="answeredFinally"></ion-radio>\n\n          </ion-item>\n\n      <ion-item>\n\n          <ion-label class="lbl">{{question.choice_4}}</ion-label>\n\n          <ion-radio (click)="selectAnswer(question, \'fourth\', question.fourthChoice)" [checked]="selectFourth" [disabled]="answeredFinally"></ion-radio>\n\n        </ion-item>\n\n    </ion-list>\n\n    </ion-slide>\n\n  \n\n    <ion-slide>\n\n        <h2>Your Final Score: {{score}}</h2>\n\n        <button (click)="restartQuiz()" ion-button full color="primary">Start Quiz Again</button>\n\n      </ion-slide>\n\n  </ion-slides>\n\n  \n\n  \n\n  \n\n  \n\n  </ion-content>\n\n  \n\n  '/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-quiz-score\template-quiz-score.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]])
     ], TemplateQuizScorePage);
@@ -2594,330 +2499,112 @@ var TemplateQuizScorePage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 95:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateImagetopPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the TemplateImagetopPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TemplateImagetopPage = /** @class */ (function () {
+    function TemplateImagetopPage(toastCtrl, storage, navCtrl, navParams, wpApiProvider, imageViewerCtrl) {
+        this.toastCtrl = toastCtrl;
+        this.storage = storage;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.wpApiProvider = wpApiProvider;
+        this.searchOpen = false;
+        this._imageViewerCtrl = imageViewerCtrl;
+        this.slug = this.navParams.get('slug');
+        console.log(this.slug);
+        this.title = this.navParams.get('title');
+        console.log(this.title);
+        this.imagetop = this.navParams.get('imagetop');
+        console.log(this.imagetop);
+        this.loadData();
+    }
+    TemplateImagetopPage.prototype.presentImage = function (myImage) {
+        var imageViewer = this._imageViewerCtrl.create(myImage);
+        imageViewer.present();
+    };
+    TemplateImagetopPage.prototype.loadData = function (refresher) {
+        var _this = this;
+        if (this.wpApiProvider.isConnected() || navigator.onLine) {
+            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
+                console.log(data);
+                _this.sections = data;
+                _this.storage.set('dataFrom' + _this.slug, _this.sections);
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'Data loaded from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+        else {
+            this.storage.get('dataFrom' + this.slug).then(function (data) {
+                _this.sections = data;
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'No connection - failed to retrieve from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+    };
+    TemplateImagetopPage.prototype.forceReload = function (refresher) {
+        this.loadData(refresher);
+        refresher.complete();
+    };
+    TemplateImagetopPage.prototype.notesToSelf = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
+    };
+    TemplateImagetopPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TemplateImagetopPage');
+    };
+    TemplateImagetopPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-template-imagetop',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-imagetop\template-imagetop.html"*/'<ion-header>\n\n\n\n  <ion-navbar color="primary">\n\n    <ion-title *ngIf ="!searchOpen">{{ title }}</ion-title>\n\n    <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n\n   <ion-buttons end>\n\n     <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n\n     <ion-icon name="search"></ion-icon></button>\n\n     <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n   </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n      </ion-refresher>\n\n    \n\n\n\n<img #myImage (click)="presentImage(myImage)" src="{{ imagetop }} ">\n\n\n\n  <accordion-more *ngFor="let section of sections | search : terms" [title]="section.title.rendered">\n\n      <div [innerHTML]="section.content.rendered"></div>\n\n      <img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} ">\n\n    </accordion-more>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-imagetop\template-imagetop.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
+    ], TemplateImagetopPage);
+    return TemplateImagetopPage;
+}());
+
+//# sourceMappingURL=template-imagetop.js.map
+
+/***/ }),
+
 /***/ 96:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSimplePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var TemplateSimplePage = /** @class */ (function () {
-    function TemplateSimplePage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, imageViewerCtrl) {
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.wpApiProvider = wpApiProvider;
-        this.searchOpen = false;
-        this._imageViewerCtrl = imageViewerCtrl;
-        this.slug = this.navParams.get('slug');
-        console.log(this.slug);
-        this.title = this.navParams.get('title');
-        // alert(this.title);
-        console.log(this.title);
-        this.loadData();
-    }
-    TemplateSimplePage.prototype.presentImage = function (myImage) {
-        var imageViewer = this._imageViewerCtrl.create(myImage);
-        imageViewer.present();
-    };
-    TemplateSimplePage.prototype.loadData = function (refresher) {
-        var _this = this;
-        if (this.wpApiProvider.isConnected() || navigator.onLine) {
-            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
-                console.log(data);
-                _this.sections = data;
-                _this.storage.set('dataFrom' + _this.slug, _this.sections);
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'Data loaded from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-        else {
-            this.storage.get('dataFrom' + this.slug).then(function (data) {
-                _this.sections = data;
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'No connection - failed to retrieve from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-    };
-    TemplateSimplePage.prototype.forceReload = function (refresher) {
-        this.loadData(refresher);
-        refresher.complete();
-    };
-    TemplateSimplePage.prototype.notesToSelf = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
-    };
-    TemplateSimplePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TemplateSliderPage');
-    };
-    TemplateSimplePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-template-simple',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-simple/template-simple.html"*/'<ion-header>\n  <ion-navbar color="primary">\n     <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n<div *ngFor="let section of sections | search : terms"> <div [innerHTML]="section.content.rendered"></div>\n<img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} "></div>\n     \n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-simple/template-simple.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
-    ], TemplateSimplePage);
-    return TemplateSimplePage;
-}());
-
-//# sourceMappingURL=template-simple.js.map
-
-/***/ }),
-
-/***/ 97:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSliderPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the TemplateSliderPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TemplateSliderPage = /** @class */ (function () {
-    function TemplateSliderPage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, imageViewerCtrl) {
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.wpApiProvider = wpApiProvider;
-        this.searchOpen = false;
-        this._imageViewerCtrl = imageViewerCtrl;
-        this.slug = this.navParams.get('slug');
-        console.log(this.slug);
-        this.title = this.navParams.get('title');
-        // alert(this.title);
-        console.log(this.title);
-        this.loadData();
-    }
-    TemplateSliderPage.prototype.presentImage = function (myImage) {
-        var imageViewer = this._imageViewerCtrl.create(myImage);
-        imageViewer.present();
-    };
-    TemplateSliderPage.prototype.loadData = function (refresher) {
-        var _this = this;
-        if (this.wpApiProvider.isConnected() || navigator.onLine) {
-            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
-                console.log(data);
-                _this.sections = data;
-                _this.storage.set('dataFrom' + _this.slug, _this.sections);
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'Data loaded from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-        else {
-            this.storage.get('dataFrom' + this.slug).then(function (data) {
-                _this.sections = data;
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'No connection - failed to retrieve from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-    };
-    TemplateSliderPage.prototype.forceReload = function (refresher) {
-        this.loadData(refresher);
-        refresher.complete();
-    };
-    TemplateSliderPage.prototype.notesToSelf = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
-    };
-    TemplateSliderPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TemplateSliderPage');
-    };
-    TemplateSliderPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-template-slider',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slider/template-slider.html"*/'<ion-header>\n  <ion-navbar color="primary">\n     <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n    <ion-buttons end>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n      <ion-icon name="search"></ion-icon></button>\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n  <!--NEEDS WORDPRESS LINKING -->\n\n<ion-slides class="sliderr" pager>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-01.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-02.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-03.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-04.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-05.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-06.jpg">\n  </ion-slide>\n  <ion-slide>\n    <img src="assets/imgs/SA_Swiss_Cheese-07.jpg">\n  </ion-slide>\n</ion-slides>\n\n  <accordion-more *ngFor="let section of sections | search : terms" [title]="section.title.rendered">\n\n      <div [innerHTML]="section.content.rendered"></div>\n      <img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} ">\n    </accordion-more>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slider/template-slider.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
-    ], TemplateSliderPage);
-    return TemplateSliderPage;
-}());
-
-//# sourceMappingURL=template-slider.js.map
-
-/***/ }),
-
-/***/ 98:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSlidesArrowsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the TemplateSlidesArrowsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TemplateSlidesArrowsPage = /** @class */ (function () {
-    function TemplateSlidesArrowsPage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, http, imageViewerCtrl) {
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.wpApiProvider = wpApiProvider;
-        this.http = http;
-        this.slides = [
-            {},
-            {},
-            {},
-            {},
-            {},
-            {}
-        ];
-        this.currentIndex = 0;
-        this._imageViewerCtrl = imageViewerCtrl;
-        this.slug = this.navParams.get('slug');
-        console.log(this.slug);
-        this.title = this.navParams.get('title');
-        // alert(this.title);
-        console.log(this.title);
-        this.loadData();
-    }
-    TemplateSlidesArrowsPage.prototype.presentImage = function (myImage) {
-        var imageViewer = this._imageViewerCtrl.create(myImage);
-        imageViewer.present();
-    };
-    TemplateSlidesArrowsPage.prototype.loadData = function (refresher) {
-        var _this = this;
-        if (this.wpApiProvider.isConnected() || navigator.onLine) {
-            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
-                console.log(data);
-                _this.tools = data;
-                _this.storage.set('dataFrom' + _this.slug, _this.tools);
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'Data loaded from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-        else {
-            this.storage.get('dataFrom' + this.slug).then(function (data) {
-                _this.tools = data;
-            });
-            if (refresher) {
-                var toast = this.toastCtrl.create({
-                    message: 'No connection - failed to retrieve from server.',
-                    duration: 2000
-                });
-                toast.present();
-            }
-        }
-    };
-    TemplateSlidesArrowsPage.prototype.forceReload = function (refresher) {
-        this.loadData(refresher);
-        refresher.complete();
-    };
-    TemplateSlidesArrowsPage.prototype.nextSlide = function () {
-        this.slider.slideNext();
-    };
-    TemplateSlidesArrowsPage.prototype.previousSlide = function () {
-        this.slider.slidePrev();
-    };
-    TemplateSlidesArrowsPage.prototype.onSlideChanged = function () {
-        this.currentIndex = this.slider.getActiveIndex();
-        console.log('Slide changed! Current index is', this.currentIndex);
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('slider'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* Slides */])
-    ], TemplateSlidesArrowsPage.prototype, "slider", void 0);
-    TemplateSlidesArrowsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-template-slides-arrows',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slides-arrows/template-slides-arrows.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Blood Culture Collection</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n      \n \n  <ion-slides #slider effect="fade" (ionSlideWillChange)="onSlideChanged()">\n    <ion-slide *ngFor="let tool of tools"\n               class="swiper-no-swiping"\n               [ngStyle]="{\'background\' : \'url(\' + tool.background.guid + \')\'}">\n\n               <div [innerHTML]="tool.content.rendered"></div>\n               <img #myImage (click)="presentImage(myImage)" src="{{ tool.img.guid }} ">\n    </ion-slide>\n    <!-- Add Pagination -->\n    <div *ngIf="currentIndex > 0"\n         class="swiper-button-prev swiper-button-white"\n         (click)="previousSlide()"></div>\n    <div *ngIf="currentIndex < slides.length-1"\n         class="swiper-button-next swiper-button-white"\n         (click)="nextSlide()"></div>\n  </ion-slides>\n</ion-content>'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-slides-arrows/template-slides-arrows.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
-    ], TemplateSlidesArrowsPage);
-    return TemplateSlidesArrowsPage;
-}());
-
-//# sourceMappingURL=template-slides-arrows.js.map
-
-/***/ }),
-
-/***/ 99:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3090,7 +2777,7 @@ var TemplateQuizPage = /** @class */ (function () {
     ], TemplateQuizPage.prototype, "slides", void 0);
     TemplateQuizPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-template-quiz',template:/*ion-inline-start:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-quiz/template-quiz.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n      </ion-refresher>\n<ion-slides>\n    <ion-slide>\n       \n        <button ion-button color="primary" (click)="changeSlide()">Start Quiz!</button>\n      </ion-slide>\n\n  <ion-slide *ngFor="let question of questions; let i = index;">\n      <p class="pp">{{question.intro}}</p>\n      \n <ion-card class="question-card">\n   <ion-card-header>{{ question.title.rendered }}</ion-card-header>\n   <ion-card-content>\n  <div [innerHTML]="question.content.rendered"></div>\n </ion-card-content>\n </ion-card>\n\n	<ion-list no-lines radio-group>\n				<ion-item>\n      <ion-label class="lbl">{{question.choice_1}}</ion-label>\n      <ion-radio (click)="selectAnswer(question, \'first\', question.firstChoice)" [checked]="selectFirst" [disabled]="answeredFinally"></ion-radio>\n				</ion-item>\n    <ion-item>\n      <ion-label class="lbl">{{question.choice_2}}</ion-label>\n      <ion-radio (click)="selectAnswer(question, \'second\', question.secondChoice)" [checked]="selectSecond" [disabled]="answeredFinally"></ion-radio>\n				</ion-item>\n    <ion-item>\n      <ion-label class="lbl">{{question.choice_3}}</ion-label>\n      <ion-radio (click)="selectAnswer(question, \'third\', question.thirdChoice)" [checked]="selectThird" [disabled]="answeredFinally"></ion-radio>\n				</ion-item>\n    <ion-item>\n        <ion-label class="lbl">{{question.choice_4}}</ion-label>\n        <ion-radio (click)="selectAnswer(question, \'fourth\', question.fourthChoice)" [checked]="selectFourth" [disabled]="answeredFinally"></ion-radio>\n      </ion-item>\n  </ion-list>\n  </ion-slide>\n\n  <ion-slide>\n			\n			<button (click)="restartQuiz()" ion-button full color="primary">Start Quiz Again</button>\n		</ion-slide>\n</ion-slides>\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/ionicapp/Desktop/GOSHAPP/src/pages/template-quiz/template-quiz.html"*/,
+            selector: 'page-template-quiz',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-quiz\template-quiz.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>\n\n      {{title}}\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n      </ion-refresher>\n\n<ion-slides>\n\n    <ion-slide>\n\n       \n\n        <button ion-button color="primary" (click)="changeSlide()">Start Quiz!</button>\n\n      </ion-slide>\n\n\n\n  <ion-slide *ngFor="let question of questions; let i = index;">\n\n      <p class="pp">{{question.intro}}</p>\n\n      \n\n <ion-card class="question-card">\n\n   <ion-card-header>{{ question.title.rendered }}</ion-card-header>\n\n   <ion-card-content>\n\n  <div [innerHTML]="question.content.rendered"></div>\n\n </ion-card-content>\n\n </ion-card>\n\n\n\n	<ion-list no-lines radio-group>\n\n				<ion-item>\n\n      <ion-label class="lbl">{{question.choice_1}}</ion-label>\n\n      <ion-radio (click)="selectAnswer(question, \'first\', question.firstChoice)" [checked]="selectFirst" [disabled]="answeredFinally"></ion-radio>\n\n				</ion-item>\n\n    <ion-item>\n\n      <ion-label class="lbl">{{question.choice_2}}</ion-label>\n\n      <ion-radio (click)="selectAnswer(question, \'second\', question.secondChoice)" [checked]="selectSecond" [disabled]="answeredFinally"></ion-radio>\n\n				</ion-item>\n\n    <ion-item>\n\n      <ion-label class="lbl">{{question.choice_3}}</ion-label>\n\n      <ion-radio (click)="selectAnswer(question, \'third\', question.thirdChoice)" [checked]="selectThird" [disabled]="answeredFinally"></ion-radio>\n\n				</ion-item>\n\n    <ion-item>\n\n        <ion-label class="lbl">{{question.choice_4}}</ion-label>\n\n        <ion-radio (click)="selectAnswer(question, \'fourth\', question.fourthChoice)" [checked]="selectFourth" [disabled]="answeredFinally"></ion-radio>\n\n      </ion-item>\n\n  </ion-list>\n\n  </ion-slide>\n\n\n\n  <ion-slide>\n\n			\n\n			<button (click)="restartQuiz()" ion-button full color="primary">Start Quiz Again</button>\n\n		</ion-slide>\n\n</ion-slides>\n\n\n\n\n\n\n\n\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-quiz\template-quiz.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]])
     ], TemplateQuizPage);
@@ -3098,6 +2785,329 @@ var TemplateQuizPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=template-quiz.js.map
+
+/***/ }),
+
+/***/ 97:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSimplePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var TemplateSimplePage = /** @class */ (function () {
+    function TemplateSimplePage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, imageViewerCtrl) {
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.wpApiProvider = wpApiProvider;
+        this.searchOpen = false;
+        this._imageViewerCtrl = imageViewerCtrl;
+        this.slug = this.navParams.get('slug');
+        console.log(this.slug);
+        this.title = this.navParams.get('title');
+        // alert(this.title);
+        console.log(this.title);
+        this.loadData();
+    }
+    TemplateSimplePage.prototype.presentImage = function (myImage) {
+        var imageViewer = this._imageViewerCtrl.create(myImage);
+        imageViewer.present();
+    };
+    TemplateSimplePage.prototype.loadData = function (refresher) {
+        var _this = this;
+        if (this.wpApiProvider.isConnected() || navigator.onLine) {
+            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
+                console.log(data);
+                _this.sections = data;
+                _this.storage.set('dataFrom' + _this.slug, _this.sections);
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'Data loaded from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+        else {
+            this.storage.get('dataFrom' + this.slug).then(function (data) {
+                _this.sections = data;
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'No connection - failed to retrieve from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+    };
+    TemplateSimplePage.prototype.forceReload = function (refresher) {
+        this.loadData(refresher);
+        refresher.complete();
+    };
+    TemplateSimplePage.prototype.notesToSelf = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
+    };
+    TemplateSimplePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TemplateSliderPage');
+    };
+    TemplateSimplePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-template-simple',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-simple\template-simple.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n     <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>\n\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n\n      <ion-icon name="search"></ion-icon></button>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n      </ion-refresher>\n\n<div *ngFor="let section of sections | search : terms"> <div [innerHTML]="section.content.rendered"></div>\n\n<img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} "></div>\n\n     \n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-simple\template-simple.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
+    ], TemplateSimplePage);
+    return TemplateSimplePage;
+}());
+
+//# sourceMappingURL=template-simple.js.map
+
+/***/ }),
+
+/***/ 98:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSliderPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the TemplateSliderPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TemplateSliderPage = /** @class */ (function () {
+    function TemplateSliderPage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, imageViewerCtrl) {
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.wpApiProvider = wpApiProvider;
+        this.searchOpen = false;
+        this._imageViewerCtrl = imageViewerCtrl;
+        this.slug = this.navParams.get('slug');
+        console.log(this.slug);
+        this.title = this.navParams.get('title');
+        // alert(this.title);
+        console.log(this.title);
+        this.loadData();
+    }
+    TemplateSliderPage.prototype.presentImage = function (myImage) {
+        var imageViewer = this._imageViewerCtrl.create(myImage);
+        imageViewer.present();
+    };
+    TemplateSliderPage.prototype.loadData = function (refresher) {
+        var _this = this;
+        if (this.wpApiProvider.isConnected() || navigator.onLine) {
+            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
+                console.log(data);
+                _this.sections = data;
+                _this.storage.set('dataFrom' + _this.slug, _this.sections);
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'Data loaded from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+        else {
+            this.storage.get('dataFrom' + this.slug).then(function (data) {
+                _this.sections = data;
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'No connection - failed to retrieve from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+    };
+    TemplateSliderPage.prototype.forceReload = function (refresher) {
+        this.loadData(refresher);
+        refresher.complete();
+    };
+    TemplateSliderPage.prototype.notesToSelf = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__notes_to_self_notes_to_self__["a" /* NotesToSelfPage */]);
+    };
+    TemplateSliderPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TemplateSliderPage');
+    };
+    TemplateSliderPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-template-slider',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-slider\template-slider.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n     <ion-title *ngIf ="!searchOpen"> {{ title }}</ion-title>\n\n     <ion-searchbar *ngIf ="searchOpen" showCancelButton="true" (ionCancel)="searchOpen=false" [(ngModel)]="terms"></ion-searchbar>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)="searchOpen=true">\n\n      <ion-icon name="search"></ion-icon></button>\n\n      <button ion-button icon-only *ngIf ="!searchOpen" (click)= "notesToSelf()"><ion-icon name="logo-buffer"></ion-icon></button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n      </ion-refresher>\n\n  <!--NEEDS WORDPRESS LINKING -->\n\n\n\n<ion-slides class="sliderr" pager>\n\n  <ion-slide>\n\n    <img src="assets/imgs/SA_Swiss_Cheese-01.jpg">\n\n  </ion-slide>\n\n  <ion-slide>\n\n    <img src="assets/imgs/SA_Swiss_Cheese-02.jpg">\n\n  </ion-slide>\n\n  <ion-slide>\n\n    <img src="assets/imgs/SA_Swiss_Cheese-03.jpg">\n\n  </ion-slide>\n\n  <ion-slide>\n\n    <img src="assets/imgs/SA_Swiss_Cheese-04.jpg">\n\n  </ion-slide>\n\n  <ion-slide>\n\n    <img src="assets/imgs/SA_Swiss_Cheese-05.jpg">\n\n  </ion-slide>\n\n  <ion-slide>\n\n    <img src="assets/imgs/SA_Swiss_Cheese-06.jpg">\n\n  </ion-slide>\n\n  <ion-slide>\n\n    <img src="assets/imgs/SA_Swiss_Cheese-07.jpg">\n\n  </ion-slide>\n\n</ion-slides>\n\n\n\n  <accordion-more *ngFor="let section of sections | search : terms" [title]="section.title.rendered">\n\n\n\n      <div [innerHTML]="section.content.rendered"></div>\n\n      <img #myImage (click)="presentImage(myImage)" src="{{ section.img.guid }} ">\n\n    </accordion-more>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-slider\template-slider.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
+    ], TemplateSliderPage);
+    return TemplateSliderPage;
+}());
+
+//# sourceMappingURL=template-slider.js.map
+
+/***/ }),
+
+/***/ 99:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TemplateSlidesArrowsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__ = __webpack_require__(53);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the TemplateSlidesArrowsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TemplateSlidesArrowsPage = /** @class */ (function () {
+    function TemplateSlidesArrowsPage(storage, toastCtrl, navCtrl, navParams, wpApiProvider, http, imageViewerCtrl) {
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.wpApiProvider = wpApiProvider;
+        this.http = http;
+        this.slides = [
+            {},
+            {},
+            {},
+            {},
+            {},
+            {}
+        ];
+        this.currentIndex = 0;
+        this._imageViewerCtrl = imageViewerCtrl;
+        this.slug = this.navParams.get('slug');
+        console.log(this.slug);
+        this.title = this.navParams.get('title');
+        // alert(this.title);
+        console.log(this.title);
+        this.loadData();
+    }
+    TemplateSlidesArrowsPage.prototype.presentImage = function (myImage) {
+        var imageViewer = this._imageViewerCtrl.create(myImage);
+        imageViewer.present();
+    };
+    TemplateSlidesArrowsPage.prototype.loadData = function (refresher) {
+        var _this = this;
+        if (this.wpApiProvider.isConnected() || navigator.onLine) {
+            this.wpApiProvider.getSTSpecific(this.slug).subscribe(function (data) {
+                console.log(data);
+                _this.tools = data;
+                _this.storage.set('dataFrom' + _this.slug, _this.tools);
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'Data loaded from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+        else {
+            this.storage.get('dataFrom' + this.slug).then(function (data) {
+                _this.tools = data;
+            });
+            if (refresher) {
+                var toast = this.toastCtrl.create({
+                    message: 'No connection - failed to retrieve from server.',
+                    duration: 2000
+                });
+                toast.present();
+            }
+        }
+    };
+    TemplateSlidesArrowsPage.prototype.forceReload = function (refresher) {
+        this.loadData(refresher);
+        refresher.complete();
+    };
+    TemplateSlidesArrowsPage.prototype.nextSlide = function () {
+        this.slider.slideNext();
+    };
+    TemplateSlidesArrowsPage.prototype.previousSlide = function () {
+        this.slider.slidePrev();
+    };
+    TemplateSlidesArrowsPage.prototype.onSlideChanged = function () {
+        this.currentIndex = this.slider.getActiveIndex();
+        console.log('Slide changed! Current index is', this.currentIndex);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])('slider'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* Slides */])
+    ], TemplateSlidesArrowsPage.prototype, "slider", void 0);
+    TemplateSlidesArrowsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-template-slides-arrows',template:/*ion-inline-start:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-slides-arrows\template-slides-arrows.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n\n    <ion-title>Blood Culture Collection</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-refresher (ionRefresh)="forceReload($event)">\n\n\n\n        <ion-refresher-content refreshingText="Reloading from server..."></ion-refresher-content>\n\n      </ion-refresher>\n\n      \n\n \n\n  <ion-slides #slider effect="fade" (ionSlideWillChange)="onSlideChanged()">\n\n    <ion-slide *ngFor="let tool of tools"\n\n               class="swiper-no-swiping"\n\n               [ngStyle]="{\'background\' : \'url(\' + tool.background.guid + \')\'}">\n\n\n\n               <div [innerHTML]="tool.content.rendered"></div>\n\n               <img #myImage (click)="presentImage(myImage)" src="{{ tool.img.guid }} ">\n\n    </ion-slide>\n\n    <!-- Add Pagination -->\n\n    <div *ngIf="currentIndex > 0"\n\n         class="swiper-button-prev swiper-button-white"\n\n         (click)="previousSlide()"></div>\n\n    <div *ngIf="currentIndex < slides.length-1"\n\n         class="swiper-button-next swiper-button-white"\n\n         (click)="nextSlide()"></div>\n\n  </ion-slides>\n\n</ion-content>'/*ion-inline-end:"C:\Users\Christian\Documents\GOSH_Internship\GITHUB\GOSHAPP_FINAL_3\src\pages\template-slides-arrows\template-slides-arrows.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_wp_api_wp_api__["a" /* WpApiProvider */], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_5_ionic_img_viewer__["a" /* ImageViewerController */]])
+    ], TemplateSlidesArrowsPage);
+    return TemplateSlidesArrowsPage;
+}());
+
+//# sourceMappingURL=template-slides-arrows.js.map
 
 /***/ })
 

@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { Storage } from '@ionic/storage'
+import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
 
 @IonicPage()
 @Component({
@@ -47,6 +48,9 @@ export class ClinicalQualityProjectsPage {
       }
   }
 
+  notesToSelf(){
+    this.navCtrl.push(NotesToSelfPage);
+  }
 
   forceReload(refresher?){
     this.loadData(refresher)

@@ -4,6 +4,7 @@ import { WpApiProvider } from '../../providers/wp-api/wp-api';
 import { Storage } from '@ionic/storage';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { NotesToSelfPage } from '../notes-to-self/notes-to-self';
 
 @Component({
   selector: 'page-home',
@@ -47,6 +48,9 @@ export class HomePage {
       }
   }
 
+  notesToSelf(){
+    this.navCtrl.push(NotesToSelfPage);
+  }
   
   forceReload(refresher?){
     this.loadData(refresher)

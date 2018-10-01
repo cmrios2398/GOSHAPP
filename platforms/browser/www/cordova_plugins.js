@@ -79,7 +79,8 @@ module.exports.metadata =
     "cordova-plugin-appcenter-crashes": "0.1.6",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-email-composer": "0.8.15",
-    "cordova-sqlite-storage": "2.3.2"
+    "cordova-sqlite-storage": "2.3.2",
+    "cordova-plugin-whitelist": "1.3.3"
 }
 // BOTTOM OF METADATA
 });
